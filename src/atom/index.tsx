@@ -1,1 +1,2 @@
-export * as AtomElement from './bases';
+export * from './Element';
+export * from './AtomSelector';

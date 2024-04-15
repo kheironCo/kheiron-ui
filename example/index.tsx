@@ -1,13 +1,23 @@
 import 'react-app-polyfill/ie11';
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { AtomDiv, AtomSelector, OptionList } from '../.';
+
+const optionSelector: OptionList = [
+  { value: 'opt1', option: 'Option 1' },
+  {
+    optGroup: 'Group',
+    optionList: [
+      { value: 'opt2', option: 'Option 2' },
+      { value: 'opt3', option: 'Option 3' },
+    ],
+  },
+];
 
 const App = () => {
   return (
-    <div>
-      <Thing />
-    </div>
+    <AtomDiv>
+      <AtomSelector list={optionSelector} />
+    </AtomDiv>
   );
 };
 
