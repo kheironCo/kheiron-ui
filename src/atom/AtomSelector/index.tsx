@@ -16,27 +16,26 @@ export type AtomSelectorProps = {
   list: OptionList;
 };
 
-const OptionElement = ({ value, option }: OptionType) => (
+const OptionElement: React.FC<OptionType> = ({ value, option }) => (
   <AtomOption value={value}>{option}</AtomOption>
 );
 
-export const AtomSelector = ({ list }: AtomSelectorProps) => {
-  const renderOptions = list.map((item, i) => {
-    if ('optGroup' in item) {
-      return (
-        <AtomOptGroup key={`otp_group-${i}`} label={item.optGroup}>
-          {item.optionList.map((element, j) => (
-            <OptionElement
-              key={`otp_group-${i}-${element.value}-${j}`}
-              {...element}
-            />
-          ))}
-        </AtomOptGroup>
-      );
-    } else {
-      return <OptionElement key={`${item.value}-${i}`} {...item} />;
-    }
-  });
+const OptGroupElement: React.FC<OptGroupType> = ({ optGroup, optionList }) => (
+  <AtomOptGroup label={optGroup}>
+    {optionList.map((element, j) => (
+      <OptionElement key={element.value + j} {...element} />
+    ))}
+  </AtomOptGroup>
+);
 
-  return <AtomSelect>{renderOptions}</AtomSelect>;
-};
+export const AtomSelector = ({ list }: AtomSelectorProps) => (
+  <AtomSelect>
+    {list.map((item, i) =>
+      'optGroup' in item ? (
+        <OptGroupElement key={item.optGroup + i} {...item} />
+      ) : (
+        <OptionElement key={item.value + i} {...item} />
+      )
+    )}
+  </AtomSelect>
+);
