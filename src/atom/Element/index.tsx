@@ -1,4 +1,5 @@
 export * from './AtomButton';
+export * from './AtomDetails';
 export * from './AtomDiv';
 export * from './AtomForm';
 export * from './AtomHeading';
@@ -12,4 +13,5 @@ export * from './AtomOptGroup';
 export * from './AtomOption';
 export * from './AtomParagraph';
 export * from './AtomSelect';
+export * from './AtomSummary';
 export * from './AtomTextArea';
