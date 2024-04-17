@@ -1,5 +1,6 @@
 export * from './AtomButton';
 export * from './AtomDetails';
+export * from './AtomDialog';
 export * from './AtomDiv';
 export * from './AtomForm';
 export * from './AtomHeading';
