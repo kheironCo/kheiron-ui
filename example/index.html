@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Playground</title>
-  </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Playground</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
+</body>
+<style>
+  details summary::marker {
+    content: '';
+    /* Marca inicial, un triángulo hacia la derecha */
+  }
+
+  details[open] summary::marker {
+    content: '';
+    /* Cambia el contenido del marcador a un triángulo hacia abajo */
+  }
+
+
+  @keyframes slideIn {
+    from {
+      max-height: 0;
+    }
+
+    to {
+      max-height: 500px;
+    }
+  }
+
+  /* Estilo para detalles abiertos */
+  details[open]>.content {
+    max-height: 500px;
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+</style>
+
 </html>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { AtomDetails, AtomSummary } from '../Element';
+import { AtomDetails, AtomSummary } from '../../atom';
 
-export type AtomDropDownProps = {
+export type DropDownKUIProps = {
   summary: React.JSX.Element;
   children: React.ReactNode;
 };
 
-export const AtomDropDown = ({ summary, children }: AtomDropDownProps) => {
+export const DropDownKUI = ({ summary, children }: DropDownKUIProps) => {
   const [toggleDetails, setToggleDetails] = useState(false);
   return (
     <AtomDetails open={toggleDetails}>

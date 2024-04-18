@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtomOptGroup, AtomOption, AtomSelect } from '../Element';
+import { AtomOptGroup, AtomOption, AtomSelect } from '../../atom';
 
 type OptionType = {
   value: string;
@@ -12,7 +12,7 @@ type OptGroupType = {
 
 export type OptionList = Array<OptionType | OptGroupType>;
 
-export type AtomSelectorProps = {
+export type SelectorKUIProps = {
   list: OptionList;
 };
 
@@ -28,7 +28,7 @@ const OptGroupElement: React.FC<OptGroupType> = ({ optGroup, optionList }) => (
   </AtomOptGroup>
 );
 
-export const AtomSelector = ({ list }: AtomSelectorProps) => (
+export const SelectorKUI = ({ list }: SelectorKUIProps) => (
   <AtomSelect>
     {list.map((item, i) =>
       'optGroup' in item ? (
