@@ -1,3 +1,3 @@
-export * from './AtomDropDown';
-export * from './AtomSelector';
+export * from './DropDownKUI';
+export * from './SelectorKUI';
 export * from './ModalKUI';

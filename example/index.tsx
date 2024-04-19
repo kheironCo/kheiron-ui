@@ -5,13 +5,13 @@ import {
   AtomDetails,
   AtomDialog,
   AtomDiv,
-  AtomDropDown,
+  DropDownKUI,
   AtomLabel,
   AtomParagraph,
-  AtomSelector,
+  SelectorKUI,
   AtomSummary,
   OptionList,
-} from '../.';
+} from '../src';
 import { useState } from 'react';
 
 const optionSelector: OptionList = [
@@ -31,19 +31,19 @@ const App = () => {
 
   return (
     <AtomDiv>
-      <AtomSelector list={optionSelector} />
+      <SelectorKUI list={optionSelector} />
 
-      <AtomDropDown summary={<AtomLabel>This is a label</AtomLabel>}>
+      <DropDownKUI summary={<AtomLabel>This is a label</AtomLabel>}>
         <AtomParagraph>Esta es una descripción</AtomParagraph>
-      </AtomDropDown>
+      </DropDownKUI>
 
       <AtomDialog open={tg}>
         <AtomDiv>
-          <AtomSelector list={optionSelector} />
+          <SelectorKUI list={optionSelector} />
 
-          <AtomDropDown summary={<AtomLabel>This is a label</AtomLabel>}>
+          <DropDownKUI summary={<AtomLabel>This is a label</AtomLabel>}>
             <AtomParagraph>Esta es una descripción</AtomParagraph>
-          </AtomDropDown>
+          </DropDownKUI>
 
           <AtomButton
             onClick={() => {

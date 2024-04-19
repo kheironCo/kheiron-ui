@@ -2,9 +2,12 @@
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "extends": "@tsconfig/vite-react/tsconfig.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowImportingTsExtensions": false,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react"
+    "jsx": "react",
   },
   "include": [
     "src",
