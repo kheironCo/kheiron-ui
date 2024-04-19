@@ -15,7 +15,7 @@
     "analyze": "size-limit --why",
     "build": "dts build",
     "build-storybook": "storybook build",
-    "lint": "dts lint",
+    "lint": "eslint",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
@@ -26,6 +26,11 @@
     "hooks": {
       "pre-commit": "dts lint"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.test.js": "pnpm test",
+    "*.{json,css,md}": "prettier --write"
   },
   "prettier": {
     "printWidth": 80,
@@ -68,6 +73,7 @@
     "babel-loader": "^9.1.3",
     "dts-cli": "^2.0.4",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
