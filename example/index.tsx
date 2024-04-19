@@ -11,6 +11,7 @@ import {
   SelectorKUI,
   AtomSummary,
   OptionList,
+  AtomHeading,
 } from '../src';
 import { useState } from 'react';
 
@@ -27,7 +28,7 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
-  const [openDetail, setOpenDetail] = useState(true);
+  const [openDetail] = useState(true);
 
   return (
     <AtomDiv>
@@ -62,34 +63,38 @@ const App = () => {
       >
         Open
       </AtomButton>
+      <label>
+        Choose a browser from this list:{' '}
+        <input list="browsers" name="myBrowser" />
+      </label>
+      <datalist id="browsers">
+        <option value="Chrome">
+          <AtomButton style={{ backgroundColor: 'blue' }}>Boton</AtomButton>
+        </option>
+        <option value="Firefox"></option>
+        <option value="Internet Explorer"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+        <option value="Microsoft Edge"></option>
+      </datalist>
 
-      <AtomDetails open={openDetail}>
-        <AtomSummary
-          onClick={() => {
-            setOpenDetail((old) => !old);
-          }}
-          style={{
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-          }}
-        >
-          <AtomDiv
-            style={{
-              rotate: openDetail ? '90deg' : '0deg',
-              transition: 'all 0.2s ease',
-            }}
-          >
-            ▹
+      <AtomDetails id="details-id">
+        <AtomSummary>
+          <AtomDiv className="KUI-summary-icon-root">
+            <AtomDiv className="KUI-summary-icon KUI-summary-icon-horizontal"></AtomDiv>
+            <AtomDiv className="KUI-summary-icon KUI-summary-icon-vertical"></AtomDiv>
+            {/* <AtomDiv className="KUI-summary-icon">▹</AtomDiv> */}
           </AtomDiv>
-          <AtomLabel style={{ width: '100%' }}>Atom Summary</AtomLabel>
+          <AtomHeading variant="h5" style={{ width: '100%', margin: 0 }}>
+            Atom Summary
+          </AtomHeading>
         </AtomSummary>
         <AtomDiv
-          className={openDetail ? 'content' : ''}
+          className="KUI-details-content"
           style={{
             overflow: 'hidden',
-            // maxHeight: 'auto',
-            backgroundColor: '#d4d4d4',
+            maxHeight: 'auto',
+            transition: 'all 1s ease',
           }}
         >
           <AtomParagraph>
