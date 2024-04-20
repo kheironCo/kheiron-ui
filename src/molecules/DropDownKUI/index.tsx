@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { AtomDetails, AtomSummary } from '../../atom';
+import { AtomDetails, AtomDiv, AtomSummary } from '../../atom';
 
 export type DropDownKUIProps = {
+  icon: React.JSX.Element;
   summary: React.JSX.Element;
   children: React.ReactNode;
 };
 
-export const DropDownKUI = ({ summary, children }: DropDownKUIProps) => {
-  const [toggleDetails, setToggleDetails] = useState(false);
-  return (
-    <AtomDetails open={toggleDetails}>
-      <AtomSummary onClick={() => setToggleDetails((old) => !old)}>
-        {summary}
-      </AtomSummary>
-      {children}
-    </AtomDetails>
-  );
-};
+export const DropDownKUI = ({ icon, summary, children }: DropDownKUIProps) => (
+  <AtomDetails id="details-id">
+    <AtomSummary>
+      <AtomDiv className="KUI-summary-icon-root">{icon}</AtomDiv>
+      {summary}
+    </AtomSummary>
+    {children}
+  </AtomDetails>
+);

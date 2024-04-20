@@ -28,7 +28,6 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
-  const [openDetail] = useState(true);
 
   return (
     <AtomDiv>
