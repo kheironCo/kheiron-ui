@@ -1,0 +1,65 @@
+.KUI-dropdown summary::marker {
+    content: '';
+}
+
+.KUI-dropdown[open] summary::marker {
+    content: '';
+}
+
+.KUI-dropdown {
+    width: auto;
+    max-width: 20rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+.KUI-dropdown[open] {
+    background-color: #f7f7f7;
+}
+
+.KUI-dropdown summary {
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.KUI-dropdown-summary {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.KUI-dropdown-summary-icon {
+    min-width: 1rem;
+    min-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    transition: all 0.2s ease-out;
+}
+
+.KUI-dropdown[open] .KUI-dropdown-summary-icon {
+    transform: rotate(0deg);
+}
+
+.KUI-dropdown-content {
+    max-height: 1px;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    opacity: 0;
+    background-color: blanchedalmond;
+    transition: all 0.2s;
+}
+
+.KUI-dropdown[open] .KUI-dropdown-content {
+    max-height: 100vh;
+    opacity: 1;
+    transition: all 1s ease-out;
+}

@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AtomDetails, AtomDiv, AtomSummary } from '../../atom';
+import './styles.css';
 
 export type DropDownKUIProps = {
-  icon: React.JSX.Element;
+  icon?: React.JSX.Element;
   summary: React.JSX.Element;
   children: React.ReactNode;
 };
 
 export const DropDownKUI = ({ icon, summary, children }: DropDownKUIProps) => (
-  <AtomDetails id="details-id">
-    <AtomSummary>
-      <AtomDiv className="KUI-summary-icon-root">{icon}</AtomDiv>
+  <AtomDetails className="KUI-dropdown">
+    <AtomSummary className="KUI-dropdown-summary">
+      <AtomDiv className="KUI-dropdown-summary-icon">{icon || '▼'}</AtomDiv>
       {summary}
     </AtomSummary>
-    {children}
+    <AtomDiv className="KUI-dropdown-content">{children}</AtomDiv>
   </AtomDetails>
 );
