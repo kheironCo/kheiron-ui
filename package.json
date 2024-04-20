@@ -15,6 +15,7 @@
     "analyze": "size-limit --why",
     "build": "dts build",
     "build-storybook": "storybook build",
+    "husky": "husky",
     "lint": "eslint ./src",
     "prepare": "dts build",
     "size": "size-limit",

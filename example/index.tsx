@@ -33,8 +33,42 @@ const App = () => {
     <AtomDiv>
       <SelectorKUI list={optionSelector} />
 
-      <DropDownKUI summary={<AtomLabel>This is a label</AtomLabel>}>
+      <DropDownKUI
+        summary={
+          <AtomHeading
+            variant="h4"
+            style={{ margin: '0', padding: '0.25rem 0.5rem' }}
+          >
+            Titulo del Drop-Down
+          </AtomHeading>
+        }
+      >
         <AtomParagraph>Esta es una descripción</AtomParagraph>
+
+        <DropDownKUI
+          summary={
+            <AtomHeading
+              variant="h4"
+              style={{ margin: '0', padding: '0.25rem 0.5rem' }}
+            >
+              Titulo del Drop-Down
+            </AtomHeading>
+          }
+        >
+          <AtomParagraph>Esta es una descripción</AtomParagraph>
+          <DropDownKUI
+            summary={
+              <AtomHeading
+                variant="h4"
+                style={{ margin: '0', padding: '0.25rem 0.5rem' }}
+              >
+                Titulo del Drop-Down
+              </AtomHeading>
+            }
+          >
+            <AtomParagraph>Esta es una descripción</AtomParagraph>
+          </DropDownKUI>
+        </DropDownKUI>
       </DropDownKUI>
 
       <AtomDialog open={tg}>

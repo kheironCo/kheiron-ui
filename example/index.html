@@ -9,89 +9,13 @@
 </head>
 
 <body>
+  <style>
+    * {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
   <div id="root"></div>
   <script type="module" src="./index.tsx"></script>
 </body>
-<style>
-  details summary::marker {
-    content: '';
-    /* Marca inicial, un triángulo hacia la derecha */
-  }
-
-  details[open] summary::marker {
-    content: '';
-    /* Cambia el contenido del marcador*/
-  }
-
-  details {
-    width: 20rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-width: 400px;
-    transition: background-color 0.3s ease;
-  }
-
-  /* Cambiando el color de fondo cuando el componente está abierto */
-  details[open] {
-    background-color: #f7f7f7;
-    /* Color de fondo cuando está abierto */
-  }
-
-  /* Estilizando el título (summary) */
-  details summary {
-    font-weight: bold;
-    padding: 5px;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  .KUI-summary-container {
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .KUI-summary-icon-root {
-    width: 1rem;
-    height: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .KUI-summary-icon {
-    width: 0.75rem;
-    height: 0.125rem;
-    text-align: center;
-    transition: all 0.125s ease;
-    position: absolute;
-    background-color: #4d4d4d;
-  }
-
-  .KUI-summary-icon-horizontal {
-    transform: rotate(0deg);
-  }
-
-  .KUI-summary-icon-vertical {
-    transform: rotate(90deg);
-  }
-
-  details[open] .KUI-summary-icon-vertical {
-    transform: rotate(180deg);
-  }
-
-  details .KUI-details-content {
-    display: none;
-  }
-
-  details[open] .KUI-details-content {
-    display: block;
-    max-height: min-content;
-    overflow: hidden;
-  }
-</style>
 
 </html>
