@@ -1,6 +1,11 @@
 import React from 'react';
+import {
+  Dropdown,
+  DropdownSummary,
+  DropdownSummaryIcon,
+  DropdownContent,
+} from './styled';
 import { AtomDetails, AtomDiv, AtomSummary } from '../../atom';
-import './styles.css';
 
 export type DropDownKUIProps = {
   icon?: React.JSX.Element;
@@ -9,11 +14,15 @@ export type DropDownKUIProps = {
 };
 
 export const DropDownKUI = ({ icon, summary, children }: DropDownKUIProps) => (
-  <AtomDetails className="KUI-dropdown">
-    <AtomSummary className="KUI-dropdown-summary">
-      <AtomDiv className="KUI-dropdown-summary-icon">{icon || '▼'}</AtomDiv>
+  <AtomDetails css={Dropdown} className="KUI-dropdown">
+    <AtomSummary css={DropdownSummary} className="KUI-dropdown-summary">
+      <AtomDiv css={DropdownSummaryIcon} className="KUI-dropdown-summary-icon">
+        {icon || '▼'}
+      </AtomDiv>
       {summary}
     </AtomSummary>
-    <AtomDiv className="KUI-dropdown-content">{children}</AtomDiv>
+    <AtomDiv css={DropdownContent} className="KUI-dropdown-content">
+      {children}
+    </AtomDiv>
   </AtomDetails>
 );

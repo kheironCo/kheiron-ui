@@ -7,7 +7,8 @@
     "esModuleInterop": true,
     "allowImportingTsExtensions": false,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react"
   },
   "include": [
     "src",

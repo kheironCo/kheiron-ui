@@ -9,18 +9,22 @@
     "build": "vite build"
   },
   "dependencies": {
-    "react-app-polyfill": "^3.0.0"
+    "react-app-polyfill": "^3.0.0",
+    "styled-components": "^6.1.8"
   },
   "alias": {
     "react": "../node_modules/react",
     "react-dom": "../node_modules/react-dom/profiling",
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
   },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "devDependencies": {
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
-    "vite": "latest",
     "@vitejs/plugin-react": "latest",
-    "typescript": "^4"
+    "typescript": "^4",
+    "vite": "latest"
   }
 }

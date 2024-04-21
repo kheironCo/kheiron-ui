@@ -1,25 +1,12 @@
-.KUI-dropdown summary::marker {
+.KUI-dropdown>summary::marker {
     content: '';
 }
 
-.KUI-dropdown[open] summary::marker {
+.KUI-dropdown[open]>summary::marker {
     content: '';
 }
 
-.KUI-dropdown {
-    width: auto;
-    max-width: 20rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-width: 400px;
-    transition: background-color 0.3s ease;
-}
-
-.KUI-dropdown[open] {
-    background-color: #f7f7f7;
-}
-
-.KUI-dropdown summary {
+.KUI-dropdown>.KUI-dropdown-summary {
     font-weight: bold;
     padding: 5px;
     cursor: pointer;
@@ -45,7 +32,7 @@
     transition: all 0.2s ease-out;
 }
 
-.KUI-dropdown[open] .KUI-dropdown-summary-icon {
+.KUI-dropdown[open]>.KUI-dropdown-summary>.KUI-dropdown-summary-icon {
     transform: rotate(0deg);
 }
 
@@ -58,7 +45,7 @@
     transition: all 0.2s;
 }
 
-.KUI-dropdown[open] .KUI-dropdown-content {
+.KUI-dropdown[open]>.KUI-dropdown-content {
     max-height: 100vh;
     opacity: 1;
     transition: all 1s ease-out;
