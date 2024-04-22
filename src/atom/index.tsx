@@ -1,4 +1,4 @@
-export * from './AtomButton';
+export * from './ButtonKUI';
 export * from './AtomDetails';
 export * from './AtomDialog';
 export * from './AtomDiv';

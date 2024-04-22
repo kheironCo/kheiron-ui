@@ -1,5 +1,6 @@
+import React from 'react';
 import ModalKUI, { ModalKUIProps } from '.';
-import { AtomButton } from '../../';
+import { ButtonKUI } from '../../';
 
 export default {
   title: 'Organism/Modal',
@@ -9,6 +10,6 @@ export default {
 export const Default: { args: ModalKUIProps } = {
   args: {
     open: true,
-    children: <AtomButton variant="primary">Close</AtomButton>,
+    children: <ButtonKUI>Close</ButtonKUI>,
   },
 };

@@ -32,6 +32,11 @@ export default [
         }
       ],
       "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
+      'react/jsx-filename-extension': [
+        'error',
+        { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
+      ],
     }
   },
   pluginJs.configs.recommended,
