@@ -1,16 +1,23 @@
-module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+import { StorybookConfig } from '@storybook/react-vite';
+
+const config: StorybookConfig = {
+  stories: [
+    '../stories/**/*.stories.@(ts|tsx|js|jsx)',
+    '../src/**/*.stories.@(ts|tsx|js|jsx)',
+  ],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
-    check: true // type-check stories during Storybook build
+    check: true, // type-check stories during Storybook build
   },
 
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };
+
+export default config;

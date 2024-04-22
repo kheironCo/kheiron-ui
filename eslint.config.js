@@ -23,6 +23,15 @@ export default [
         // It will default to "latest" and warn if missing, and to "detect" in the future
         flowVersion: "0.53" // Flow version
       },
+    },
+    rules: {
+      "react/no-unknown-property": [
+        "error",
+        {
+          "ignore": ["css"]
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
     }
   },
   pluginJs.configs.recommended,

@@ -4,7 +4,7 @@ import {
   DropdownSummary,
   DropdownSummaryIcon,
   DropdownContent,
-} from './styled';
+} from './styles';
 import { AtomDetails, AtomDiv, AtomSummary } from '../../atom';
 
 export type DropDownKUIProps = {
