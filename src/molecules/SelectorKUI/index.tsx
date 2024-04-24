@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtomOptGroup, AtomOption, AtomSelect } from '../../atom';
+import { AtomOptGroup, AtomOption, AtomSelect } from '../../element';
 
 type OptionType = {
   value: string;

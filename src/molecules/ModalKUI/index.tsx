@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtomDialog, AtomDiv } from '../../atom';
+import { AtomDialog, AtomDiv } from '../../element';
 import { css } from '@emotion/react';
 import ROOT from '../../common/root';
 

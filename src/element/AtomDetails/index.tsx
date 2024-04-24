@@ -2,7 +2,7 @@ import React from 'react';
 
 export type AtomDetailsProps = React.DetailsHTMLAttributes<HTMLDetailsElement>;
 
-export interface AtomDetailsElement extends React.JSX.Element {}
+export interface DetailsJSXElement extends React.JSX.Element {}
 
 export const AtomDetails = ({
   children,
@@ -10,10 +10,7 @@ export const AtomDetails = ({
   ...rest
 }: AtomDetailsProps) =>
   (
-    <details
-      className={`KUI-atom-element-details ${className || ''}`}
-      {...rest}
-    >
+    <details className={`KUI-element-details ${className || ''}`} {...rest}>
       {children}
     </details>
-  ) as AtomDetailsElement;
+  ) as DetailsJSXElement;

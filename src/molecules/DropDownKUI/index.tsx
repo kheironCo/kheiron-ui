@@ -5,7 +5,7 @@ import {
   DropdownSummaryIcon,
   DropdownContent,
 } from './styles';
-import { AtomDetails, AtomDiv, AtomSummary } from '../../atom';
+import { AtomDetails, AtomDiv, AtomSummary } from '../../element';
 
 export type DropDownKUIProps = {
   icon?: React.JSX.Element;

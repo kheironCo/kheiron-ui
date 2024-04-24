@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { Button } from '../../element';
+import { AtomButton } from '../../element';
 import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonList, GeneralButtonStyle } from './styles';
 
@@ -23,12 +23,12 @@ export const ButtonKUI = ({
   const ButtonStyle =
     ButtonPalleteStyle[(variant as ButtonVariant) || 'filled'];
   return (
-    <Button
+    <AtomButton
       css={css(GeneralButtonStyle, ButtonStyle)}
       className={`KUI-button ${className || ''}`}
       {...rest}
     >
       {children}
-    </Button>
+    </AtomButton>
   );
 };
