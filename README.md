@@ -14,12 +14,13 @@ pnpm install
 
 ### **Storybook**
 
-Run proyect with storybook <br/>
-After open the documentation in [http://localhost:6006](http://localhost:6006)
+Run proyect with storybook, usign this command:
 
 ```bash
 pnpm storybook
 ```
+
+After open the documentation in [http://localhost:6006](http://localhost:6006)
 
 ## Dependecies
 
