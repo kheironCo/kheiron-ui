@@ -12,6 +12,8 @@ import {
   AtomSummary,
   OptionList,
   AtomHeading,
+  AtomListItem,
+  AtomList,
 } from '../src';
 import { useState } from 'react';
 import {InputFieldKUI} from "../src/molecules/InputFieldKUI"
@@ -41,6 +43,14 @@ const App = () => {
     <AtomDiv>
     
     <InputFieldKUI label='Nombre' value={inputValue} handleChange={handleChange}/>
+
+    <AtomList>
+    <AtomListItem >lista</AtomListItem>
+    <AtomListItem >lista</AtomListItem>
+    <AtomListItem >lista</AtomListItem>
+    </AtomList>
+
+
 
 
     <br /><br /><hr />
