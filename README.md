@@ -15,7 +15,7 @@
 
 ### **Setting format**
 
-Go to de Settings
+Go to Settings
 
 > File > Preferences > Settings
 
