@@ -12,8 +12,11 @@ import {
   AtomSummary,
   OptionList,
   AtomHeading,
+  AtomListItem,
+  AtomList,
 } from '../src';
 import { useState } from 'react';
+import {InputFieldKUI} from "../src/molecules/InputFieldKUI"
 
 const optionSelector: OptionList = [
   { value: 'opt1', option: 'Option 1' },
@@ -28,9 +31,30 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
+  const [inputValue, setInputValue] = useState<string>('');
 
+  const handleChange = (event:any): void => {
+    setInputValue(event.target.value);
+  };
   return (
+
+
+
     <AtomDiv>
+    
+    <InputFieldKUI label='Nombre' value={inputValue} handleChange={handleChange}/>
+
+    <AtomList>
+    <AtomListItem >lista</AtomListItem>
+    <AtomListItem >lista</AtomListItem>
+    <AtomListItem >lista</AtomListItem>
+    </AtomList>
+
+
+
+
+    <br /><br /><hr />
+    
       <SelectorKUI list={optionSelector} />
 
       <DropDownKUI
