@@ -2,7 +2,7 @@
 import React from 'react';
 import { ChangeEvent } from 'react';
 import { AtomDiv, AtomLabel, AtomInput } from '../../element';
-import { css } from '@emotion/react';
+import { css }  from '@emotion/react';
 import { divStyles, input, labelParentDiv } from './styles';
 
 export type InputFieldKUIProps = {

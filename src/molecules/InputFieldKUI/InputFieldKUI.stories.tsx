@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+
 import { InputFieldKUI } from '../InputFieldKUI';
 
 
@@ -13,11 +13,7 @@ export default {
       label: "Nombre",
       value: estado,
       placeHolder: "",
-      handleChange: (e:ChangeEvent<HTMLInputElement>) =>{
-        const [estado, setState] = useState("");
-        setState(e.target.value)
-      } 
-
+      handleChange: ""
   }
 
 }
