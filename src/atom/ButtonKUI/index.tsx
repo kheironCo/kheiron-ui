@@ -11,13 +11,13 @@ export type ButtonKUIProps = {
   children: string;
 };
 
-export const ButtonKUI = ({
+export const ButtonKUI: React.FC<ButtonKUIProps> = ({
   className,
   children,
   variant = 'filled',
   palette = 'primary',
   ...rest
-}: ButtonKUIProps) => {
+}) => {
   const ButtonPalleteStyle =
     ButtonList[(palette as ButtonPalette) || 'primary'];
   const ButtonStyle =
