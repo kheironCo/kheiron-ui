@@ -5,13 +5,11 @@ import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 
 
 export default [
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReactConfig,
   {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      },
-    },
     settings: {
       react: {
         createClass: "createReactClass", // Regex for Component Factory to use,
@@ -38,8 +36,5 @@ export default [
         { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
       ],
     }
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReactConfig,
+  }
 ];
