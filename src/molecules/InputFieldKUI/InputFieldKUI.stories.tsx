@@ -1,13 +1,19 @@
+
 import { InputFieldKUI } from '../InputFieldKUI';
+
 
 
 export default {
         component: InputFieldKUI,
   };
   
-export const Default = {
+  let estado;
+  export const Example = {
     args: {
-      children: 'Descripción del InputField',
-      value: ""
-    },
-  };
+      label: "Nombre",
+      value: estado,
+      placeHolder: "",
+      handleChange: "",
+  }
+
+}
