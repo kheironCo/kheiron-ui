@@ -1,16 +1,16 @@
 import React from 'react';
 
 import {
-  AtomAnchor,
+
   AtomDiv,
   AtomList,
-  AtomListItem,
+
   AtomNav,
 } from '../../element';
 
-import { css } from '@emotion/react';
 import { ItemType } from './type';
 import { AtomDivStyle, AtomListItemStyle, AtomListStyle } from './styles';
+import AtomListComponent from './AtomListComponent';
 
 export type NabvarProps = {
   leftElement?: React.JSX.Element;
@@ -30,25 +30,11 @@ export const NavBarKUI = ({
         <AtomList className='KUI-navbar-ul' css={AtomListStyle}>
           {
           Array.isArray(listItem) ? (
-            listItem?.map((elemento) => (
-              <AtomListItem className='KUI-navbar-list' css={AtomListItemStyle}>
-                <AtomAnchor
-                  target={elemento.target ? '_blank' : ''}
-                  href={elemento.href}
-                >
-                  {elemento.value}
-                </AtomAnchor>
-              </AtomListItem>
+            listItem?.map((elemento, i:any) => (
+             <AtomListComponent key={ `KUI-navbar-item-${ i }` } elemento={elemento} AtomListItemStyle={AtomListItemStyle}/>
             ))
           ) : (
-            <AtomListItem className='KUI-navbar-list' css={AtomListItemStyle}>
-              <AtomAnchor
-                target={listItem?.target ? '_blank' : ''}
-                href={listItem?.href}
-              >
-                {listItem?.value}
-              </AtomAnchor>
-            </AtomListItem>
+            <AtomListComponent elemento={listItem}/>
           )
           }
         </AtomList>
