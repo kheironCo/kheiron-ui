@@ -13,6 +13,7 @@ export * from './AtomMeter';
 export * from './AtomOptGroup';
 export * from './AtomOption';
 export * from './AtomParagraph';
+export * from './AtomSearch';
 export * from './AtomSelect';
 export * from './AtomSummary';
 export * from './AtomTextArea';
