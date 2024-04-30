@@ -12,8 +12,6 @@ export default {
     args: {
       label: "Nombre",
       value: estado,
-      placeHolder: "",
-      handleChange: "",
   }
 
 }
