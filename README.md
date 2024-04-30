@@ -22,6 +22,26 @@ pnpm storybook
 
 After open the documentation in [http://localhost:6006](http://localhost:6006)
 
+### **ESLint**
+
+```
+pnpm lint
+```
+
+### **Formater**
+
+```
+pnpm prettier
+```
+
+## Recommendation
+
+_Go to the setting_
+
+> File > Preferences > Settings
+
+Search _"Format On Save"_ and checked the editor option.
+
 ## Dependecies
 
 ### Main dependencies
