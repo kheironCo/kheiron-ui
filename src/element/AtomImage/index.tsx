@@ -7,6 +7,4 @@ type AtomImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 export interface AtomImageElement extends React.JSX.Element {}
 
 export const AtomImage = ({ className, ...rest }: AtomImageProps) =>
-  (
-    <img className={`KUI-atom-element-image ${className || ''}`} {...rest} />
-  ) as AtomImageElement;
+  (<img className={`KUI-atom-element-image ${className || ''}`} {...rest} />) as AtomImageElement;
