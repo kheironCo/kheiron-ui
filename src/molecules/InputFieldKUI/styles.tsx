@@ -22,7 +22,3 @@ export const  input = css`
     border-bottom: solid #33c4b5 2px;
   }
 `
- 
-  
-
-// };
