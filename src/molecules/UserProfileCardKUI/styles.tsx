@@ -1,10 +1,18 @@
 import { css } from '@emotion/react';
 
+const blinkerFont = css`
+  @import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+`;
+
+const quicksandFont = css`
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+`;
+
 export const UserProfileCardRoot = css`
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   heigth: auto;
-  width: 30rem;
+  width: auto;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 0.8rem;
@@ -12,10 +20,15 @@ export const UserProfileCardRoot = css`
   align-items: center;
 `;
 export const UserProfileCardImage = css`
-  height: 10rem;
+  height: 7rem;
   border-radius: 9999px;
 `;
 export const UserProfileCardHead = css`
-  font-family: Blinker;
+  ${blinkerFont};
+  font-family: 'Blinker', sans-serif;
 `;
-export const UserProfileCardBody = css``;
+
+export const UserProfileCardBody = css`
+  ${quicksandFont};
+  font-family: 'Quicksand', sans-serif;
+`;
