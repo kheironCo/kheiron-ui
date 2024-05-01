@@ -17,27 +17,12 @@
     "build-storybook": "storybook build",
     "husky": "husky",
     "lint": "eslint ./src",
+    "prettier": "prettier --write .",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
     "test": "dts test --passWithNoTests"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix",
-    "*.test.js": "pnpm test",
-    "*.{json,css,md}": "prettier --write"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "jest": {
     "testEnvironment": "jsdom"

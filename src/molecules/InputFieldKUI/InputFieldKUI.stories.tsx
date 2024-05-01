@@ -1,7 +1,4 @@
-
 import { InputFieldKUI } from '../InputFieldKUI';
-
-
 
 export default {
         component: InputFieldKUI,
@@ -13,5 +10,5 @@ export default {
       label: "Nombre",
       value: estado,
   }
-
 }
+

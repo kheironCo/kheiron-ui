@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Dropdown,
-  DropdownSummary,
-  DropdownSummaryIcon,
-  DropdownContent,
-} from './styles';
+import { Dropdown, DropdownSummary, DropdownSummaryIcon, DropdownContent } from './styles';
 import { AtomDetails, AtomDiv, AtomSummary } from '../../element';
 
 export type DropDownKUIProps = {
