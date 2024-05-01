@@ -4,7 +4,13 @@ import {
   UserProfileCardHead,
   UserProfileCardBody,
 } from './styles';
-import { AtomDiv, AtomHeading, AtomImage, AtomParagraph } from '../../element';
+import {
+  AtomDiv,
+  AtomHeading,
+  AtomImage,
+  AtomParagraph,
+  AtomSection,
+} from '../../element';
 
 export type UserProfileCardKUIProps = {
   image?: string;
@@ -18,15 +24,18 @@ export const UserProfileCardKUI = ({
   body,
 }: UserProfileCardKUIProps) => (
   <AtomDiv>
-    <section css={UserProfileCardRoot} className="KUI-user-profile-card-root">
-      <div>
+    <AtomSection
+      css={UserProfileCardRoot}
+      className="KUI-user-profile-card-root"
+    >
+      <AtomDiv>
         <AtomImage
           src={image}
           css={UserProfileCardImage}
           className="KUI-user-profile-card-image"
         />
-      </div>
-      <div>
+      </AtomDiv>
+      <AtomDiv>
         <AtomHeading
           variant="h4"
           css={UserProfileCardHead}
@@ -40,7 +49,7 @@ export const UserProfileCardKUI = ({
         >
           {body}
         </AtomParagraph>
-      </div>
-    </section>
+      </AtomDiv>
+    </AtomSection>
   </AtomDiv>
 );
