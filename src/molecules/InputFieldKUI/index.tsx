@@ -8,7 +8,7 @@ import { divStyles, input, labelParentDiv } from './styles';
 export type InputFieldKUIProps = {
     value?: string;
     label?: string;
-    placeHolder: string;
+    placeHolder?: string;
     handleChange?: (e: ChangeEvent<HTMLInputElement>)=> void;
   };
 

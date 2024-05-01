@@ -1,18 +1,20 @@
 
+import { css } from '@emotion/react';
 import { AtomAnchor, AtomListItem } from '../../element'
+import { ItemType } from './type';
+import { AtomListItemStyle } from './styles';
 
 
-
-const AtomListComponent = ({elemento, AtomListItemStyle}: any) => {
+const AtomListComponent = ({value, href, target}: ItemType) => {
 
     
   return (
-    <AtomListItem className='KUI-navbar-list'  css={AtomListItemStyle}>
+    <AtomListItem className='KUI-navbar-list'  css={css(AtomListItemStyle)}>
     <AtomAnchor
-      target={elemento.target ? '_blank' : ''}
-      href={elemento.href}
+      target={target ? '_blank' : ''}
+      href={href}
     >
-      {elemento.value}
+      {value}
     </AtomAnchor>
   </AtomListItem>
   )
