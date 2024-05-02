@@ -3,11 +3,11 @@ import { AvatarRoot, AvatarAlt } from './styles';
 import { useState, useEffect } from 'react';
 
 export type AvatarKUIProps = {
-  imgSrc?: string;
-  altText?: string;
+  imgSrc: string;
+  altText: string;
 };
 
-export const AvatarKUI = ({ imgSrc, altText }: AvatarKUIProps) => {
+export const AvatarKUI = ({ imgSrc = '', altText = '' }: AvatarKUIProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
