@@ -19,3 +19,4 @@ export * from './AtomParagraph';
 export * from './AtomSelect';
 export * from './AtomSummary';
 export * from './AtomTextArea';
+export * from './AtomSection';
