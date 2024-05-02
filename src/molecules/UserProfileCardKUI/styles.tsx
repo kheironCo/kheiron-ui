@@ -12,7 +12,7 @@ export const UserProfileCardRoot = css`
   display: flex;
   gap: 1rem;
   heigth: auto;
-  width: auto;
+  width: fit-content;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 0.8rem;

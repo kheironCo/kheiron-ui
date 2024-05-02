@@ -1,25 +1,31 @@
 import { AtomDiv, AtomImage } from '../../element';
 import { AvatarRoot, AvatarAlt } from './styles';
+import { useState, useEffect } from 'react';
 
 export type AvatarKUIProps = {
   imgSrc?: string;
-  altText: string;
+  altText?: string;
 };
 
 export const AvatarKUI = ({ imgSrc, altText }: AvatarKUIProps) => {
-  const userChar = altText.charAt(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-  const renderContent = () => {
-    if (imgSrc) {
-      return <AtomImage css={AvatarRoot} className="KUI-avatar-root" src={imgSrc} alt={altText} />;
-    } else {
-      return (
+  useEffect(() => {
+    const img = new Image();
+    img.src = imgSrc;
+    img.onload = () => setImageLoaded(true);
+    img.onerror = () => setImageLoaded(false);
+  }, [imgSrc]);
+
+  return (
+    <>
+      {imageLoaded ? (
+        <AtomImage css={AvatarRoot} className="KUI-avatar-root" src={imgSrc} alt={altText} />
+      ) : (
         <AtomDiv css={AvatarAlt} className="KUI-avatar-alt">
-          {userChar}
+          {altText.charAt(0)}
         </AtomDiv>
-      );
-    }
-  };
-
-  return <AtomDiv>{renderContent()}</AtomDiv>;
+      )}
+    </>
+  );
 };
