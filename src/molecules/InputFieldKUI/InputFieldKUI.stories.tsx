@@ -1,15 +1,14 @@
 import { InputFieldKUI } from '../InputFieldKUI';
 
 export default {
-  component: InputFieldKUI,
-};
+        component: InputFieldKUI,
+  };
+  
+  let estado;
+  export const Example = {
+    args: {
+      label: "Nombre",
+      value: estado,
+  }
+}
 
-let estado;
-export const Example = {
-  args: {
-    label: 'Nombre',
-    value: estado,
-    placeHolder: '',
-    handleChange: '',
-  },
-};
