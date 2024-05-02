@@ -1,7 +1,6 @@
 import React from 'react';
 
-interface AtomButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface AtomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;
 }
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { AtomButton } from '../../element';
 import { ButtonPalette, ButtonVariant } from './type';
@@ -11,17 +10,15 @@ export type ButtonKUIProps = {
   children: string;
 };
 
-export const ButtonKUI: React.FC<ButtonKUIProps> = ({
+export const ButtonKUI = ({
   className,
   children,
   variant = 'filled',
   palette = 'primary',
   ...rest
-}) => {
-  const ButtonPalleteStyle =
-    ButtonList[(palette as ButtonPalette) || 'primary'];
-  const ButtonStyle =
-    ButtonPalleteStyle[(variant as ButtonVariant) || 'filled'];
+}: ButtonKUIProps) => {
+  const ButtonPalleteStyle = ButtonList[(palette as ButtonPalette) || 'primary'];
+  const ButtonStyle = ButtonPalleteStyle[(variant as ButtonVariant) || 'filled'];
   return (
     <AtomButton
       css={css(GeneralButtonStyle, ButtonStyle)}
