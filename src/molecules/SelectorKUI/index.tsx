@@ -35,7 +35,7 @@ export const SelectorKUI = ({ list }: SelectorKUIProps) => (
         <OptGroupElement key={item.optGroup + i} {...item} />
       ) : (
         <OptionElement key={item.value + i} {...item} />
-      )
+      ),
     )}
   </AtomSelect>
 );

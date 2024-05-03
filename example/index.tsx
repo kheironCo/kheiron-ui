@@ -12,8 +12,11 @@ import {
   AtomSummary,
   OptionList,
   AtomHeading,
+  AtomListItem,
+  AtomList,
 } from '../src';
 import { useState } from 'react';
+import { InputFieldKUI } from '../src/molecules/InputFieldKUI';
 
 const optionSelector: OptionList = [
   { value: 'opt1', option: 'Option 1' },
@@ -28,17 +31,29 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
+  const [inputValue, setInputValue] = useState<string>('');
 
+  const handleChange = (event: any): void => {
+    setInputValue(event.target.value);
+  };
   return (
     <AtomDiv>
+      <InputFieldKUI label="Nombre" value={inputValue} handleChange={handleChange} />
+
+    <AtomList>
+    <AtomListItem >lista</AtomListItem>
+    <AtomListItem >lista</AtomListItem>
+    <AtomListItem >lista</AtomListItem>
+    </AtomList>
+
+
+
+
       <SelectorKUI list={optionSelector} />
 
       <DropDownKUI
         summary={
-          <AtomHeading
-            variant="h4"
-            style={{ margin: '0', padding: '0.25rem 0.5rem' }}
-          >
+          <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
             Titulo del Drop-Down
           </AtomHeading>
         }
@@ -47,10 +62,7 @@ const App = () => {
 
         <DropDownKUI
           summary={
-            <AtomHeading
-              variant="h4"
-              style={{ margin: '0', padding: '0.25rem 0.5rem' }}
-            >
+            <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
               Titulo del Drop-Down
             </AtomHeading>
           }
@@ -58,10 +70,7 @@ const App = () => {
           <AtomParagraph>Esta es una descripción</AtomParagraph>
           <DropDownKUI
             summary={
-              <AtomHeading
-                variant="h4"
-                style={{ margin: '0', padding: '0.25rem 0.5rem' }}
-              >
+              <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
                 Titulo del Drop-Down
               </AtomHeading>
             }
@@ -97,8 +106,7 @@ const App = () => {
         Open
       </AtomButton>
       <label>
-        Choose a browser from this list:{' '}
-        <input list="browsers" name="myBrowser" />
+        Choose a browser from this list: <input list="browsers" name="myBrowser" />
       </label>
       <datalist id="browsers">
         <option value="Chrome">
@@ -130,9 +138,7 @@ const App = () => {
             transition: 'all 1s ease',
           }}
         >
-          <AtomParagraph>
-            Este es un parafo dentro de una etiqueta Details
-          </AtomParagraph>
+          <AtomParagraph>Este es un parafo dentro de una etiqueta Details</AtomParagraph>
         </AtomDiv>
       </AtomDetails>
     </AtomDiv>
