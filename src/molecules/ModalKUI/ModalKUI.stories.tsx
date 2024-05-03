@@ -1,4 +1,3 @@
-import React from 'react';
 import ModalKUI, { ModalKUIProps } from '.';
 import { ButtonKUI } from '../../';
 
