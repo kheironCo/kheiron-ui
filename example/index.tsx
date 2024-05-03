@@ -40,14 +40,11 @@ const App = () => {
     <AtomDiv>
       <InputFieldKUI label="Nombre" value={inputValue} handleChange={handleChange} />
 
-    <AtomList>
-    <AtomListItem >lista</AtomListItem>
-    <AtomListItem >lista</AtomListItem>
-    <AtomListItem >lista</AtomListItem>
-    </AtomList>
-
-
-
+      <AtomList>
+        <AtomListItem>lista</AtomListItem>
+        <AtomListItem>lista</AtomListItem>
+        <AtomListItem>lista</AtomListItem>
+      </AtomList>
 
       <SelectorKUI list={optionSelector} />
 

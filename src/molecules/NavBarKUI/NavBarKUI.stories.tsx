@@ -1,20 +1,24 @@
-import { NavBarKUI } from "./index";
+import { NavBarKUI } from './index';
 
 export default {
-        component: NavBarKUI,
-  };
-  
+  component: NavBarKUI,
+};
+
 export const Example = {
-    args: {
-        leftElement: <strong>Izquierda</strong>,
-        listItem: {value:"lista1", href: "direccion", target: true},
-        rightElement: <i>Izquierda</i>,
-    },
-  };
+  args: {
+    leftElement: <strong>Izquierda</strong>,
+    listItem: { value: 'lista1', href: 'direccion', target: true },
+    rightElement: <i>Izquierda</i>,
+  },
+};
 export const Default = {
-    args: {
-        leftElement: <strong>Izquierda</strong>,
-        listItem: [{value:"lista1", href: "direccion", target: true},{value:"lista2", href: "direccion", target: true}, {value:"lista3", href: "direccion", target: true}],
-        rightElement: <i>Izquierda</i>,
-    },
-  };
+  args: {
+    leftElement: <strong>Izquierda</strong>,
+    listItem: [
+      { value: 'lista1', href: 'direccion', target: true },
+      { value: 'lista2', href: 'direccion', target: true },
+      { value: 'lista3', href: 'direccion', target: true },
+    ],
+    rightElement: <i>Izquierda</i>,
+  },
+};
