@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 import ModalKUI, { ModalKUIProps } from '.';
 import { ButtonKUI } from '../../';
 
