@@ -1,5 +1,5 @@
 export type ItemType = {
-    value: string,
+    value: string | undefined,
     href?: string,
     target?: boolean,
 }

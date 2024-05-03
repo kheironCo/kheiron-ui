@@ -9,12 +9,12 @@ import {
 } from '../../element';
 
 import { ItemType } from './type';
-import { AtomDivStyle, AtomListItemStyle, AtomListStyle } from './styles';
+import { AtomDivStyle, AtomListStyle } from './styles';
 import AtomListComponent from './AtomListComponent';
 
-export type NabvarProps = {
+export type NavBarProps = {
   leftElement?: React.JSX.Element;
-  listItem?: ItemType[] | ItemType;
+  listItem: ItemType[] | ItemType ;
   rightElement?: React.JSX.Element;
 };
 
@@ -22,7 +22,7 @@ export const NavBarKUI = ({
   leftElement,
   listItem,
   rightElement,
-}: NabvarProps) => {
+}: NavBarProps) => {
   return (
     <AtomNav className='KUI-navbar-root'>
       <AtomDiv css={AtomDivStyle} className='KUI-navbar-container'>
@@ -30,11 +30,11 @@ export const NavBarKUI = ({
         <AtomList className='KUI-navbar-ul' css={AtomListStyle}>
           {
           Array.isArray(listItem) ? (
-            listItem?.map((elemento, i:any) => (
-             <AtomListComponent key={ `KUI-navbar-item-${ i }` } elemento={elemento} AtomListItemStyle={AtomListItemStyle}/>
+            listItem.map((elemento:ItemType, i:number) => (
+             <AtomListComponent key={ `KUI-navbar-item-${ i }` } {...elemento}/>
             ))
           ) : (
-            <AtomListComponent elemento={listItem}/>
+              <AtomListComponent {...listItem} />
           )
           }
         </AtomList>
