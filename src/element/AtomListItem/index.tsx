@@ -1,7 +1,7 @@
 import React from 'react';
 
-interface AtomListItemProps{
-  children?:  React.JSX.Element | string;
+interface AtomListItemProps {
+  children?: React.JSX.Element | string;
   className?: string;
 }
 export interface AtomListItemElement extends React.JSX.Element {}
