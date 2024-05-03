@@ -1,9 +1,4 @@
-import {
-  UserProfileCardRoot,
-  UserProfileCardImage,
-  UserProfileCardHead,
-  UserProfileCardBody,
-} from './styles';
+import { UserProfileCardRoot, UserProfileCardHead, UserProfileCardBody } from './styles';
 import { AtomDiv, AtomHeading, AtomParagraph, AtomSection } from '../../element';
 import { AvatarKUI } from '../../atom';
 
