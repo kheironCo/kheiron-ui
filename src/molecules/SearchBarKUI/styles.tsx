@@ -1,5 +1,4 @@
-import { css } from "@emotion/react";
-
+import { css } from '@emotion/react';
 
 export const button = css`
   background-color: #10b2cc;
@@ -11,9 +10,8 @@ export const button = css`
   cursor: pointer;
 `;
 export const input = css`
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #0c8ca0;
-    padding: 3px 6px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #0c8ca0;
+  padding: 3px 6px;
 `;
-

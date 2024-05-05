@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AtomNavProps{
+interface AtomNavProps {
   children?: React.JSX.Element;
   className?: string;
 }
