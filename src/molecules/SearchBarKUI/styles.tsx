@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
 
-export const boton = css`
+export const button = css`
   background-color: #10b2cc;
   color: white;
   border: none;

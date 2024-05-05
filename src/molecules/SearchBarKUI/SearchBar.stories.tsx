@@ -1,7 +1,7 @@
 import { SearchBarKUI } from './';
 
 export default {
-    title: 'Organism/SearchBar',
+    title: 'Molecule/SearchBar',
     component: SearchBarKUI,
   };
   
