@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import {
   UserProfileCardRoot,
   UserProfileCardHead,
   UserProfileCardBody,
 } from './styles';
+=======
+import { UserProfileCardRoot, UserProfileCardHead, UserProfileCardBody } from './styles';
+>>>>>>> cd443218e123b43fa66f6d8b438958930199a519
 import { AtomDiv, AtomHeading, AtomParagraph, AtomSection } from '../../element';
 import { AvatarKUI } from '../../atom';
 

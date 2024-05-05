@@ -3,11 +3,11 @@ import { AtomDiv, AtomLabel, AtomInput } from '../../element';
 import { divStyles, input, labelParentDiv } from './styles';
 
 export type InputFieldKUIProps = {
-    value?: string;
-    label?: string;
-    placeHolder?: string;
-    handleChange?: (e: ChangeEvent<HTMLInputElement>)=> void;
-  };
+  value?: string;
+  label?: string;
+  placeHolder?: string;
+  handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+};
 
 export const InputFieldKUI = ({ label, value, placeHolder, handleChange }: InputFieldKUIProps) => {
   return (
