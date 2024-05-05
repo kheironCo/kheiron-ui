@@ -1,22 +1,17 @@
 import { css } from "@emotion/react";
 
-export const top = css`
+export const AlinearCenter = css`
 display: flex;
-flex-direction: column;
-align-items: center;
+justify-content: center;
 `;
-export const left = css`
-display: block;
-float: left;
-align-items: center !important;
-`;
-export const right = css`
-display: block;
-float: right;
-align-items: center !important;
-`;
-export const bottom = css`
+export const AlinearLeft= css`
 display: flex;
-flex-direction: column-reverse;
-align-items: center;
+justify-content: baseline;
+`;
+export const AlinearRight= css`
+display: flex;
+justify-content: end;
+`;
+export const Espaciado= css`
+
 `;

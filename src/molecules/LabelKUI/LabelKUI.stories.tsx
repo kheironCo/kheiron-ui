@@ -7,8 +7,9 @@ export default {
 
 export const Default = {
     args: {
-        label: "label", 
+        label:"Nombre: " , 
         position: "top",
-        children: "Hijo"
+        align: "left",
+        children: "Lorem Ipsum es simplemente el texto de relleno de las imprentas ",
     },
   };
