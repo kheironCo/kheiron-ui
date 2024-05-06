@@ -12,9 +12,17 @@ npm install -g pnpm
 pnpm install
 ```
 
+### **Husky**
+
+Prepare husky using the next command:
+
+```bash
+pnpm husky
+```
+
 ### **Storybook**
 
-Run proyect with storybook, usign this command:
+Run proyect with storybook, using this command:
 
 ```bash
 pnpm storybook
