@@ -5,17 +5,17 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 export type SearchBarKUIProps = {
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSearch?: (e: FormEvent<HTMLFormElement>) => void;
+  placeHolder?: string; 
   getValue?: (value: string) => void;
 };
 
-export const SearchBarKUI = ({ handleSearch, getValue }: SearchBarKUIProps) => {
+export const SearchBarKUI = ({ handleSearch, getValue, placeHolder }: SearchBarKUIProps) => {
   const [_value, _setValue] = useState('');
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(e.target.value);
     _setValue(e.target.value);
   };
   const _onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    // si existe la función se ejecutará
     if (handleSearch) handleSearch(e);
   };
 
@@ -30,6 +30,7 @@ export const SearchBarKUI = ({ handleSearch, getValue }: SearchBarKUIProps) => {
           css={input}
           onChange={handleChange}
           value={_value}
+          placeholder={placeHolder}
         />
       </AtomForm>
     </AtomSearch>
