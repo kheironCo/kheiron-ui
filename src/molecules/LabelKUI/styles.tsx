@@ -1,17 +1,31 @@
 import { css } from "@emotion/react";
 
 export const AlinearCenter = css`
-display: flex;
-justify-content: center;
+text-align: center;
 `;
 export const AlinearLeft= css`
-display: flex;
-justify-content: baseline;
+text-align: left;
 `;
 export const AlinearRight= css`
-display: flex;
-justify-content: end;
+text-align: right;
 `;
-export const Espaciado= css`
+export const PositionTop = css`
+display: flex;
+flex-direction: column;
+
+`;
+export const PositionBottom = css`
+display: flex;
+flex-direction: column-reverse;
+
+`;
+export const PositionLeft = css`
+display: flex;
+flex-direction: row;
+
+`;
+export const PositionRight = css`
+display: flex;
+flex-direction: row-reverse;
 
 `;
