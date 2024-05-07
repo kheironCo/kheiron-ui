@@ -8,7 +8,7 @@ export type UserProfileCardKUIProps = {
   body: string;
 };
 
-export const UserProfileCardKUI = ({ image, head, body }: UserProfileCardKUIProps) => (
+export const UserProfileCardKUI = ({ image = '', head, body }: UserProfileCardKUIProps) => (
   <AtomDiv>
     <AtomSection css={UserProfileCardRoot} className="KUI-user-profile-card-root">
       <AtomDiv>
