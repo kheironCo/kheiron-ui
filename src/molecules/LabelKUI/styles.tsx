@@ -1,31 +1,35 @@
 import { css } from "@emotion/react";
 
-export const AlinearCenter = css`
-text-align: center;
-`;
-export const AlinearLeft= css`
-text-align: left;
-`;
-export const AlinearRight= css`
-text-align: right;
-`;
-export const PositionTop = css`
-display: flex;
-flex-direction: column;
+import { PositionStyleType, AlignStyleType } from './types';
 
-`;
-export const PositionBottom = css`
-display: flex;
-flex-direction: column-reverse;
+export const PositionStyle: PositionStyleType = {
+  top: css`
+    display: flex;
+    flex-direction: column;
+  `,
+  bottom: css`
+    display: flex;
+    flex-direction: column-reverse;
+  `,
+  left: css`
+  display: flex;
+    flex-direction: row;
+  `,
+  right: css`
+  display: flex;
+    flex-direction: row-reverse;
+  `,
+}
+export const AlignStyle: AlignStyleType = {
+  center: css`
+  text-align: center;
+  `,
+  left: css`
+  text-align: left;
+  `,
+  right: css`
+  text-align: right;
+  `,
+}
 
-`;
-export const PositionLeft = css`
-display: flex;
-flex-direction: row;
 
-`;
-export const PositionRight = css`
-display: flex;
-flex-direction: row-reverse;
-
-`;

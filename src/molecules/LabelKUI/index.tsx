@@ -1,10 +1,9 @@
 import { ReactElement } from "react";
 import { AtomDiv, AtomLabel } from "../../element";
-import { AlinearLeft, AlinearCenter, AlinearRight, PositionTop, PositionBottom, PositionLeft, PositionRight} from "./styles";
+import { PositionStyle, AlignStyle} from "./styles";
+import {PositionType, AlignType} from "./types"
 
 
-type PositionType = "top" | "bottom" | "left" | "right";
-type AlignType = "left" | "center" | "right";
 
 export type LabelProps = {
   label: string; 
@@ -18,9 +17,10 @@ export const LabelKUI = ({position="top", align="left", htmlFor, children, label
   
   
   return (
+    
       <AtomDiv >
-        <AtomDiv css={((position == "top") && PositionTop) ||((position == "bottom") && PositionBottom) || ((position == "left") && PositionLeft) || ((position == "right") && PositionRight)}>
-          <AtomLabel css={((align == "left") && AlinearLeft)||((align == "center") && AlinearCenter) || ((align == "right") && AlinearRight) } htmlFor={htmlFor} >{label}</AtomLabel>
+        <AtomDiv css={ PositionStyle[ position ]}>
+          <AtomLabel css={ AlignStyle[ align ]} htmlFor={htmlFor} >{label}</AtomLabel>
           {children}
         </AtomDiv>
       </AtomDiv>
