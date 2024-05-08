@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 import { PositionStyleType, AlignStyleType } from './types';
 
@@ -12,24 +12,22 @@ export const PositionStyle: PositionStyleType = {
     flex-direction: column-reverse;
   `,
   left: css`
-  display: flex;
+    display: flex;
     flex-direction: row;
   `,
   right: css`
-  display: flex;
+    display: flex;
     flex-direction: row-reverse;
   `,
-}
+};
 export const AlignStyle: AlignStyleType = {
   center: css`
-  text-align: center;
+    text-align: center;
   `,
   left: css`
-  text-align: left;
+    text-align: left;
   `,
   right: css`
-  text-align: right;
+    text-align: right;
   `,
-}
-
-
+};
