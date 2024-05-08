@@ -1,5 +1,3 @@
-import React from 'react';
-
 type AtomInputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 export interface AtomInputElement extends React.JSX.Element {}
