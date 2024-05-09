@@ -1,9 +1,19 @@
-import { PasswordInputKUI } from './index';
+import { Meta, StoryObj } from '@storybook/react';
+import { PasswordInputKUI } from '.';
 
-export default {
+
+const meta: Meta<typeof PasswordInputKUI> = {
+  title: 'Atom/Password',
   component: PasswordInputKUI,
 };
 
-export const Default = {
-  args: {},
+export default meta;
+
+type Story = StoryObj<typeof PasswordInputKUI>;
+
+export const Default: Story = {
+  args: {
+    
+  },
 };
+
