@@ -7,7 +7,6 @@ export default {
 
 export const Default = {
   args: {
-    
+    label: "Esto es un Label"
   },
 };
-

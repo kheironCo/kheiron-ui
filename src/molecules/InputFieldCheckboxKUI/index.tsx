@@ -1,23 +1,22 @@
-import { CheckKUI } from "../../atom/CheckKUI";
-import { AtomDiv, AtomLabel } from "../../element";
-import { PositionStyle } from "./styles";
+import { CheckKUI } from '../../atom/CheckKUI';
+import { AtomDiv, AtomLabel } from '../../element';
+import { PositionStyle } from './styles';
+
 
 export type PositionType = 'top' | 'bottom' | 'left' | 'right';
 
 export type CheckboxKUIProps = {
- label?: string;
- position: PositionType;
- value?: boolean;
- handleChange?: () => void;
+  label?: string;
+  position: PositionType;
+  value?: boolean;
+  handleChange?: () => void;
 };
 
-export const InputFieldCheckboxKUI = ({ label, position  }: CheckboxKUIProps) => {
-  
-
+export const InputFieldCheckboxKUI = ({ label=" ", position= "top", value, handleChange }: CheckboxKUIProps) => {
   return (
     <AtomDiv className="KUI-checkbox-root" css={PositionStyle[position]}>
-        <CheckKUI className="KUI-checkbox-check"/>
-        <AtomLabel className="KUI-checkbox-label">{label}</AtomLabel>
+      <CheckKUI checked={value} className="KUI-checkbox-check"  />
+      <AtomLabel className="KUI-checkbox-label"  onChange={handleChange}>{label}</AtomLabel>
     </AtomDiv>
   );
 };
