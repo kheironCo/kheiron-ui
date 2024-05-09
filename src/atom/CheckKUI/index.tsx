@@ -8,9 +8,10 @@ export type CheckKUIProps = {
   getValue?: (checked: boolean) => void;
   icon?: ReactElement;
   iconChecked?: ReactElement;
+  className: string;
 };
 
-export const CheckKUI = ({ checked = false, getValue, icon, iconChecked }: CheckKUIProps) => {
+export const CheckKUI = ({ checked = false, getValue, icon, iconChecked, className }: CheckKUIProps) => {
   const [_value, _setValue] = useState(checked);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(e.target.checked);
@@ -24,7 +25,7 @@ export const CheckKUI = ({ checked = false, getValue, icon, iconChecked }: Check
         onChange={handleChange}
         type="checkbox"
         id="KUICheck"
-        className="KUI-check-input"
+        className={`KUI-check-input ${className || ''}`}
       />
       <AtomLabel css={LabelCheckBox} htmlFor="KUICheck" className="KUI-check-label">
         {_value ? iconChecked || <IconCheckBox checked /> : icon || <IconCheckBox />}
