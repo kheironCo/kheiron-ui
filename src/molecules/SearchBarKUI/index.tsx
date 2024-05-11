@@ -5,7 +5,7 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 export type SearchBarKUIProps = {
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSearch?: (e: FormEvent<HTMLFormElement>) => void;
-  placeholder?: string; 
+  placeholder?: string;
   getValue?: (value: string) => void;
 };
 
