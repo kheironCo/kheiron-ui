@@ -9,7 +9,7 @@ export type CheckKUIProps = {
   icon?: ReactElement;
   iconChecked?: ReactElement;
   className: string;
-
+  id?: string;
 };
 
 export const CheckKUI = ({

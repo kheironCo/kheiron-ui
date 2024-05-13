@@ -3,12 +3,13 @@ import { AtomDiv, AtomLabel } from '../../element';
 import { PositionStyle, AlignStyle } from './styles';
 import { PositionType, AlignType } from './types';
 
-export type LabelProps = {
+export type LabelKUIProps = {
   label: string;
   position?: PositionType;
   align?: AlignType;
   htmlFor?: string;
   children: ReactElement;
+  className?: string;
 };
 
 export const LabelKUI = ({
@@ -17,11 +18,12 @@ export const LabelKUI = ({
   htmlFor,
   children,
   label,
-}: LabelProps) => {
+  className,
+}: LabelKUIProps) => {
   return (
     <AtomDiv>
       <AtomDiv css={PositionStyle[position]}>
-        <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor}>
+        <AtomLabel className={className} css={AlignStyle[align]} htmlFor={htmlFor}>
           {label}
         </AtomLabel>
         {children}
