@@ -1,5 +1,0 @@
-#!bin/sh
-# Ejecuta prettier --write
-pnpm prettier
-# Ejecuta ESLint antes de cada commit
-pnpm lint
