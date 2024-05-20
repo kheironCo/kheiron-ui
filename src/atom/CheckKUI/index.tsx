@@ -1,7 +1,7 @@
 import { ChangeEvent, ReactElement, useState } from 'react';
 import { CheckRoot, InputCheckBox, LabelCheckBox } from './styles';
-import { IconCheckBox } from '../../icons';
-import { AtomDiv, AtomInput, AtomLabel } from '../../element';
+import { AtomDiv, AtomInput, AtomLabel } from '@KUI-element';
+import { IconCheckBox } from '@KUI-icons';
 
 export type CheckKUIProps = {
   checked?: boolean;
@@ -11,7 +11,13 @@ export type CheckKUIProps = {
   className?: string;
 };
 
-export const CheckKUI = ({ checked = false, getValue, icon, iconChecked, className }: CheckKUIProps) => {
+export const CheckKUI = ({
+  checked = false,
+  getValue,
+  icon,
+  iconChecked,
+  className,
+}: CheckKUIProps) => {
   const [_value, _setValue] = useState(checked);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(e.target.checked);
