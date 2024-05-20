@@ -18,7 +18,12 @@ export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
 
   return (
     <AtomDiv css={DivStyle} className="KUI-PasswordInput-div">
-      <AtomInput onChange={handleChange} value={_value} type={visible ?'text' : 'password'} className="KUI-PasswordInput-input" />
+      <AtomInput
+        onChange={handleChange}
+        value={_value}
+        type={visible ? 'text' : 'password'}
+        className="KUI-PasswordInput-input"
+      />
       <CheckKUI
         className="KUI-PasswordInput-check"
         getValue={(checked) => setVisible(checked)}
