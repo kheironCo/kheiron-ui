@@ -8,7 +8,8 @@ export type CheckKUIProps = {
   getValue?: (checked: boolean) => void;
   icon?: ReactElement;
   iconChecked?: ReactElement;
-  className?: string;
+  className: string;
+  id?: string;
 };
 
 export const CheckKUI = ({
