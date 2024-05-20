@@ -9,6 +9,7 @@ export type LabelProps = {
   align?: AlignType;
   htmlFor?: string;
   children: ReactElement;
+  className?: string;
 };
 
 export const LabelKUI = ({

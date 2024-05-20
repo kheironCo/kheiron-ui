@@ -12,4 +12,3 @@ type Story = StoryObj<typeof IconEye>;
 export const Default: Story = {
   args: {},
 };
-

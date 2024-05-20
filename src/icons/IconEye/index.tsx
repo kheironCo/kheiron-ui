@@ -1,10 +1,9 @@
-
-type IconEyeParams= {
+type IconEyeParams = {
   size?: string;
   color?: string;
-}
+};
 
-export const IconEye = ({size="24", color="#5f6368"}: IconEyeParams) => (
+export const IconEye = ({ size = '24', color = '#5f6368' }: IconEyeParams) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
