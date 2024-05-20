@@ -21,11 +21,11 @@ export const LabelKUI = ({
   className,
 }: LabelKUIProps) => {
   return (
-      <AtomDiv className={className} css={PositionStyle[position]}>
-        <AtomLabel  css={AlignStyle[align]} htmlFor={htmlFor}>
-          {label}
-        </AtomLabel>
-        {children}
-      </AtomDiv>
+    <AtomDiv className={className} css={PositionStyle[position]}>
+      <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor}>
+        {label}
+      </AtomLabel>
+      {children}
+    </AtomDiv>
   );
 };
