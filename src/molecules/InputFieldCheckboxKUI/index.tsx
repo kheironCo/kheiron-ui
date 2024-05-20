@@ -2,15 +2,11 @@ import { CheckKUI, CheckKUIProps } from '../../atom/CheckKUI';
 import { AtomDiv } from '../../element';
 import { LabelKUI, LabelKUIProps } from '../LabelKUI';
 
-export type PositionType = 'top' | 'bottom' | 'left' | 'right';
+export type CheckboxKUIProps = Omit<CheckKUIProps,"id"> & Omit<LabelKUIProps, "htmlFor"> ;
 
-export type CheckboxKUIProps = CheckKUIProps &
-  LabelKUIProps & {
+export const InputFieldCheckboxKUI = ({ label, position, checked,  ...rest}: CheckboxKUIProps) => {
+  
 
-  };
-
-export const InputFieldCheckboxKUI = ({ label, position, checked }: CheckboxKUIProps) => {
-  //Usar LabelKUI
   return (
     <AtomDiv className="KUI-checkbox-root">
       <LabelKUI
@@ -19,7 +15,7 @@ export const InputFieldCheckboxKUI = ({ label, position, checked }: CheckboxKUIP
         label={label}
         position={position}
       >
-        <CheckKUI checked={checked} className="KUI-checkbox-check" />
+        <CheckKUI {...rest} checked={checked} className="KUI-checkbox-check" />
       </LabelKUI>
     </AtomDiv>
   );
