@@ -1,13 +1,13 @@
-import { InputFieldKUI } from '../InputFieldKUI';
+import { InputFieldKUI } from '@KUI-form';
 
 export default {
+  title: 'Organism/InputFieldKUI',
   component: InputFieldKUI,
 };
 
-let estado;
+
 export const Example = {
   args: {
     label: 'Nombre',
-    value: estado,
   },
 };

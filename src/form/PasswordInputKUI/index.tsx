@@ -1,12 +1,14 @@
-import { AtomDiv, AtomInput } from '../../element';
-import { CheckKUI } from '../CheckKUI';
+import { AtomDiv, AtomInput } from '@KUI-element';
+
 import { DivStyle } from './styles';
-import { IconEye } from '../../icons';
-import { IconEyeClosed } from '../../icons';
+import { IconEye } from '@KUI-icons';
+import { IconEyeClosed } from '@KUI-icons';
 import { ChangeEvent, useState } from 'react';
 import { PasswordInputKUIProps } from './types';
+import { CheckKUI } from '@KUI-form';
 
-export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
+
+export const PasswordInputKUI = ({ getValue, label }: PasswordInputKUIProps) => {
   const [visible, setVisible] = useState(false);
 
   const [_value, _setValue] = useState('');
@@ -25,6 +27,7 @@ export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
         className="KUI-PasswordInput-input"
       />
       <CheckKUI
+        label={label}
         className="KUI-PasswordInput-check"
         getValue={(checked) => setVisible(checked)}
         icon={<IconEye />}
