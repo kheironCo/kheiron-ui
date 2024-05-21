@@ -4,7 +4,7 @@ import { PositionStyle, AlignStyle } from './styles';
 import { PositionType, AlignType } from './types';
 
 export type LabelKUIProps = {
-  label: string;
+  label?: string;
   position?: PositionType;
   align?: AlignType;
   htmlFor?: string;
@@ -21,11 +21,11 @@ export const LabelKUI = ({
   className,
 }: LabelKUIProps) => {
   return (
-      <AtomDiv className={className} css={PositionStyle[position]}>
-        <AtomLabel  css={AlignStyle[align]} htmlFor={htmlFor}>
-          {label}
-        </AtomLabel>
-        {children}
-      </AtomDiv>
+    <AtomDiv className={className} css={PositionStyle[position]}>
+      <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor}>
+        {label}
+      </AtomLabel>
+      {children}
+    </AtomDiv>
   );
 };
