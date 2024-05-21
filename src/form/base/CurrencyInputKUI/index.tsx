@@ -7,8 +7,6 @@ export type CurrencyInputKUIProps = Omit<AtomInputProps, 'onChange'> & {
 };
 
 const CurrencyToNumber = (value: string) => {
-  console.log('currencyToNumber', value);
-  console.log('valueClean', value.replace(/\D/g, '').replace(/^0+/, ''));
   return Number(value.replace(/\D/g, '').replace(/^0+/, '')) / 100;
 };
 const NumberToCurrency = (value: number) => {
@@ -36,8 +34,6 @@ export const CurrencyInputKUI = ({
   const _onChange: AtomInputProps['onChange'] = (e) => {
     const _valueNumber = CurrencyToNumber(e.target.value);
     const _valueCurrency = NumberToCurrency(_valueNumber);
-    console.log('_valueNumber', _valueNumber);
-    console.log('_valueCurrency', _valueCurrency);
     _setValue(_valueCurrency);
     if (getValue) getValue(_valueNumber);
   };
