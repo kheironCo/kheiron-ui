@@ -1,6 +1,6 @@
 import { PasswordInputKUI } from '@KUI-form';
 import { AtomDiv } from '@KUI-element';
-import { PasswordInputKUIProps } from 'form/PasswordInputKUI/types';
+import { PasswordInputKUIProps } from 'form/base/PasswordInputKUI/types';
 import { LabelKUI, LabelKUIProps } from '@KUI-form';
 
 export type inputFieldPasswordKUIProps = LabelKUIProps & PasswordInputKUIProps;
@@ -19,7 +19,7 @@ export const inputFieldPasswordKUI = ({
         label={label}
         className="KUI-inputfieldPassword-label"
       >
-        <PasswordInputKUI label={label} getValue={getValue} />
+        <PasswordInputKUI getValue={getValue} />
       </LabelKUI>
     </AtomDiv>
   );

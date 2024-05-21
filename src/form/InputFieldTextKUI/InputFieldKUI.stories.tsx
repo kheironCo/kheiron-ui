@@ -1,8 +1,8 @@
-import { InputFieldKUI } from '@KUI-form';
+import { InputFieldTextKUI } from '@KUI-form';
 
 export default {
   title: 'Form/InputFieldKUI',
-  component: InputFieldKUI,
+  component: InputFieldTextKUI,
 };
 
 export const Example = {

@@ -1,7 +1,6 @@
 export * from './ButtonKUI';
-export * from './CheckKUI';
+export * from './base';
 export * from './InputFieldCheckboxKUI';
-export * from './InputFieldKUI';
+export * from './InputFieldTextKUI';
 export * from './inputFieldPasswordKUI';
-export * from './LabelKUI';
-export * from './PasswordInputKUI';
+

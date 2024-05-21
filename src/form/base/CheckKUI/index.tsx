@@ -1,8 +1,7 @@
 import { ChangeEvent, ReactElement, useState } from 'react';
 import { CheckRoot, InputCheckBox, LabelCheckBox } from './styles';
+import { AtomDiv, AtomInput, AtomLabel } from '@KUI-element';
 import { IconCheckBox } from '@KUI-icons';
-import { LabelKUI } from 'form/LabelKUI';
-import { AtomDiv, AtomInput } from '@KUI-element';
 
 export type CheckKUIProps = {
   checked?: boolean;
@@ -11,7 +10,6 @@ export type CheckKUIProps = {
   iconChecked?: ReactElement;
   className: string;
   id?: string;
-  label: string;
 };
 
 export const CheckKUI = ({
@@ -20,7 +18,6 @@ export const CheckKUI = ({
   icon,
   iconChecked,
   className,
-  label,
 }: CheckKUIProps) => {
   const [_value, _setValue] = useState(checked);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -37,9 +34,9 @@ export const CheckKUI = ({
         id="KUICheck"
         className={`KUI-check-input ${className || ''}`}
       />
-      <LabelKUI label={label} css={LabelCheckBox} htmlFor="KUICheck" className="KUI-check-label">
+      <AtomLabel css={LabelCheckBox} htmlFor="KUICheck" className="KUI-check-label">
         {_value ? iconChecked || <IconCheckBox checked /> : icon || <IconCheckBox />}
-      </LabelKUI>
+      </AtomLabel>
     </AtomDiv>
   );
 };

@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { AtomDiv } from '@KUI-element';
+import { AtomDiv, AtomLabel } from '@KUI-element';
 import { PositionStyle, AlignStyle } from './styles';
 import { PositionType, AlignType } from './types';
 
@@ -17,14 +17,15 @@ export const LabelKUI = ({
   align = 'left',
   htmlFor,
   children,
-  label,
   className,
+  label
 }: LabelKUIProps) => {
   return (
     <AtomDiv className={className} css={PositionStyle[position]}>
-      <LabelKUI css={AlignStyle[align]} htmlFor={htmlFor} label={label}>
+      <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor} >
+        {label}
+      </AtomLabel>
         {children}
-      </LabelKUI>
     </AtomDiv>
   );
 };
