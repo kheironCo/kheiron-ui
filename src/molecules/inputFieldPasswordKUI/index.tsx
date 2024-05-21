@@ -1,9 +1,9 @@
 import { PasswordInputKUI } from '../../atom/PasswordInputKUI';
 import { PasswordInputKUIProps } from '../../atom/PasswordInputKUI/types';
 import { AtomDiv } from '../../element';
-import { LabelKUI, LabelProps } from '../LabelKUI';
+import { LabelKUI, LabelKUIProps } from '../LabelKUI';
 
-export type inputFieldPasswordKUIProps = LabelProps & PasswordInputKUIProps;
+export type inputFieldPasswordKUIProps = LabelKUIProps & PasswordInputKUIProps;
 
 export const inputFieldPasswordKUI = ({
   label,

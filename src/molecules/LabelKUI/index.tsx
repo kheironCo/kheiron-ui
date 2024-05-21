@@ -4,7 +4,7 @@ import { PositionStyle, AlignStyle } from './styles';
 import { PositionType, AlignType } from './types';
 
 export type LabelKUIProps = {
-  label: string;
+  label?: string;
   position?: PositionType;
   align?: AlignType;
   htmlFor?: string;
