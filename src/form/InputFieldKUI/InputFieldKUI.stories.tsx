@@ -1,10 +1,9 @@
 import { InputFieldKUI } from '@KUI-form';
 
 export default {
-  title: 'Organism/InputFieldKUI',
+  title: 'Form/InputFieldKUI',
   component: InputFieldKUI,
 };
-
 
 export const Example = {
   args: {

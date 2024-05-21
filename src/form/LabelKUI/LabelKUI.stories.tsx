@@ -1,7 +1,7 @@
 import { LabelKUI } from './index';
 
 export default {
-  title: 'Organism/LabelKUI',
+  title: 'Form/LabelKUI',
   component: LabelKUI,
 };
 

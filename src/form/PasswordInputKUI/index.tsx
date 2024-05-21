@@ -7,7 +7,6 @@ import { ChangeEvent, useState } from 'react';
 import { PasswordInputKUIProps } from './types';
 import { CheckKUI } from '@KUI-form';
 
-
 export const PasswordInputKUI = ({ getValue, label }: PasswordInputKUIProps) => {
   const [visible, setVisible] = useState(false);
 

@@ -3,7 +3,7 @@ import { CheckKUI } from '.';
 import { IconHeartFilled, IconHeartOutlined } from '../../icons';
 
 const meta: Meta<typeof CheckKUI> = {
-  title: 'Atom/Check',
+  title: 'Form/Check',
   component: CheckKUI,
 };
 

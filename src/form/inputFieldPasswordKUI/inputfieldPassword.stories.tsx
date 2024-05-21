@@ -2,7 +2,7 @@ import { inputFieldPasswordKUI } from '.';
 
 export default {
   component: inputFieldPasswordKUI,
-  title: 'Organism/inputFieldPasswordKUI',
+  title: 'Form/inputFieldPasswordKUI',
 };
 
 export const Example = {
