@@ -1,2 +1,2 @@
-export * from '../form/ButtonKUI';
+export * from './ButtonKUI';
 export * from './AvatarKUI';

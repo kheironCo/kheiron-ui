@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { CheckKUI } from '.';
-import { IconHeartFilled, IconHeartOutlined } from '@KUI-icons';
+import { IconHeartFilled, IconHeartOutlined } from '../../icons';
 
 const meta: Meta<typeof CheckKUI> = {
-  title: 'Form/Bases/CheckKUI',
+  title: 'Atom/Check',
   component: CheckKUI,
 };
 
