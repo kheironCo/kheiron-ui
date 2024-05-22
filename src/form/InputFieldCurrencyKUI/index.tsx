@@ -1,5 +1,5 @@
 import { CurrencyInputKUI, CurrencyInputKUIProps } from 'form/base';
-import { LabelKUI, LabelKUIProps } from 'molecules/LabelKUI';
+import { LabelKUI, LabelKUIProps } from '@KUI-form';
 
 export type InputFieldCurrencyKUIProps = CurrencyInputKUIProps &
   Omit<LabelKUIProps, 'htmlFor' | 'children'>;
