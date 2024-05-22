@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { AtomButton } from '../../element';
+import { AtomButton } from '@KUI-element';
 import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonList, GeneralButtonStyle } from './styles';
 

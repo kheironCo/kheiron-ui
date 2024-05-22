@@ -1,7 +1,7 @@
 import { ButtonKUI, ButtonKUIProps } from '.';
 
 export default {
-  title: 'Atom/Button',
+  title: 'Form/Button',
   component: ButtonKUI,
 };
 
