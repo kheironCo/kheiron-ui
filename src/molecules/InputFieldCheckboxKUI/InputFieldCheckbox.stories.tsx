@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { InputFieldCheckboxKUI } from '.';
+import { InputFieldCheckboxKUI } from './';
 
 const meta: Meta<typeof InputFieldCheckboxKUI> = {
-  title: 'Form/InputFieldCheckboxKUI',
+  title: 'Organism/InputFieldCheckboxKUI',
   component: InputFieldCheckboxKUI,
 };
 

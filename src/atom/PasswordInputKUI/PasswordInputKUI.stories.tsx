@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { PasswordInputKUI } from '.';
 
 const meta: Meta<typeof PasswordInputKUI> = {
-  title: 'Form/Bases/Password',
+  title: 'Atom/Password',
   component: PasswordInputKUI,
 };
 
