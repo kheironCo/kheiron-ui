@@ -7,18 +7,10 @@ type AtomHeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
 
 export interface AtomHeadingElement extends React.JSX.Element {}
 
-export const AtomHeading = ({
-  variant,
-  children,
-  className,
-  ...rest
-}: AtomHeadingProps) => {
+export const AtomHeading = ({ variant, children, className, ...rest }: AtomHeadingProps) => {
   const HeadingTag = variant;
   return (
-    <HeadingTag
-      className={`KUI-atom-element-heading-${variant} ${className || ''}`}
-      {...rest}
-    >
+    <HeadingTag className={`KUI-atom-element-heading-${variant} ${className || ''}`} {...rest}>
       {children}
     </HeadingTag>
   ) as AtomHeadingElement;

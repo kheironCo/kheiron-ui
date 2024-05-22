@@ -1,6 +1,5 @@
-import React from 'react';
 import { css } from '@emotion/react';
-import { AtomButton } from '../../element';
+import { AtomButton } from '@KUI-element';
 import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonList, GeneralButtonStyle } from './styles';
 
@@ -18,10 +17,8 @@ export const ButtonKUI = ({
   palette = 'primary',
   ...rest
 }: ButtonKUIProps) => {
-  const ButtonPalleteStyle =
-    ButtonList[(palette as ButtonPalette) || 'primary'];
-  const ButtonStyle =
-    ButtonPalleteStyle[(variant as ButtonVariant) || 'filled'];
+  const ButtonPalleteStyle = ButtonList[(palette as ButtonPalette) || 'primary'];
+  const ButtonStyle = ButtonPalleteStyle[(variant as ButtonVariant) || 'filled'];
   return (
     <AtomButton
       css={css(GeneralButtonStyle, ButtonStyle)}

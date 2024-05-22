@@ -12,6 +12,4 @@ type AtomMeterProps = React.MeterHTMLAttributes<HTMLMeterElement> & {
 export interface AtomMeterElement extends React.JSX.Element {}
 
 export const AtomMeter = ({ className, ...rest }: AtomMeterProps) =>
-  (
-    <meter className={`KUI-atom-element-meter ${className || ''}`} {...rest} />
-  ) as AtomMeterElement;
+  (<meter className={`KUI-atom-element-meter ${className || ''}`} {...rest} />) as AtomMeterElement;

@@ -8,10 +8,15 @@
     "allowImportingTsExtensions": false,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": "./src",
+    "paths": {
+      "@KUI-types": [ "common/types" ],
+      "@KUI-utils": [ "common/utils" ],
+      "@KUI-element": [ "element" ],
+      "@KUI-icons": [ "icons" ],
+      "@KUI-form": [ "form" ]
+    }
   },
-  "include": [
-    "src",
-    "types"
-  ]
+  "include": [ "src", "types" ]
 }
