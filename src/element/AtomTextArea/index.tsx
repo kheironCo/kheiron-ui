@@ -1,6 +1,6 @@
 import React from 'react';
 
-type AtomTextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+export type AtomTextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface AtomTextAreaElement extends React.JSX.Element {}
 

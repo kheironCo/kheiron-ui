@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react/*";
-import { InputFieldTextareaKUI } from ".";
+import { Meta, StoryObj } from '@storybook/react/*';
+import { InputFieldTextareaKUI } from '.';
 
 const meta: Meta<typeof InputFieldTextareaKUI> = {
-    title: 'Molecules/InputFieldTextareaKUI',
-    component: InputFieldTextareaKUI,
+  title: 'Form/InputFieldTextareaKUI',
+  component: InputFieldTextareaKUI,
 };
 
 export default meta;
@@ -11,11 +11,11 @@ export default meta;
 type Story = StoryObj<typeof InputFieldTextareaKUI>;
 
 export const Default: Story = {
-    args: {},
+  args: {},
 };
 
 export const Label: Story = {
-    args: {
-        label: 'Buenos días'
-    },
+  args: {
+    label: 'Buenos días',
+  },
 };
