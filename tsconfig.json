@@ -15,7 +15,8 @@
       "@KUI-utils": [ "common/utils" ],
       "@KUI-element": [ "element" ],
       "@KUI-icons": [ "icons" ],
-      "@KUI-form": [ "form" ]
+      "@KUI-form": [ "form" ],
+      "@KUI-dashboard": [ "dashboard" ],
     }
   },
   "include": [ "src", "types" ]
