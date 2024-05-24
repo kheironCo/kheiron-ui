@@ -16,6 +16,7 @@ export const TableKUI = <B, H extends string, C extends string>({
   body,
   renderHead,
   renderBody,
+  onRow,
   className,
   ...rest
 }: TableKUIProps<B, H, C>) => {
@@ -49,25 +50,30 @@ export const TableKUI = <B, H extends string, C extends string>({
 
   const _renderBody = useMemo(
     () =>
-      body.map((valueRow, row) => (
-        <AtomTr
-          key={row}
-          className={`KUI-table-body-row KUI-table-body-row-${row}`}
-          css={TableBodyRowStyle}
-        >
-          {keys.map((key, column) => (
-            <AtomTd
-              key={`KUI-table-body-cell-${key}-row-${row}-column-${column}`}
-              className={`KUI-table-body-cell KUI-table-body-cell-${key}-row-${row}-column-${column}`}
-              css={TableBodyCellStyle}
-            >
-              {renderBody
-                ? renderBody({ value: valueRow[key], key, row, column, valueRow })
-                : valueRow[key]?.toString()}
-            </AtomTd>
-          ))}
-        </AtomTr>
-      )),
+      body.map((valueRow, row) => {
+        const propsTr = onRow ? onRow(valueRow) : {};
+
+        return (
+          <AtomTr
+            {...propsTr}
+            key={row}
+            className={`KUI-table-body-row KUI-table-body-row-${row} ${propsTr.className}`}
+            css={[TableBodyRowStyle, propsTr?.css]}
+          >
+            {keys.map((key, column) => (
+              <AtomTd
+                key={`KUI-table-body-cell-${key}-row-${row}-column-${column}`}
+                className={`KUI-table-body-cell KUI-table-body-cell-${key}-row-${row}-column-${column}`}
+                css={TableBodyCellStyle}
+              >
+                {renderBody
+                  ? renderBody({ value: valueRow[key], key, row, column, valueRow })
+                  : valueRow[key]?.toString()}
+              </AtomTd>
+            ))}
+          </AtomTr>
+        );
+      }),
     [keys, body, renderBody],
   );
 

@@ -42,6 +42,12 @@ export const Default: Story = {
       phone: 'Phone',
     },
     body: fakeData,
+    onRow: (value) => ({
+      css: css`
+        cursor: crosshair;
+      `,
+      onClick: () => alert(value?.id),
+    }),
     renderBody: ({ value, key, valueRow }) => {
       if (['id', 'age', 'phone'].includes(key)) {
         return (
@@ -61,14 +67,24 @@ export const Default: Story = {
           return (
             <UserProfileCardKUI
               css={css`
+                cursor: pointer;
+                & .KUI-user-profile-card-root:hover {
+                  box-shadow: 0 0 0 0.25rem #7773;
+                }
                 & .KUI-user-profile-card-root {
+                  width: 100%;
                   justify-content: left;
-                  width: 100% !important;
+                  box-sizing: border-box;
                 }
               `}
               image={valueRow?.user?.image || ''}
               head={valueRow?.user?.name || ''}
               body={valueRow?.user?.email || ''}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                alert(valueRow?.user?.name);
+              }}
             />
           );
         }

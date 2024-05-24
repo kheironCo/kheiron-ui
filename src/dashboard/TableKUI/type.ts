@@ -1,4 +1,4 @@
-import { AtomDivProps } from '@KUI-element';
+import { AtomDivProps, AtomTrProps } from '@KUI-element';
 
 /**
  * @template V - Tipo del valor recibido del cuerpo.
@@ -42,4 +42,5 @@ export type TableKUIProps<B, H extends string, C extends string> = AtomDivProps 
   renderBody?: (
     args: RenderBodyProps<AnyType<B>, NoInfer<C>, Record<NoInfer<C>, AnyType<B>>>,
   ) => JSX.Element; // Función para renderizar el cuerpo.
+  onRow?: (args: Record<NoInfer<C>, AnyType<B>>) => AtomTrProps;
 };

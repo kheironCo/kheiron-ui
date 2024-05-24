@@ -1,6 +1,11 @@
-type AtomTrProps = React.HTMLAttributes<HTMLTableRowElement>;
+import { Interpolation, Theme } from '@emotion/react';
+import { HTMLAttributes } from 'react';
 
-export interface AtomTrElement extends React.JSX.Element {}
+export type AtomTrProps = HTMLAttributes<HTMLTableRowElement> & {
+  css?: Interpolation<Theme>;
+};
+
+export interface AtomTrElement extends JSX.Element {}
 
 export const AtomTr = ({ children, className, ...rest }: AtomTrProps) =>
   (
