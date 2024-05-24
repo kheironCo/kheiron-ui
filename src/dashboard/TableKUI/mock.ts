@@ -16,4 +16,4 @@ function generateFakeRow() {
 }
 
 // Generar 10 filas de datos ficticios
-export const fakeData = Array.from({ length: 10 }, generateFakeRow);
+export const fakeData = Array.from({ length: 3 }, generateFakeRow);
