@@ -1,6 +1,13 @@
-import { AtomTable, AtomTbody, AtomTd, AtomTh, AtomThead, AtomTr } from '@KUI-element';
+import { AtomDiv, AtomTable, AtomTbody, AtomTd, AtomTh, AtomThead, AtomTr } from '@KUI-element';
 import { useMemo } from 'react';
-import { TableBodyCellStyle, TableHeaderCellStyle, TableHeaderStyle, TableStyle } from './styles';
+import {
+  TableBodyCellStyle,
+  TableBodyRowStyle,
+  TableHeaderCellStyle,
+  TableHeaderRowStyle,
+  TableHeaderStyle,
+  TableStyle,
+} from './styles';
 import { TableKUIProps } from './type';
 
 export const TableKUI = <B, H extends string, C extends string>({
@@ -9,6 +16,8 @@ export const TableKUI = <B, H extends string, C extends string>({
   body,
   renderHead,
   renderBody,
+  className,
+  ...rest
 }: TableKUIProps<B, H, C>) => {
   const uniqueKeys = Array.from(new Set(keys));
   if (uniqueKeys.length !== keys.length) {
@@ -41,15 +50,19 @@ export const TableKUI = <B, H extends string, C extends string>({
   const _renderBody = useMemo(
     () =>
       body.map((valueRow, row) => (
-        <AtomTr key={row} className={`KUI-table-body-row-${row}`}>
+        <AtomTr
+          key={row}
+          className={`KUI-table-body-row KUI-table-body-row-${row}`}
+          css={TableBodyRowStyle}
+        >
           {keys.map((key, column) => (
             <AtomTd
-              key={`KUI-table-cell-${key}-row-${row}-column-${column}`}
-              className={`KUI-table-cell-${key}-row-${row}-column-${column}`}
+              key={`KUI-table-body-cell-${key}-row-${row}-column-${column}`}
+              className={`KUI-table-body-cell KUI-table-body-cell-${key}-row-${row}-column-${column}`}
               css={TableBodyCellStyle}
             >
               {renderBody
-                ? renderBody({ value: valueRow[key], key, row, column })
+                ? renderBody({ value: valueRow[key], key, row, column, valueRow })
                 : valueRow[key]?.toString()}
             </AtomTd>
           ))}
@@ -59,11 +72,15 @@ export const TableKUI = <B, H extends string, C extends string>({
   );
 
   return (
-    <AtomTable css={TableStyle}>
-      <AtomThead css={TableHeaderStyle}>
-        <AtomTr>{_renderHead}</AtomTr>
-      </AtomThead>
-      <AtomTbody>{_renderBody}</AtomTbody>
-    </AtomTable>
+    <AtomDiv {...rest} className={`KUI-table-root ${className}`}>
+      <AtomTable css={TableStyle} className="KUI-table">
+        <AtomThead css={TableHeaderStyle} className="KUI-table-thead">
+          <AtomTr css={TableHeaderRowStyle} className="KUI-table-thead-tr">
+            {_renderHead}
+          </AtomTr>
+        </AtomThead>
+        <AtomTbody className="KUI-table-tbody">{_renderBody}</AtomTbody>
+      </AtomTable>
+    </AtomDiv>
   );
 };

@@ -13,6 +13,7 @@
     "paths": {
       "@KUI-types": [ "common/types" ],
       "@KUI-utils": [ "common/utils" ],
+      "@KUI/styles": [ "common/styles" ],
       "@KUI-element": [ "element" ],
       "@KUI-icons": [ "icons" ],
       "@KUI-form": [ "form" ],

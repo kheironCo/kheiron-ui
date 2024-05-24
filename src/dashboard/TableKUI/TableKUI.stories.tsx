@@ -1,8 +1,10 @@
 // @ts-check
 import { Meta, StoryObj } from '@storybook/react';
 import { TableKUI } from '.';
-import { AtomDiv } from '@KUI-element';
+import { AtomParagraph } from '@KUI-element';
 import { css } from '@emotion/react';
+import { fakeData } from './mock';
+import { UserProfileCardKUI } from 'molecules';
 
 const meta: Meta<typeof TableKUI> = {
   title: 'Dashboard/TableKUI',
@@ -15,28 +17,43 @@ type Story = StoryObj<typeof TableKUI>;
 
 export const Default: Story = {
   args: {
-    keys: ['id', 'name', 'age'],
+    keys: ['id', 'user', 'age', 'city', 'phone'],
     head: {
       id: 'ID',
-      name: 'Name',
+      user: 'User',
       age: 'Age',
+      city: 'City',
+      phone: 'Phone',
     },
-    body: [
-      { id: 1, name: 'John Doe', age: 28 },
-      { id: 2, name: 'Jane Smith', age: 34 },
-      { id: 3, name: 'Emily Johnson', age: 22 },
-    ],
-    renderBody: ({ value, key }) => {
+    body: fakeData,
+    renderBody: ({ value, key, valueRow }) => {
+      if (['id', 'age', 'phone'].includes(key)) {
+        return (
+          <AtomParagraph
+            css={css`
+              font-family: monospace;
+              font-size: 0.875rem;
+              color: #777;
+            `}
+          >
+            {value}
+          </AtomParagraph>
+        );
+      }
       switch (key) {
-        case 'adios': {
+        case 'user': {
           return (
-            <AtomDiv
+            <UserProfileCardKUI
               css={css`
-                background-color: blueviolet;
+                & .KUI-user-profile-card-root {
+                  justify-content: left;
+                  width: 100% !important;
+                }
               `}
-            >
-              {value}
-            </AtomDiv>
+              image={valueRow?.user?.image || ''}
+              head={valueRow?.user?.name || ''}
+              body={valueRow?.user?.email || ''}
+            />
           );
         }
         default: {

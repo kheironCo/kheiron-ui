@@ -6,6 +6,11 @@ const ROOT = {
       tertiary: '#ab99b2',
       100: '#ded8e1',
     },
+    triada: {
+      morado: '#9c45de',
+      cream: '#de9c45',
+      aqua: '#45de9c',
+    },
     gray: {
       100: '#f1f1f1',
       200: '#e4e4e4',

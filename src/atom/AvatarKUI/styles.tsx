@@ -5,7 +5,7 @@ const blinkerFont = css`
 `;
 
 export const AvatarRoot = css`
-  height: 7rem;
+  height: 2rem;
   border-radius: 9999px;
 `;
 
@@ -13,12 +13,12 @@ export const AvatarAlt = css`
   ${blinkerFont};
   font-family: 'Blinker', sans-serif;
   display: flex;
-  height: 7rem;
-  width: 7rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 9999px;
   background-color: magenta;
   color: white;
-  font-size: 4rem;
+  font-size: 1.25rem;
   font-weight: bold;
   justify-content: center;
   align-items: center;
