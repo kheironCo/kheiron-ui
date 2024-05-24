@@ -1,10 +1,9 @@
 import { css } from '@emotion/react';
 
 export const styles = css`
-  
-  .div{
+  .div {
     display: flex;
-    align-items:center;
+    align-items: center;
   }
   input[type='radio'] {
     display: none;
@@ -21,7 +20,7 @@ export const styles = css`
   }
   .flexing {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
   }
 
   input[type='radio']:checked + .abierto {
