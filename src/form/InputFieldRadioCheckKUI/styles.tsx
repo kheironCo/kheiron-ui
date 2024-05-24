@@ -18,7 +18,6 @@ export const styles = css`
   .cerrado {
     display: flex;
   }
-  
 
   .KUI-input-field-radio-check-input[type='radio']:checked + .abierto {
     display: flex;

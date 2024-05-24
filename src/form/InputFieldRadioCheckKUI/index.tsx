@@ -20,19 +20,20 @@ export type InputFieldRadioCheckKUIProps = LabelKUIProps & {
 };
 
 export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = ({
-  initValue ,
+  initValue,
   value,
   getValue,
   items,
   icon = <IconRadioOpen2 />,
   iconChecked = <IconRadioClose2 />,
 }: InputFieldRadioCheckKUIProps) => {
-  const [selectedRadio, setSelectedRadio] = useState<string | null>( initValue || null);
+  const [selectedRadio, setSelectedRadio] = useState<string | null>(initValue || null);
 
-  const flatValues = items.map((elemento) => elemento.value )
-  const uniqueValues = Array.from(new Set(flatValues))
+  const flatValues = items.map((elemento) => elemento.value);
+  const uniqueValues = Array.from(new Set(flatValues));
 
-  if(uniqueValues.length !== flatValues.length)console.warn('The property "value" have been unique');
+  if (uniqueValues.length !== flatValues.length)
+    console.warn('The property "value" have been unique');
 
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(event.target.value);
@@ -58,7 +59,10 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
             {selectedRadio === el.value && icon}
             {selectedRadio !== el.value && iconChecked}
 
-            <AtomLabel htmlFor={`${el.value}-${index}`} className={`KUI-input-field-radio-check-${index}`}>
+            <AtomLabel
+              htmlFor={`${el.value}-${index}`}
+              className={`KUI-input-field-radio-check-${index}`}
+            >
               {el.label}
             </AtomLabel>
           </AtomDiv>

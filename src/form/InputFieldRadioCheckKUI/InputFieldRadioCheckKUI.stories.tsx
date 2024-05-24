@@ -19,8 +19,8 @@ export const Example = {
 };
 export const Example2 = {
   args: {
-    icon: <IconRadioOpen  />,
-    iconChecked: <IconRadioClose  />,
+    icon: <IconRadioOpen />,
+    iconChecked: <IconRadioClose />,
     items: [
       { label: 'Ejemplo1', value: 'valor1' },
       { label: 'Ejemplo2', value: 'valor2' },
