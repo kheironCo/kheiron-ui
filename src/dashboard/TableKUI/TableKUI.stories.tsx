@@ -9,6 +9,28 @@ import { UserProfileCardKUI } from 'molecules';
 const meta: Meta<typeof TableKUI> = {
   title: 'Dashboard/TableKUI',
   component: TableKUI,
+  argTypes: {
+    keys: {
+      control: 'object',
+      description: `This props recibe a string's array
+      @example ['id', 'name', 'email']
+      `,
+    },
+    head: {
+      control: 'object',
+      description: `Head is an Object. It's key is equal to the keys and this value is a string
+      @example {id: 'ID', name: 'Name', email: 'Email'}
+      `,
+    },
+    body: {
+      control: 'object',
+      description: `Body is equal to the head prop. This is an array to object
+      @example [{id: 1234, name: 'User', email: 'user@example.com'}]
+      `,
+    },
+    renderHead: { type: 'function' },
+    renderBody: { type: 'function' },
+  },
 };
 
 export default meta;
