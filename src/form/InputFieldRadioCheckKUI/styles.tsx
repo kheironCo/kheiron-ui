@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 
 export const styles = css`
-  .div {
+  .KUI-input-field-radio-check-root {
     display: flex;
     align-items: center;
   }
-  input[type='radio'] {
+  .KUI-input-field-radio-check-input[type='radio'] {
     display: none;
   }
   .radio-label {
@@ -18,15 +18,12 @@ export const styles = css`
   .cerrado {
     display: flex;
   }
-  .flexing {
-    display: flex;
-    flex-direction: row;
-  }
+  
 
-  input[type='radio']:checked + .abierto {
+  .KUI-input-field-radio-check-input[type='radio']:checked + .abierto {
     display: flex;
   }
-  input[type='radio']:checked + .cerrado {
+  .KUI-input-field-radio-check-input[type='radio']:checked + .cerrado {
     display: none;
   }
 `;

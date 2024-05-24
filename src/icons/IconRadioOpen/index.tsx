@@ -1,13 +1,13 @@
 type IconRadioOpenParams = {
   size?: string;
   color?: string;
-  className: string;
+
 };
 
 export const IconRadioOpen = ({
-  size = '24',
+  size = '20',
   color = '#000000',
-  className,
+
 }: IconRadioOpenParams) => (
   <svg
     viewBox="0 0 24 24"
@@ -15,7 +15,7 @@ export const IconRadioOpen = ({
     height={size}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={className}
+
   >
     <path
       fillRule="evenodd"

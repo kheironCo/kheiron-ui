@@ -1,6 +1,6 @@
-import { IconRadioClose2, IconRadioClose3, IconRadioOpen2 } from '@KUI-icons';
+import { IconRadioClose, IconRadioOpen } from '@KUI-icons';
 import { InputFieldRadioCheckKUI } from '.';
-import { IconRadioOpen3 } from 'icons';
+import { IconHeartFilled, IconHeartOutlined } from '@KUI-icons';
 
 export default {
   title: 'Form/InputFieldRadioCheckKUI',
@@ -13,34 +13,32 @@ export const Example = {
       { label: 'Radio1', value: 'valor1' },
       { label: 'Radio2', value: 'valor2' },
       { label: 'Radio3', value: 'valor3' },
-      
+      { label: 'Radio4', value: 'valor4' },
     ],
   },
 };
 export const Example2 = {
   args: {
-    icon: <IconRadioOpen2  className="abierto"/> ,
-    iconChecked: <IconRadioClose2  className="cerrado"/>,
-        items: [
+    icon: <IconRadioOpen  />,
+    iconChecked: <IconRadioClose  />,
+    items: [
       { label: 'Ejemplo1', value: 'valor1' },
       { label: 'Ejemplo2', value: 'valor2' },
-      { label: 'Ejemplo3', value: 'valor3' },
+      { label: 'Holas5', value: 'valor3' },
       { label: 'Ejemplo4', value: 'valor4' },
-      
     ],
   },
 };
 export const Example3 = {
   args: {
-    icon: <IconRadioOpen3  className="abierto"/> ,
-    iconChecked: <IconRadioClose3  className="cerrado"/>,
-        items: [
+    icon: <IconHeartFilled />,
+    iconChecked: <IconHeartOutlined />,
+    items: [
       { label: 'Ejemplo1', value: 'valor1' },
       { label: 'Ejemplo2', value: 'valor2' },
       { label: 'Ejemplo3', value: 'valor3' },
       { label: 'Ejemplo4', value: 'valor4' },
       { label: 'Ejemplo5', value: 'valor5' },
-      
     ],
   },
 };
