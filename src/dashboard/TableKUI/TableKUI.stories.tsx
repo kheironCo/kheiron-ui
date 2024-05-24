@@ -44,7 +44,7 @@ export const Default: Story = {
     body: fakeData,
     onRow: (value) => ({
       css: css`
-        cursor: crosshair;
+        cursor: pointer;
       `,
       onClick: () => alert(value?.id),
     }),
