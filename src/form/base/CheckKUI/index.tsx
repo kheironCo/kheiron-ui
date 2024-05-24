@@ -1,4 +1,4 @@
-import React, { ChangeEvent, HTMLInputTypeAttribute, InputHTMLAttributes, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { AtomDiv, AtomInput, AtomLabel } from '@KUI-element';
 import { IconCheckBox } from '@KUI-icons';
 import { CheckRoot, InputCheckBox, LabelCheckBox } from './styles';
@@ -11,9 +11,7 @@ export type CheckKUIProps = {
   className: string;
   id?: string;
   value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void,
-  type:  HTMLInputTypeAttribute | undefined;
-
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const CheckKUI = ({
@@ -24,7 +22,6 @@ export const CheckKUI = ({
   className,
   value,
   onChange,
-  type= "radio",
 }: CheckKUIProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
@@ -45,7 +42,7 @@ export const CheckKUI = ({
         type="radio"
       />
       <AtomLabel css={LabelCheckBox} htmlFor="KUICheck" className="KUI-check-label">
-        {isChecked ? (iconChecked || <IconCheckBox checked />) : (icon || <IconCheckBox />)}
+        {isChecked ? iconChecked || <IconCheckBox checked /> : icon || <IconCheckBox />}
       </AtomLabel>
     </AtomDiv>
   );

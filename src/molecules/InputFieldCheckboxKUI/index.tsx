@@ -8,7 +8,7 @@ export const InputFieldCheckboxKUI = ({ label, position, checked, ...rest }: Che
   return (
     <AtomDiv className="KUI-checkbox-root">
       <LabelKUI htmlFor="labelId" className="KUI-checkbox-label" label={label} position={position}>
-        <CheckKUI {...rest} checked={checked} className="KUI-checkbox-check"  />
+        <CheckKUI {...rest} checked={checked} className="KUI-checkbox-check" />
       </LabelKUI>
     </AtomDiv>
   );

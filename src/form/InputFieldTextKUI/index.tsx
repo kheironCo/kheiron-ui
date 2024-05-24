@@ -10,7 +10,12 @@ export type InputFieldTextKUIProps = {
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const InputFieldTextKUI = ({ label, value, placeHolder, handleChange }: InputFieldTextKUIProps) => {
+export const InputFieldTextKUI = ({
+  label,
+  value,
+  placeHolder,
+  handleChange,
+}: InputFieldTextKUIProps) => {
   return (
     <AtomDiv className="KUI-inputfield-root" css={divStyles}>
       <LabelKUI

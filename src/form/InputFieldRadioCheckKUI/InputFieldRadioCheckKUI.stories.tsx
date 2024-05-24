@@ -1,5 +1,4 @@
-import {InputFieldRadioCheckKUI} from ".";
-
+import { InputFieldRadioCheckKUI } from '.';
 
 export default {
   title: 'Form/InputFieldRadioCheckKUI',
@@ -8,7 +7,11 @@ export default {
 
 export const Example = {
   args: {
-
-    radio: [{label:"Radio1", value:"valor1", checked: false},{label:"Radio2", value:"valor2", checked: false},{label:"Radio3", value:"valor3", checked: false} ,{label:"Radio4", value:"valor4", checked: false}],
+    items: [
+      { label: 'Radio1', value: 'valor1'},
+      { label: 'Radio2', value: 'valor2'},
+      { label: 'Radio3', value: 'valor3'},
+      { label: 'Radio4', value: 'valor4'},
+    ],
   },
 };

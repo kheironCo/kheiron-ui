@@ -4,7 +4,7 @@ type IconEyeParams = {
   className: string;
 };
 
-export const IconEye = ({ size = '24', color = '#5f6368', className}: IconEyeParams) => (
+export const IconEye = ({ size = '24', color = '#5f6368', className }: IconEyeParams) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}

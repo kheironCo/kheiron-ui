@@ -18,14 +18,14 @@ export const LabelKUI = ({
   htmlFor,
   children,
   className,
-  label
+  label,
 }: LabelKUIProps) => {
   return (
     <AtomDiv className={className} css={PositionStyle[position]}>
-      <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor} >
+      <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor}>
         {label}
       </AtomLabel>
-        {children}
+      {children}
     </AtomDiv>
   );
 };
