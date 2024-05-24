@@ -1,12 +1,18 @@
-import { AtomDiv, AtomInput } from '@KUI-element';
+import { AtomDiv, AtomInput, AtomLabel } from '@KUI-element';
 import { LabelKUI } from 'form/base';
 import { ChangeEvent, useState } from 'react';
 
+import { IconRadioClose } from '@KUI-icons';
+import { IconRadioOpen } from '@KUI-icons';
+import { styles } from './styles';
+
+
+
 export type InputFieldRadioCheckKUIProps = {
-  radio: { name: string, value: string }[],
+  radio: { label: string, value: string }[],
 };
 
-const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = ({ radio }) => {
+export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = ({ radio }) => {
     
   const [selectedRadio, setSelectedRadio] = useState<string | null>(null);
 
@@ -17,22 +23,44 @@ const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = ({ radio
 
   return (
     <>
+    <LabelKUI >
+                <AtomDiv >
       {radio.map((el, index) => (
         
-            <LabelKUI key={index}>
-                <AtomDiv>
+          <>
+            
+            <AtomDiv className='flexing' css={styles}>
                     <AtomInput
+                    className="input"
+                    id={el.label}
+                    key={index}
                     type="radio"
-                    value={el.name}
-                    checked={selectedRadio === el.name}
+                    value={el.value}
+                    checked={selectedRadio === el.value}
                     onChange={handleRadioChange}
-                    />
-                    {el.value}
-                </AtomDiv>
-            </LabelKUI>
-      ))}
+                    >
+                      </AtomInput>
+                    
+                    {
+                      selectedRadio === el.value &&
+                    <IconRadioOpen className="abierto" />
+                    
+                    }
+                    {
+                      selectedRadio !== el.value &&
+                      <IconRadioClose className="cerrado"/>
+                    }
+                      
+                      <AtomLabel htmlFor={el.label} className="radio-label" >{el.label}</AtomLabel>
+                      
+                    </AtomDiv>
+                    
+          </>
+      ))
+      }
+      </AtomDiv>
+      </LabelKUI>
     </>
   );
 };
 
-export default InputFieldRadioCheckKUI;
