@@ -1,6 +1,6 @@
 {
   "name": "kheiron-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Kheiron",
   "main": "dist/index.js",
@@ -11,6 +11,7 @@
     "dist",
     "src"
   ],
+  "keywords": [ "react", "react-dom", "ui", "form" ],
   "scripts": {
     "analyze": "size-limit --why",
     "build": "dts build",
