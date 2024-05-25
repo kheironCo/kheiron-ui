@@ -1,15 +1,20 @@
 import { UserProfileCardRoot, UserProfileCardHead, UserProfileCardBody } from './styles';
-import { AtomDiv, AtomHeading, AtomParagraph, AtomSection } from '../../element';
+import { AtomDiv, AtomDivProps, AtomHeading, AtomParagraph, AtomSection } from '../../element';
 import { AvatarKUI } from '../../atom';
 
-export type UserProfileCardKUIProps = {
+export type UserProfileCardKUIProps = AtomDivProps & {
   image: string;
   head: string;
   body: string;
 };
 
-export const UserProfileCardKUI = ({ image = '', head, body }: UserProfileCardKUIProps) => (
-  <AtomDiv>
+export const UserProfileCardKUI = ({
+  image = '',
+  head,
+  body,
+  ...rest
+}: UserProfileCardKUIProps) => (
+  <AtomDiv {...rest}>
     <AtomSection css={UserProfileCardRoot} className="KUI-user-profile-card-root">
       <AtomDiv>
         <AvatarKUI imgSrc={image} altText={head} />
