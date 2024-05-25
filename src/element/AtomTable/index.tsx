@@ -1,4 +1,4 @@
-type AtomTableProps = React.HTMLAttributes<HTMLTableElement>;
+export type AtomTableProps = React.HTMLAttributes<HTMLTableElement>;
 
 export interface AtomTableElement extends React.JSX.Element {}
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-type AtomDivProps = React.HTMLAttributes<HTMLDivElement>;
+export type AtomDivProps = React.HTMLAttributes<HTMLDivElement>;
 
 export interface AtomDivElement extends React.JSX.Element {}
 
