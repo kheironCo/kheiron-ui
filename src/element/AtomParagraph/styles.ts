@@ -1,4 +1,4 @@
-import { quicksandFont } from '@KUI/styles';
+import { quicksandFont } from '@KUI-styles';
 import { css } from '@emotion/react';
 
 export const ParagraphStyle = css`
