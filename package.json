@@ -32,7 +32,7 @@
     "test": "dts test --passWithNoTests"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "prettier --write"
+    "*.{ts,tsx}": [ "prettier --write", "eslint" ]
   },
   "jest": {
     "testEnvironment": "jsdom"
