@@ -17,9 +17,9 @@
       "@KUI-element": [ "element" ],
       "@KUI-icons": [ "icons" ],
       "@KUI-form": [ "form" ],
-      "@KUI-dashboard": [ "dashboard" ],
+      "@KUI-dashboard": [ "dashboard" ]
     }
   },
-  "include": [ "src", "types", "stories" ],
+  "include": [ "src", "types", "stories", "test" ],
   "exclude": [ "node_modules", "**/*.spec.ts" ]
 }

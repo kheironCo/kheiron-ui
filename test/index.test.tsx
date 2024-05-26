@@ -1,11 +1,10 @@
-import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Default as Thing } from '../stories/Thing.stories';
+import { AvatarKUI } from '../src';
 
-describe('Thing', () => {
+describe('Avatar', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Thing />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const img = document.createElement('img');
+    ReactDOM.render(<AvatarKUI imgSrc="image" altText="alternative" />, img);
+    ReactDOM.unmountComponentAtNode(img);
   });
 });

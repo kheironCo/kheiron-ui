@@ -8,7 +8,7 @@ const meta: Meta<typeof InputFieldPasswordKUI> = {
 export default meta;
 
 type Story = StoryObj<typeof InputFieldPasswordKUI>;
-export const Example = {
+export const Example: Story = {
   args: {
     label: 'Contraseña: ',
   },
