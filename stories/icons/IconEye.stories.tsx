@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconEye } from '.';
+import { IconEye } from '@KUI-icons';
 
 const meta: Meta<typeof IconEye> = {
   title: 'Icon/IconEye',

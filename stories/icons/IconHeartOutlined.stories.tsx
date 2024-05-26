@@ -1,14 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconHeartFilled } from '.';
+import { IconHeartOutlined } from '@KUI-icons';
 
-const meta: Meta<typeof IconHeartFilled> = {
-  title: 'Icon/HeartFilled',
-  component: IconHeartFilled,
+const meta: Meta<typeof IconHeartOutlined> = {
+  title: 'Icon/HeartOutlined',
+  component: IconHeartOutlined,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof IconHeartFilled>;
+type Story = StoryObj<typeof IconHeartOutlined>;
 
 export const Default: Story = {
   args: {},
