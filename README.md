@@ -7,6 +7,8 @@
 </h3>
 
 [![Stable Release](https://img.shields.io/npm/v/kheiron-ui.svg)](https://npm.im/kheiron-ui)
+[![Downloads](https://img.shields.io/npm/dm/kheiron-ui.svg)](https://www.npmjs.com/package/kheiron-ui)
+[![npm](https://img.shields.io/npm/dt/kheiron-ui.svg)](https://www.npmjs.com/package/kheiron-ui)
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
 <!-- [![Discord](https://img.shields.io/discord/769256827007139912.svg?style=flat-square)](https://discord.gg/pJSg287) -->
