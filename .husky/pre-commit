@@ -1,5 +1,5 @@
 #!bin/sh
 # Ejecuta prettier --write
-pnpm format
+pnpm lint-staged
 # Ejecuta ESLint antes de cada commit
 pnpm lint
