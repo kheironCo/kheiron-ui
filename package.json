@@ -23,7 +23,7 @@
     "build-storybook": "storybook build",
     "husky": "husky",
     "lint": "eslint ./src ./stories",
-    "prettier": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
+    "format": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
