@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconHeartFilled } from '@KUI-icons';
+import { IconHeartFilled } from 'icons';
 
 const meta: Meta<typeof IconHeartFilled> = {
   title: 'Icon/HeartFilled',

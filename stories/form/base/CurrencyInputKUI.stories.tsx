@@ -1,4 +1,4 @@
-import { CurrencyInputKUI } from '@KUI-form';
+import { CurrencyInputKUI } from 'form';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof CurrencyInputKUI> = {

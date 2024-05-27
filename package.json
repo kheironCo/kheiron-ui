@@ -8,9 +8,7 @@
   "typings": "dist/index.d.ts",
   "type": "module",
   "files": [
-    "dist",
-    "src",
-    "tsconfig.json"
+    "dist"
   ],
   "keywords": [
     "react",
@@ -26,7 +24,9 @@
     "husky": "husky",
     "lint": "eslint ./src ./stories",
     "lint-staged": "lint-staged",
+    "postinstall": "husky",
     "prepare": "dts build",
+    "prepublish": "eslint ./src",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",

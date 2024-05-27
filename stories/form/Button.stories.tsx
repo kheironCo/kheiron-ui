@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ButtonKUI } from '@KUI-form';
+import { ButtonKUI } from 'form';
 
 const meta: Meta<typeof ButtonKUI> = {
   title: 'Form/Button',

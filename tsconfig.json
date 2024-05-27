@@ -2,7 +2,7 @@
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "extends": "@tsconfig/vite-react/tsconfig.json",
   "compilerOptions": {
-    "rootDirs": [ "src", "types" ],
+    "rootDirs": [ "types", "src" ],
     "outDir": "./dir",
     "module": "ESNext",
     "moduleResolution": "node",
@@ -12,16 +12,20 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
     "baseUrl": "./src",
-    "paths": {
-      "@KUI-types": [ "common/types" ],
-      "@KUI-utils": [ "common/utils" ],
-      "@KUI-styles": [ "common/styles" ],
-      "@KUI-element": [ "element" ],
-      "@KUI-icons": [ "icons" ],
-      "@KUI-form": [ "form" ],
-      "@KUI-dashboard": [ "dashboard" ]
-    }
+    // "paths": {
+    //   "@KUI-types": [ "common/types" ],
+    //   "@KUI-utils": [ "common/utils" ],
+    //   "@KUI-styles": [ "common/styles" ],
+    //   "@KUI-element": [ "element" ],
+    //   "@KUI-icons": [ "icons" ],
+    //   "@KUI-form": [ "form" ],
+    //   "@KUI-dashboard": [ "dashboard" ]
+    // },
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [ "stories" ],
-  "exclude": [ "node_modules", "**/*.spec.ts" ]
+  "include": [ "src", "stories" ],
+  "exclude": [ "node_modules", "**/*.spec.ts", "test", "dist" ]
 }

@@ -1,4 +1,4 @@
-import { PasswordInputKUI } from '@KUI-form';
+import { PasswordInputKUI } from 'form';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof PasswordInputKUI> = {

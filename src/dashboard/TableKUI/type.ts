@@ -1,4 +1,4 @@
-import { AtomDivProps, AtomTrProps } from '@KUI-element';
+import { AtomDivProps, AtomTrProps } from '../../element';
 
 /**
  * @template V - Tipo del valor recibido del cuerpo.

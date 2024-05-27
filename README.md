@@ -20,7 +20,7 @@
 ### Basic
 
 ```tsx
-import { TableKUI } from '@KUI-dashboard';
+import { TableKUI } from 'kheiron-ui';
 
 <TableKUI
   keys={['id', 'name']}
@@ -36,8 +36,7 @@ import { TableKUI } from '@KUI-dashboard';
 ### RenderBody
 
 ```tsx
-import { TableKUI } from '@KUI-dashboard';
-import { UserProfileCardKUI } from 'molecules';
+import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
 
 <TableKUI
   keys={['id', 'user']}

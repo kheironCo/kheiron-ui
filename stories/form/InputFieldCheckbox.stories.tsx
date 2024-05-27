@@ -1,4 +1,4 @@
-import { InputFieldCheckboxKUI } from '@KUI-form';
+import { InputFieldCheckboxKUI } from 'form';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof InputFieldCheckboxKUI> = {

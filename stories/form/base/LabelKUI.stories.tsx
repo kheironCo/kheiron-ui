@@ -1,4 +1,4 @@
-import { LabelKUI } from '@KUI-form';
+import { LabelKUI } from 'form';
 
 export default {
   title: 'Form/LabelKUI',

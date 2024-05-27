@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconEyeClosed } from '@KUI-icons';
+import { IconEyeClosed } from 'icons';
 
 const meta: Meta<typeof IconEyeClosed> = {
   title: 'Icon/IconEyeClosed',

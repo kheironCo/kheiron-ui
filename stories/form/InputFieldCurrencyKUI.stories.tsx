@@ -1,4 +1,4 @@
-import { InputFieldCurrencyKUI } from '@KUI-form';
+import { InputFieldCurrencyKUI } from 'form';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof InputFieldCurrencyKUI> = {

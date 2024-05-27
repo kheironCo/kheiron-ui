@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconCheckBox } from '@KUI-icons';
+import { IconCheckBox } from 'icons';
 
 const meta: Meta<typeof IconCheckBox> = {
   title: 'Icon/CheckBox',
