@@ -1,4 +1,4 @@
-import { AtomDiv, AtomInput } from '@KUI-element';
+import { AtomDiv, AtomInput } from '../../../element';
 
 import { DivStyle } from './styles';
 import { IconEye } from '@KUI-icons';

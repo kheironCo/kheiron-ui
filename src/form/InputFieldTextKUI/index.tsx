@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react';
-import { AtomDiv, AtomInput } from '@KUI-element';
+import { AtomDiv, AtomInput } from '../../element';
 import { divStyles, input, labelParentDiv } from './styles';
-import { LabelKUI } from 'form/base/LabelKUI';
+import { LabelKUI } from '../base';
 
 export type InputFieldTextKUIProps = {
   value?: string;

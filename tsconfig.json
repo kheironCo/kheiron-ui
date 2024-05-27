@@ -22,6 +22,6 @@
       "@KUI-dashboard": [ "dashboard" ]
     }
   },
-  "include": [ "src", "types", "stories" ],
+  "include": [ "stories" ],
   "exclude": [ "node_modules", "**/*.spec.ts" ]
 }

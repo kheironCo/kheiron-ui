@@ -1,4 +1,4 @@
-import { blinkerFont } from '@KUI-styles';
+import { blinkerFont } from '../../common/styles';
 import { css } from '@emotion/react';
 
 export const HeadingStyle = css`

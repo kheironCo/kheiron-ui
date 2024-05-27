@@ -1,7 +1,6 @@
-import { PasswordInputKUI } from '@KUI-form';
-import { AtomDiv } from '@KUI-element';
-import { PasswordInputKUIProps } from 'form/base/PasswordInputKUI/types';
-import { LabelKUI, LabelKUIProps } from '@KUI-form';
+import { LabelKUI, LabelKUIProps, PasswordInputKUI } from '../base';
+import { PasswordInputKUIProps } from '../base/PasswordInputKUI/types';
+import { AtomDiv } from '../../element';
 
 export type InputFieldPasswordKUIProps = LabelKUIProps & PasswordInputKUIProps;
 
