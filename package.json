@@ -9,7 +9,8 @@
   "type": "module",
   "files": [
     "dist",
-    "src"
+    "src",
+    "tsconfig.json"
   ],
   "keywords": [
     "react",
@@ -19,14 +20,13 @@
   ],
   "scripts": {
     "analyze": "size-limit --why",
-    "clean": "rimraf dist",
-    "build": "pnpm clean && npx rollup -c --bundleConfigAsCjs",
+    "build": "dts build",
     "build-storybook": "storybook build",
+    "format": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
     "husky": "husky",
     "lint": "eslint ./src ./stories",
     "lint-staged": "lint-staged",
-    "format": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
-    "prepare": "pnpm build",
+    "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
@@ -61,10 +61,6 @@
     "@babel/core": "^7.24.4",
     "@eslint/js": "^9.1.1",
     "@faker-js/faker": "^8.4.1",
-    "@rollup/plugin-alias": "^5.1.0",
-    "@rollup/plugin-commonjs": "^25.0.8",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@size-limit/preset-small-lib": "^11.1.2",
     "@storybook/addon-essentials": "^8.1.2",
     "@storybook/addon-info": "^6.0.0-alpha.2",
@@ -87,8 +83,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
-    "rimraf": "^5.0.7",
-    "rollup": "^4.18.0",
     "size-limit": "^11.1.2",
     "storybook": "^8.1.2",
     "tslib": "^2.6.2",
