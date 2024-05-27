@@ -1,6 +1,6 @@
 {
   "name": "kheiron-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Kheiron",
   "main": "dist/index.js",
