@@ -26,7 +26,7 @@
     "lint": "eslint ./src ./stories",
     "lint-staged": "lint-staged",
     "format": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
-    "prepare": "dts build",
+    "prepare": "pnpm build",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
