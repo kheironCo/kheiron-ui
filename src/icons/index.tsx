@@ -7,5 +7,3 @@ export * from './IconRadioClose';
 export * from './IconRadioOpen';
 export * from './IconRadio2';
 export * from './IconRadioClose2';
-export * from './IconRadio3';
-export * from './IconRadioClose3';
