@@ -1,20 +1,20 @@
 import { AtomDiv, AtomInput, AtomLabel } from '../../element';
-import { LabelKUI, LabelKUIProps } from '../base';
+import {  LabelKUIProps } from '../base';
 import { ChangeEvent, ReactElement, useState } from 'react';
 
 import { IconRadioClose2, IconRadioOpen2 } from '@KUI-icons';
 import { styles } from './styles';
 
+
 export type RadioCheckItem = {
   label: string;
   value: string;
-}[];
-
+};
 export type InputFieldRadioCheckKUIProps = LabelKUIProps & {
   initValue?: string;
   value?: string;
   getValue: (value: string) => void;
-  items: RadioCheckItem;
+  items: RadioCheckItem[];
   icon: ReactElement;
   iconChecked: ReactElement;
 };
@@ -42,10 +42,12 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   };
 
   return (
-    <LabelKUI>
+    
       <AtomDiv css={styles}>
         {items?.map((el, index) => (
-          <AtomDiv className="KUI-input-field-radio-check-root" key={index}>
+          <AtomDiv  className="KUI-input-field-radio-check-root" key={index}>
+
+           
             <AtomInput
               className="KUI-input-field-radio-check-input"
               id={`${el.value}-${index}`}
@@ -54,20 +56,18 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
               value={el.value}
               checked={selectedRadio === el.value}
               onChange={handleRadioChange}
-            ></AtomInput>
-
-            {selectedRadio === el.value && icon}
-            {selectedRadio !== el.value && iconChecked}
+            />
+              {selectedRadio === el.value ? icon : iconChecked}
 
             <AtomLabel
               htmlFor={`${el.value}-${index}`}
-              className={`KUI-input-field-radio-check-${index}`}
-            >
+              className={`'KUI-input-field-radio-check-label KUI-input-field-radio-check-label-${index}'`}
+              >
               {el.label}
             </AtomLabel>
           </AtomDiv>
         ))}
+      
       </AtomDiv>
-    </LabelKUI>
   );
 };
