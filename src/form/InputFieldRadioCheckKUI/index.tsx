@@ -1,16 +1,14 @@
 import { AtomDiv, AtomInput, AtomLabel } from '../../element';
-import {  LabelKUIProps } from '../base';
 import { ChangeEvent, ReactElement, useState } from 'react';
 
 import { IconRadioClose2, IconRadioOpen2 } from '@KUI-icons';
 import { styles } from './styles';
 
-
 export type RadioCheckItem = {
   label: string;
   value: string;
 };
-export type InputFieldRadioCheckKUIProps = LabelKUIProps & {
+export type InputFieldRadioCheckKUIProps ={
   initValue?: string;
   value?: string;
   getValue: (value: string) => void;
@@ -42,32 +40,28 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   };
 
   return (
-    
-      <AtomDiv css={styles}>
-        {items?.map((el, index) => (
-          <AtomDiv  className="KUI-input-field-radio-check-root" key={index}>
+    <AtomDiv css={styles}>
+      {items?.map((el, index) => (
+        <AtomDiv className="KUI-input-field-radio-check-root" key={index}>
+          <AtomInput
+            className="KUI-input-field-radio-check-input"
+            id={`${el.value}-${index}`}
+            key={index}
+            type="radio"
+            value={el.value}
+            checked={selectedRadio === el.value}
+            onChange={handleRadioChange}
+          />
+          {selectedRadio === el.value ? icon : iconChecked}
 
-           
-            <AtomInput
-              className="KUI-input-field-radio-check-input"
-              id={`${el.value}-${index}`}
-              key={index}
-              type="radio"
-              value={el.value}
-              checked={selectedRadio === el.value}
-              onChange={handleRadioChange}
-            />
-              {selectedRadio === el.value ? icon : iconChecked}
-
-            <AtomLabel
-              htmlFor={`${el.value}-${index}`}
-              className={`'KUI-input-field-radio-check-label KUI-input-field-radio-check-label-${index}'`}
-              >
-              {el.label}
-            </AtomLabel>
-          </AtomDiv>
-        ))}
-      
-      </AtomDiv>
+          <AtomLabel
+            htmlFor={`${el.value}-${index}`}
+            className={`'KUI-input-field-radio-check-label KUI-input-field-radio-check-label-${index}'`}
+          >
+            {el.label}
+          </AtomLabel>
+        </AtomDiv>
+      ))}
+    </AtomDiv>
   );
 };
