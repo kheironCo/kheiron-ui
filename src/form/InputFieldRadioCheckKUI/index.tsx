@@ -8,7 +8,7 @@ export type RadioCheckItem = {
   label: string;
   value: string;
 };
-export type InputFieldRadioCheckKUIProps ={
+export type InputFieldRadioCheckKUIProps = {
   initValue?: string;
   value?: string;
   getValue: (value: string) => void;
