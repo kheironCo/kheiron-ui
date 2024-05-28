@@ -1,5 +1,5 @@
-import { AtomDiv, AtomInput, AtomLabel } from '@KUI-element';
-import { LabelKUI, LabelKUIProps } from 'form/base';
+import { AtomDiv, AtomInput, AtomLabel } from '../../element';
+import { LabelKUI, LabelKUIProps } from '../base';
 import { ChangeEvent, ReactElement, useState } from 'react';
 
 import { IconRadioClose2, IconRadioOpen2 } from '@KUI-icons';
