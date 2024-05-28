@@ -3,7 +3,7 @@ import { AtomButton } from '../../element';
 import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonList, GeneralButtonStyle } from './styles';
 
-export type ButtonKUIProps = {
+export type ButtonKUIProps = Parameters<typeof AtomButton>[0] & {
   className?: string;
   variant?: ButtonVariant;
   palette?: ButtonPalette;
