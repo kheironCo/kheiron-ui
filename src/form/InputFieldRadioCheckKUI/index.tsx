@@ -1,7 +1,7 @@
 import { AtomDiv, AtomInput, AtomLabel } from '../../element';
 import { ChangeEvent, ReactElement, useState } from 'react';
 
-import { IconRadioClose2, IconRadioOpen2 } from '@KUI-icons';
+import { IconRadioClose2, IconRadioOpen2 } from '../../icons';
 import { styles } from './styles';
 
 export type RadioCheckItem = {
