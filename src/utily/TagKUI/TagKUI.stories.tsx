@@ -1,5 +1,4 @@
-import { TagKUI } from ".";
-
+import { TagKUI } from '.';
 
 export default {
   title: 'utily/TagKUI',
@@ -8,6 +7,6 @@ export default {
 
 export const Example = {
   args: {
-    label: "Ejemplo"
+    label: 'Ejemplo',
   },
 };
