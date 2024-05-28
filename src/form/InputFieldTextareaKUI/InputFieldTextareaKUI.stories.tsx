@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import { InputFieldTextareaKUI } from '.';
 
 const meta: Meta<typeof InputFieldTextareaKUI> = {

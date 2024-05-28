@@ -20,6 +20,6 @@
       "@KUI-dashboard": [ "dashboard" ],
     }
   },
-  "include": [ "src", "types" ],
+  "include": [ "src", "types", "test" ],
   "exclude": [ "node_modules", "**/*.spec.ts" ]
 }
