@@ -1,7 +1,7 @@
 import { ChangeEvent, ReactElement, useState } from 'react';
 import { CheckRoot, InputCheckBox, LabelCheckBox } from './styles';
-import { AtomDiv, AtomInput, AtomLabel } from '@KUI-element';
-import { IconCheckBox } from '@KUI-icons';
+import { AtomDiv, AtomInput, AtomLabel } from '../../element';
+import { IconCheckBox } from '../../icons';
 
 export type CheckKUIProps = {
   checked?: boolean;
