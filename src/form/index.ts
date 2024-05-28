@@ -3,4 +3,4 @@ export * from './ButtonKUI';
 export * from './InputFieldCheckboxKUI';
 export * from './InputFieldTextKUI';
 export * from './InputFieldTextareaKUI';
-export * from './InputFieldPasswordKUI';
+export * from './InputFieldRadioCheckKUI';
