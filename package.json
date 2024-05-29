@@ -1,6 +1,6 @@
 {
   "name": "kheiron-ui",
-  "version": "0.1.0",
+  "version": "1.0.6",
   "license": "MIT",
   "author": "Kheiron",
   "main": "dist/index.js",
@@ -8,21 +8,35 @@
   "typings": "dist/index.d.ts",
   "type": "module",
   "files": [
-    "dist",
-    "src"
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "react-dom",
+    "ui",
+    "form"
   ],
   "scripts": {
     "analyze": "size-limit --why",
     "build": "dts build",
     "build-storybook": "storybook build",
+    "format": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
     "husky": "husky",
-    "lint": "eslint ./src",
-    "prettier": "prettier --write ./**/*.tsx ./**/*.ts",
+    "lint": "eslint ./src ./stories",
+    "lint-staged": "lint-staged",
+    "postinstall": "husky",
     "prepare": "dts build",
+    "prepublish": "eslint ./src",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
     "test": "dts test --passWithNoTests"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ]
   },
   "jest": {
     "testEnvironment": "jsdom"
@@ -31,7 +45,7 @@
     "react": ">=16"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=18.18.0"
   },
   "size-limit": [
     {
@@ -54,8 +68,10 @@
     "@storybook/addons": "^7.6.0-beta.2",
     "@storybook/react": "^8.1.2",
     "@storybook/react-vite": "^8.1.2",
+    "@testing-library/react": "^15.0.7",
     "@tsconfig/recommended": "^1.0.6",
     "@tsconfig/vite-react": "^3.0.2",
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
     "babel-loader": "^9.1.3",

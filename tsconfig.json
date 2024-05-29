@@ -9,17 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
-    "baseUrl": "./src",
-    "paths": {
-      "@KUI-types": [ "common/types" ],
-      "@KUI-utils": [ "common/utils" ],
-      "@KUI/styles": [ "common/styles" ],
-      "@KUI-element": [ "element" ],
-      "@KUI-icons": [ "icons" ],
-      "@KUI-form": [ "form" ],
-      "@KUI-dashboard": [ "dashboard" ],
-    }
+    "baseUrl": "./src"
   },
-  "include": [ "src", "types", "test" ],
-  "exclude": [ "node_modules", "**/*.spec.ts" ]
+  "include": [ "types", "test", "stories" ],
+  "exclude": [ "node_modules", "**/*.spec.ts", "src" ]
 }

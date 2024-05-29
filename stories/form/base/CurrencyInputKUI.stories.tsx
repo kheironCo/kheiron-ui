@@ -1,5 +1,5 @@
+import { CurrencyInputKUI } from 'form';
 import { Meta, StoryObj } from '@storybook/react';
-import { CurrencyInputKUI } from './';
 
 const meta: Meta<typeof CurrencyInputKUI> = {
   title: 'Form/Bases/CurrencyInput',

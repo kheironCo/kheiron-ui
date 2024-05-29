@@ -1,5 +1,4 @@
-import { CurrencyInputKUI, CurrencyInputKUIProps } from 'form/base';
-import { LabelKUI, LabelKUIProps } from '@KUI-form';
+import { CurrencyInputKUI, CurrencyInputKUIProps, LabelKUI, LabelKUIProps } from '../base';
 
 export type InputFieldCurrencyKUIProps = CurrencyInputKUIProps &
   Omit<LabelKUIProps, 'htmlFor' | 'children'>;

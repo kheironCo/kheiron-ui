@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { AtomDiv, AtomLabel } from '@KUI-element';
+import { AtomDiv, AtomLabel } from '../../../element';
 import { PositionStyle, AlignStyle } from './styles';
 import { PositionType, AlignType } from './types';
 

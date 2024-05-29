@@ -1,4 +1,3 @@
-import React from 'react';
 import { LabelKUI } from '../base';
 import { AtomTextArea } from '../../element';
 
