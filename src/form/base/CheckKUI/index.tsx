@@ -3,15 +3,14 @@ import { CheckRoot, InputCheckBox, LabelCheckBox } from './styles';
 import { AtomDiv, AtomInput, AtomLabel } from '../../../element';
 import { IconCheckBox } from '../../../icons';
 
-export type CheckKUIProps = {
+type CheckboxParameters = Parameters<typeof AtomInput>[0];
+export type CheckKUIProps = Pick<CheckboxParameters, 'onChange'> & {
   checked?: boolean;
   getValue?: (checked: boolean) => void;
   icon?: React.ReactElement;
   iconChecked?: React.ReactElement;
   className?: string;
   id?: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const CheckKUI = ({
@@ -20,26 +19,25 @@ export const CheckKUI = ({
   icon,
   iconChecked,
   className,
-  value,
   onChange,
 }: CheckKUIProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const _onChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(e.target.checked);
+    if (onChange) onChange(e);
     setIsChecked(e.target.checked);
   };
 
   return (
-    <AtomDiv css={CheckRoot} className="KUI-check-root">
+    <AtomDiv css={CheckRoot} className={`KUI-check-root ${className || ''}`}>
       <AtomInput
-        value={value}
         css={InputCheckBox}
         checked={isChecked}
-        onChange={handleChange ?? onChange}
+        onChange={_onChange}
         id="KUICheck"
-        className={`KUI-check-input ${className || ''}`}
-        type="radio"
+        className="KUI-check-input"
+        type="checkbox"
       />
       <AtomLabel css={LabelCheckBox} htmlFor="KUICheck" className="KUI-check-label">
         {isChecked ? iconChecked || <IconCheckBox checked /> : icon || <IconCheckBox />}

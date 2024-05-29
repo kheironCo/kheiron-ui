@@ -2,8 +2,6 @@
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "extends": "@tsconfig/vite-react/tsconfig.json",
   "compilerOptions": {
-    "rootDirs": [ "types", "src" ],
-    "outDir": "./dir",
     "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -11,21 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
-    "baseUrl": "./src",
-    "paths": {
-      "@KUI-types": [ "common/types" ],
-      "@KUI-utils": [ "common/utils" ],
-      "@KUI-styles": [ "common/styles" ],
-      "@KUI-element": [ "element" ],
-      "@KUI-icons": [ "icons" ],
-      "@KUI-form": [ "form" ],
-      "@KUI-dashboard": [ "dashboard" ]
-    },
-    "resolveJsonModule": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "baseUrl": "./src"
   },
-  "include": [ "stories", "test" ],
-  "exclude": [ "node_modules", "**/*.spec.ts", "src", "dist" ]
+  "include": [ "types", "test", "stories" ],
+  "exclude": [ "node_modules", "**/*.spec.ts", "src" ]
 }
