@@ -1,4 +1,4 @@
-import { LabelKUI } from './index';
+import { LabelKUI } from 'form';
 
 export default {
   title: 'Form/LabelKUI',
@@ -7,7 +7,7 @@ export default {
 
 export const Default = {
   args: {
-    label: <strong>Título: </strong>,
+    label: 'Título:',
     position: 'top',
     align: 'left',
     children:

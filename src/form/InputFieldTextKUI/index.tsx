@@ -1,13 +1,12 @@
-import { ChangeEvent } from 'react';
-import { AtomDiv, AtomInput } from '@KUI-element';
+import { AtomDiv, AtomInput } from '../../element';
+import { LabelKUI } from '../base';
 import { divStyles, input, labelParentDiv } from './styles';
-import { LabelKUI } from 'form/base/LabelKUI';
 
 export type InputFieldTextKUIProps = {
   value?: string;
   label: string;
   placeHolder?: string;
-  handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleChange?: Parameters<typeof AtomDiv>[0]['onChange'];
 };
 
 export const InputFieldTextKUI = ({

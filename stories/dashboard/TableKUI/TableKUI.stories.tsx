@@ -1,7 +1,7 @@
 // @ts-check
 import { Meta, StoryObj } from '@storybook/react';
-import { TableKUI } from '.';
-import { AtomParagraph } from '@KUI-element';
+import { TableKUI } from 'dashboard';
+import { AtomParagraph } from 'element';
 import { css } from '@emotion/react';
 import { fakeData } from './mock';
 import { UserProfileCardKUI } from 'molecules';

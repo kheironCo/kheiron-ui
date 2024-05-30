@@ -1,16 +1,14 @@
-import { PasswordInputKUI } from '@KUI-form';
-import { AtomDiv } from '@KUI-element';
-import { PasswordInputKUIProps } from 'form/base/PasswordInputKUI/types';
-import { LabelKUI, LabelKUIProps } from '@KUI-form';
+import { LabelKUI, LabelKUIProps, PasswordInputKUI } from '../base';
+import { AtomDiv } from '../../element';
 
-export type inputFieldPasswordKUIProps = LabelKUIProps & PasswordInputKUIProps;
+export type InputFieldPasswordKUIProps = LabelKUIProps & Parameters<typeof PasswordInputKUI>[0];
 
-export const inputFieldPasswordKUI = ({
+export const InputFieldPasswordKUI = ({
   label,
   position = 'top',
   align = 'left',
   getValue,
-}: inputFieldPasswordKUIProps) => {
+}: InputFieldPasswordKUIProps) => {
   return (
     <AtomDiv className="KUI-inputfieldPassword-root">
       <LabelKUI
