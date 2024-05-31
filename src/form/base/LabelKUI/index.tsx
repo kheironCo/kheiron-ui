@@ -8,7 +8,7 @@ export type LabelKUIProps = {
   position?: PositionType;
   align?: AlignType;
   htmlFor?: string;
-  children?: ReactElement;
+  children: ReactElement | string;
   className?: string;
 };
 

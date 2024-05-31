@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-export const styles = css`
+export const stylesRadio = css`
   .KUI-input-field-radio-check-root {
     display: flex;
     align-items: center;

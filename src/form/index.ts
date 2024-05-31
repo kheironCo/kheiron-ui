@@ -5,4 +5,4 @@ export * from './InputFieldCurrencyKUI';
 export * from './InputFieldTextKUI';
 export * from './InputFieldTextareaKUI';
 export * from './InputFieldRadioCheckKUI';
-export * from './inputFieldPasswordKUI';
+export * from './InputFieldPasswordKUI';
