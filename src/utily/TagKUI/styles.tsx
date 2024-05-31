@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import { StyledType, StyledType2 } from './types';
+import { StyledBgType, StyledBorderType } from './types';
 
-const estilos = css`
+const generalStyle = css`
   font-size: 12px;
   padding: 5px 20px;
   border-radius: 7px;
@@ -11,28 +11,28 @@ const estilos = css`
 `;
 
 const mainColor = css`
-  ${estilos}
+  ${generalStyle}
   background-color: #643d67;
 `;
 const blueColor = css`
-  ${estilos}
+  ${generalStyle}
   background-color: blue;
 `;
 const yellowColor = css`
-  ${estilos}
+  ${generalStyle}
   background-color: yellow;
   color: black;
 `;
 const redColor = css`
-  ${estilos}
+  ${generalStyle}
   background-color: red;
 `;
 const blackColor = css`
-  ${estilos}
+  ${generalStyle}
   background-color: black;
 `;
 const whiteColor = css`
-  ${estilos}
+  ${generalStyle}
   background-color: white;
   color: black;
 `;
@@ -48,13 +48,13 @@ const borderDotted = css`
   border: 2px dotted black;
 `;
 
-export const stylesBorder: StyledType2 = {
+export const stylesBorder: StyledBorderType = {
   none: borderNone,
   solid: borderSolid,
   dashed: borderDashed,
   dotted: borderDotted,
 };
-export const stylesBackground: StyledType = {
+export const stylesBackground: StyledBgType = {
   main: mainColor,
   blue: blueColor,
   yellow: yellowColor,
