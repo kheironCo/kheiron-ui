@@ -20,6 +20,7 @@ export const PositionStyle: PositionStyleType = {
     flex-direction: row-reverse;
   `,
 };
+
 export const AlignStyle: AlignStyleType = {
   center: css`
     text-align: center;
