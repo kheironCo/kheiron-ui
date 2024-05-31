@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconHeartOutlined } from '.';
+import { IconHeartOutlined } from 'icons';
 
 const meta: Meta<typeof IconHeartOutlined> = {
   title: 'Icon/HeartOutlined',

@@ -1,4 +1,4 @@
-import { AtomInput, AtomInputProps } from '@KUI-element';
+import { AtomInput, AtomInputProps } from '../../../element';
 import { useState } from 'react';
 
 export type CurrencyInputKUIProps = Omit<AtomInputProps, 'onChange'> & {

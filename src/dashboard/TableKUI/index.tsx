@@ -1,4 +1,4 @@
-import { AtomDiv, AtomTable, AtomTbody, AtomTd, AtomTh, AtomThead, AtomTr } from '@KUI-element';
+import { AtomDiv, AtomTable, AtomTbody, AtomTd, AtomTh, AtomThead, AtomTr } from '../../element';
 import { useMemo } from 'react';
 import {
   TableBodyCellStyle,

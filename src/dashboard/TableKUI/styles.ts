@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import ROOT from 'common/root';
+import ROOT from '../../common/root';
 
 export const TableStyle = css`
   font-family: Quicksand, sans-serif;

@@ -1,4 +1,5 @@
 import { StorybookConfig } from '@storybook/react-vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 const config: StorybookConfig = {
   stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)', '../src/**/*.stories.@(ts|tsx|js|jsx)'],
@@ -14,6 +15,10 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: true,
+  },
+  viteFinal: async (config, { configType }) => {
+    config?.plugins?.push(tsconfigPaths());
+    return config;
   },
 };
 

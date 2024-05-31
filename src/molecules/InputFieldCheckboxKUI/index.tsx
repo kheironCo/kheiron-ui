@@ -1,5 +1,6 @@
-import { CheckKUI, CheckKUIProps, LabelKUI, LabelKUIProps } from '../base';
+import { CheckKUI, CheckKUIProps } from '@KUI-form';
 import { AtomDiv } from '../../element';
+import { LabelKUI, LabelKUIProps } from '@KUI-form';
 
 export type CheckboxKUIProps = CheckKUIProps & LabelKUIProps;
 
