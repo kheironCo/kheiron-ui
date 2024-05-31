@@ -1,8 +1,9 @@
-import { AtomDiv, AtomInput, AtomLabel } from '../../element';
+import { AtomDiv, AtomInput, AtomParagraph } from '../../element';
 import { ChangeEvent, ReactElement, useState } from 'react';
 
 import { IconRadioClose2, IconRadioOpen2 } from '../../icons';
 import { styles } from './styles';
+import { LabelKUI } from '../base';
 
 export type RadioCheckItem = {
   label: string;
@@ -18,7 +19,7 @@ export type InputFieldRadioCheckKUIProps = {
 };
 
 export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = ({
-  initValue,
+  initValue = 'value',
   value,
   getValue,
   items,
@@ -54,12 +55,12 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
           />
           {selectedRadio === el.value ? icon : iconChecked}
 
-          <AtomLabel
+          <LabelKUI
             htmlFor={`${el.value}-${index}`}
             className={`'KUI-input-field-radio-check-label KUI-input-field-radio-check-label-${index}'`}
           >
-            {el.label}
-          </AtomLabel>
+            <AtomParagraph>{el.label}</AtomParagraph>
+          </LabelKUI>
         </AtomDiv>
       ))}
     </AtomDiv>

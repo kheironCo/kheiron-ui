@@ -8,7 +8,7 @@ export type LabelKUIProps = {
   position?: PositionType;
   align?: AlignType;
   htmlFor?: string;
-  children: ReactElement;
+  children?: ReactElement;
   className?: string;
 };
 
@@ -21,11 +21,11 @@ export const LabelKUI = ({
   label,
 }: LabelKUIProps) => {
   return (
-    <AtomDiv className={className} css={PositionStyle[position]}>
-      <AtomLabel css={AlignStyle[align]} htmlFor={htmlFor}>
-        {label}
+    <AtomDiv className={className}>
+      <AtomLabel css={[AlignStyle[align], PositionStyle[position]]} htmlFor={htmlFor}>
+        <AtomDiv>{label}</AtomDiv>
+        <AtomDiv>{children}</AtomDiv>
       </AtomLabel>
-      {children}
     </AtomDiv>
   );
 };
