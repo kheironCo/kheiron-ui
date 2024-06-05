@@ -1,4 +1,3 @@
-import ROOT from '../../common/root';
 import { ButtonListType } from './type';
 
 export const GeneralButtonStyle = {
@@ -7,56 +6,70 @@ export const GeneralButtonStyle = {
   border: 'none',
   borderRadius: '0.375rem',
   cursor: 'pointer',
-  fontWidht: 500,
+  fontWeight: 500,
 };
 
 export const ButtonList: ButtonListType = {
   primary: {
     filled: {
-      color: '#fff',
-      backgroundColor: ROOT.color.aiax.secondary,
+      backgroundColor: '#ff6347',
+      color: 'white',
+      borderRadius: '5px',
+      padding: '10px 26px',
+      border: 'none',
+      fontWeight: '600',
       '&:hover': {
-        backgroundColor: ROOT.color.aiax.primary,
+        backgroundColor: '#fc8c79',
       },
       '&:active': {
-        backgroundColor: ROOT.color.aiax.tertiary,
+        color: 'white',
+        backgroundColor: '#fc8c79',
       },
     },
     outlined: {
-      color: ROOT.color.aiax.primary,
+      color: '#ff6347',
+      padding: '10px 26px',
       backgroundColor: 'transparent',
-      border: `${ROOT.color.aiax.secondary} solid 1px`,
+      border: `#ff6347 solid 1px`,
+      fontWeight: '600',
       '&:hover': {
-        color: '#fff',
-        backgroundColor: ROOT.color.aiax.primary,
+        backgroundColor: 'white',
       },
       '&:active': {
-        backgroundColor: ROOT.color.aiax.tertiary,
+        backgroundColor: '#fc8c79',
+        color: 'white',
       },
     },
   },
   secondary: {
     filled: {
-      color: '#fff',
-      backgroundColor: ROOT.color.aiax.primary,
+      backgroundColor: '#ffc107',
+      color: 'white',
+      borderRadius: '5px',
+      padding: '10px 26px',
+      border: 'none',
+      fontWeight: '600',
       '&:hover': {
-        backgroundColor: ROOT.color.aiax.secondary,
+        backgroundColor: '#ffd866',
       },
       '&:active': {
-        backgroundColor: ROOT.color.aiax.tertiary,
+        backgroundColor: '#ffd866',
+        color: 'white',
       },
     },
     outlined: {
-      color: ROOT.color.aiax.primary,
+      color: '#ffc107',
       backgroundColor: 'transparent',
-      border: `${ROOT.color.aiax.primary} solid 1px`,
+      borderRadius: '5px',
+      padding: '10px 26px',
+      border: `#ffc107 solid 1px`,
       '&:hover': {
         color: '#fff',
-        backgroundColor: ROOT.color.aiax.secondary,
+        backgroundColor: '#ffd866',
       },
       '&:active': {
         color: '#fff',
-        backgroundColor: ROOT.color.aiax.tertiary,
+        backgroundColor: '#ffd866',
       },
     },
   },

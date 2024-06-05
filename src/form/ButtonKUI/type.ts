@@ -8,6 +8,9 @@ export type ButtonType = {
   color: string;
   backgroundColor: string;
   border?: string;
+  borderRadius?: string;
+  padding?: string;
+  fontWeight?: string;
   '&:hover': HovType;
   '&:active': HovType;
 };

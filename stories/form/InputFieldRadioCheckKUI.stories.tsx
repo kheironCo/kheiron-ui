@@ -1,6 +1,6 @@
-import { IconRadioClose, IconRadioOpen } from '../../icons';
-import { InputFieldRadioCheckKUI } from '.';
-import { IconHeartFilled, IconHeartOutlined } from '../../icons';
+import { IconRadioClose, IconRadioOpen } from '../../src/icons';
+import { InputFieldRadioCheckKUI } from '../../src/form/InputFieldRadioCheckKUI';
+import { IconHeartFilled, IconHeartOutlined } from '../../src/icons';
 
 export default {
   title: 'Form/InputFieldRadioCheckKUI',
