@@ -4,6 +4,11 @@ import { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof InputFieldCheckboxKUI> = {
   title: 'Form/InputFieldCheckboxKUI',
   component: InputFieldCheckboxKUI,
+  argTypes: {
+    datatype: {
+      description: 'A button component',
+    },
+  },
 };
 
 export default meta;

@@ -3,11 +3,14 @@ type HovType = {
   backgroundColor: string;
 };
 export type ButtonVariant = 'filled' | 'outlined';
-export type ButtonPalette = 'primary' | 'secondary';
+export type ButtonPalette = 'primary' | 'gold' | 'orange';
 export type ButtonType = {
   color: string;
   backgroundColor: string;
   border?: string;
+  borderRadius?: string;
+  padding?: string;
+  fontWeight?: string;
   '&:hover': HovType;
   '&:active': HovType;
 };
