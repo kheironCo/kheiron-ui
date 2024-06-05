@@ -5,6 +5,21 @@ import { CheckKUI } from 'form';
 const meta: Meta<typeof CheckKUI> = {
   title: 'Form/Bases/CheckKUI',
   component: CheckKUI,
+  argTypes:{
+    checked:{
+      description: "Define if the check is checked"
+    },
+    getValue:{
+      description: "Function to get the value"
+    },
+    icon:{
+      description: "Define the icon"
+    },
+    iconChecked: {
+      description: "Define if the icon is checked"
+    },
+    
+  }
 };
 
 export default meta;

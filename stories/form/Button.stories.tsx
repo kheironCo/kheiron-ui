@@ -4,6 +4,17 @@ import { ButtonKUI } from 'form';
 const meta: Meta<typeof ButtonKUI> = {
   title: 'Form/Button',
   component: ButtonKUI,
+  argTypes:{
+    children:{
+      description: "Define the text of the button"
+    },
+    variant:{
+      description: "Define if the button is filled or outlined"
+    },
+    palette:{
+      description: "Define if the button color is primary or secondary "
+    }
+  }
 };
 export default meta;
 
