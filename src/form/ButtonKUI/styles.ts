@@ -1,4 +1,5 @@
 import { ButtonListType } from './type';
+import ROOT from '../../common/root';
 
 export const GeneralButtonStyle = {
   padding: ' 0.25rem 0.75rem',
@@ -12,95 +13,95 @@ export const GeneralButtonStyle = {
 export const ButtonList: ButtonListType = {
   primary: {
     filled: {
-      backgroundColor: '#583d6b',
+      backgroundColor: ROOT.color.aiax.primary,
       color: 'white',
       borderRadius: '5px',
       padding: '10px 26px',
       border: 'none',
       fontWeight: '600',
       '&:hover': {
-        backgroundColor: '#705a7f',
+        backgroundColor: ROOT.color.aiax.secondary,
       },
       '&:active': {
         color: 'white',
-        backgroundColor: '#705a7f',
+        backgroundColor: ROOT.color.aiax.secondary,
       },
     },
     outlined: {
-      color: '#583d6b',
+      color: ROOT.color.aiax.primary,
       padding: '10px 26px',
       backgroundColor: 'transparent',
-      border: `#583d6b solid 1px`,
+      border: `${ROOT.color.aiax.primary} solid 1px`,
       fontWeight: '600',
       '&:hover': {
         backgroundColor: 'white',
       },
       '&:active': {
-        backgroundColor: '#705a7f',
+        backgroundColor: ROOT.color.aiax.secondary,
         color: 'white',
       },
     },
   },
   orange: {
     filled: {
-      backgroundColor: '#ff6347',
+      backgroundColor: ROOT.color.orange.primary,
       color: 'white',
       borderRadius: '5px',
       padding: '10px 26px',
       border: 'none',
       fontWeight: '600',
       '&:hover': {
-        backgroundColor: '#fc8c79',
+        backgroundColor: ROOT.color.orange.secondary,
       },
       '&:active': {
         color: 'white',
-        backgroundColor: '#fc8c79',
+        backgroundColor: ROOT.color.orange.secondary,
       },
     },
     outlined: {
-      color: '#ff6347',
+      color: ROOT.color.orange.primary,
       padding: '10px 26px',
       backgroundColor: 'transparent',
-      border: `#ff6347 solid 1px`,
+      border: `${ROOT.color.orange.primary} solid 1px`,
       fontWeight: '600',
       '&:hover': {
         backgroundColor: 'white',
       },
       '&:active': {
-        backgroundColor: '#fc8c79',
+        backgroundColor: ROOT.color.orange.secondary,
         color: 'white',
       },
     },
   },
   gold: {
     filled: {
-      backgroundColor: '#ffc107',
+      backgroundColor: ROOT.color.gold.primary,
       color: 'white',
       borderRadius: '5px',
       padding: '10px 26px',
       border: 'none',
       fontWeight: '600',
       '&:hover': {
-        backgroundColor: '#ffd866',
+        backgroundColor: ROOT.color.gold.secondary,
       },
       '&:active': {
-        backgroundColor: '#ffd866',
+        backgroundColor: ROOT.color.gold.secondary,
         color: 'white',
       },
     },
     outlined: {
-      color: '#ffc107',
+      color: ROOT.color.gold.primary,
       backgroundColor: 'transparent',
       borderRadius: '5px',
       padding: '10px 26px',
-      border: `#ffc107 solid 1px`,
+      border: `${ROOT.color.gold.primary} solid 1px`,
       '&:hover': {
         color: '#fff',
-        backgroundColor: '#ffd866',
+        backgroundColor: ROOT.color.gold.secondary,
       },
       '&:active': {
         color: '#fff',
-        backgroundColor: '#ffd866',
+        backgroundColor: ROOT.color.gold.secondary,
       },
     },
   },

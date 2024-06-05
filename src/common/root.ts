@@ -18,6 +18,14 @@ const ROOT = {
       700: '#4d4d4d',
       900: '#1a1a1a',
     },
+    gold: {
+      primary: '#ffc107',
+      secondary: '#ffd866',
+    },
+    orange: {
+      primary: '#ff6347',
+      secondary: '#fc8c79',
+    },
   },
 };
 
