@@ -1,11 +1,18 @@
-import { IconRadioClose, IconRadioOpen } from '../../src/icons';
-import { InputFieldRadioCheckKUI } from '../../src/form/InputFieldRadioCheckKUI';
-import { IconHeartFilled, IconHeartOutlined } from '../../src/icons';
+import { IconRadioClose, IconRadioOpen } from '../../icons';
+import { InputFieldRadioCheckKUI } from '.';
+import { IconHeartFilled, IconHeartOutlined } from '../../icons';
+import { Meta } from '@storybook/react';
 
-export default {
+const meta: Meta<typeof InputFieldRadioCheckKUI> = {
   title: 'Form/InputFieldRadioCheckKUI',
   component: InputFieldRadioCheckKUI,
+  argTypes: {
+    position: {
+      description: 'This parameter set the label position of the radio bind of the radio',
+    },
+  },
 };
+export default meta;
 
 export const Example = {
   args: {
