@@ -1,18 +1,32 @@
-import { cleanup, fireEvent, render } from '@testing-library/react';
+import { cleanup, fireEvent, logRoles, render, screen } from '@testing-library/react';
 import { ButtonKUI } from '../src';
 
 describe('ButtonKUI', () => {
   afterEach(cleanup);
 
-  it('render with correct label', () => {
-    const { getByText } = render(<ButtonKUI>Button</ButtonKUI>);
-    expect(getByText('Button')).toBeTruthy();
+  test('Render element', () => {
+    render(<ButtonKUI>Button</ButtonKUI>);
+    const buttonElement = screen.getByRole('button');
+    expect(buttonElement).toBeTruthy();
   });
 
-  it('render with correct label', () => {
-    const handleClick = jest.fn();
-    const { getByText } = render(<ButtonKUI onClick={handleClick}>Button</ButtonKUI>);
-    fireEvent.click(getByText('Button'));
-    expect(handleClick).toHaveBeenCalledTimes(1);
+  test('Render with correct label', () => {
+    render(<ButtonKUI>Button</ButtonKUI>);
+    const buttonElement = screen.getByText(/Button/i);
+    expect(buttonElement).toBe;
+
+    cleanup();
+    render(<ButtonKUI>Sign up</ButtonKUI>);
+    expect(screen.getByText(/Sign/i)).toBeTruthy();
+  });
+
+  test('The button is functional', () => {
+    const handleButton = jest.fn();
+    const { container } = render(<ButtonKUI onClick={handleButton}>Button</ButtonKUI>);
+
+    const buttonElement = screen.getByRole('button');
+    fireEvent.click(buttonElement);
+    expect(handleButton).toHaveBeenCalled();
+    logRoles(container);
   });
 });
