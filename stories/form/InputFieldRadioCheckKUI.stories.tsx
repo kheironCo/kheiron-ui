@@ -1,6 +1,6 @@
-import { IconRadioClose, IconRadioOpen } from '../../icons';
-import { InputFieldRadioCheckKUI } from '.';
-import { IconHeartFilled, IconHeartOutlined } from '../../icons';
+import { IconRadioClose, IconRadioOpen } from 'icons';
+import { InputFieldRadioCheckKUI } from 'form';
+import { IconHeartFilled, IconHeartOutlined } from 'icons';
 import { Meta } from '@storybook/react';
 
 const meta: Meta<typeof InputFieldRadioCheckKUI> = {

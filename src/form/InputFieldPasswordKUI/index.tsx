@@ -10,12 +10,12 @@ export const InputFieldPasswordKUI = ({
   getValue,
 }: InputFieldPasswordKUIProps) => {
   return (
-    <AtomDiv className="KUI-inputfieldPassword-root">
+    <AtomDiv className="KUI-input-field-password-root">
       <LabelKUI
         position={position}
         align={align}
         label={label}
-        className="KUI-inputfieldPassword-label"
+        className="KUI-input-field-password-label"
       >
         <PasswordInputKUI getValue={getValue} />
       </LabelKUI>
