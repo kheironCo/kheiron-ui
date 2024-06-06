@@ -11,6 +11,6 @@
     "jsxImportSource": "@emotion/react",
     "baseUrl": "./src"
   },
-  "include": [ "types", "test", "stories", "test" ],
-  "exclude": [ "node_modules", "**/*.spec.ts", "src" ]
+  "include": [ "types", "test", "stories" ],
+  "exclude": [ "node_modules", "src" ]
 }
