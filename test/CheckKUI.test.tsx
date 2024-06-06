@@ -16,7 +16,7 @@ describe('CheckKUI', () => {
     const check = container.querySelector('[type="checkbox"]');
 
     if (check) fireEvent.click(check);
-    expect(handleCheck()).toBe(false);
+    expect(handleCheck()).toBe(true);
 
     if (check) fireEvent.click(check);
     expect(handleCheck()).toBe(false);
