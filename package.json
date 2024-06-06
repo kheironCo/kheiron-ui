@@ -25,7 +25,6 @@
     "lint-staged": "lint-staged",
     "postinstall": "husky",
     "prepare": "dts build",
-    "prepublish": "eslint ./src",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
