@@ -4,17 +4,17 @@ import { ButtonKUI } from 'form';
 const meta: Meta<typeof ButtonKUI> = {
   title: 'Form/Button',
   component: ButtonKUI,
-  argTypes:{
-    children:{
-      description: "Define the text of the button"
+  argTypes: {
+    children: {
+      description: 'Define the text of the button',
     },
-    variant:{
-      description: "Define if the button is filled or outlined"
+    variant: {
+      description: 'Define if the button is filled or outlined',
     },
-    palette:{
-      description: "Define if the button color is primary or secondary "
-    }
-  }
+    palette: {
+      description: 'Define if the button color is primary or secondary ',
+    },
+  },
 };
 export default meta;
 
@@ -33,9 +33,16 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const Gold: Story = {
   args: {
-    palette: 'secondary',
-    children: 'Secondary',
+    palette: 'gold',
+    children: 'Gold',
+  },
+};
+
+export const Orange: Story = {
+  args: {
+    palette: 'orange',
+    children: 'Orange',
   },
 };

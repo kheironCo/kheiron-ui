@@ -21,7 +21,7 @@
     "build-storybook": "storybook build",
     "format": "prettier --write ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx}",
     "husky": "husky",
-    "lint": "eslint ./src ./stories",
+    "lint": "eslint ./src ./stories ./test",
     "lint-staged": "lint-staged",
     "postinstall": "husky",
     "prepare": "dts build",
