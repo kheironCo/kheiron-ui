@@ -3,21 +3,21 @@ import { LabelKUI } from 'form';
 export default {
   title: 'Form/LabelKUI',
   component: LabelKUI,
-  argTypes:{
-    label:{
-      description: "Define the text of the input"
+  argTypes: {
+    label: {
+      description: 'Define the text of the input',
     },
-    
+
     position: {
-      description: "Define if the position"
+      description: 'Define if the position',
     },
-    align:{
-      description: "Define where the text is align"
+    align: {
+      description: 'Define where the text is align',
     },
-    children:{
-      description: "Define the Children Text"
-    }
-  }
+    children: {
+      description: 'Define the Children Text',
+    },
+  },
 };
 
 export const Default = {
