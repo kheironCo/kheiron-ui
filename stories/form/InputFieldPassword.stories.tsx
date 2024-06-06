@@ -4,18 +4,18 @@ import { InputFieldPasswordKUI } from 'form';
 const meta: Meta<typeof InputFieldPasswordKUI> = {
   component: InputFieldPasswordKUI,
   title: 'Form/inputFieldPasswordKUI',
-  argTypes:{
-    label:{
-      description: "Define the text of the input"
+  argTypes: {
+    label: {
+      description: 'Define the text of the input',
     },
-    
+
     position: {
-      description: "Define if the position"
+      description: 'Define if the position',
     },
-    align:{
-      description: "Define where the text is align"
-    }
-  }
+    align: {
+      description: 'Define where the text is align',
+    },
+  },
 };
 export default meta;
 

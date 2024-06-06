@@ -4,16 +4,15 @@ import { InputFieldTextKUI } from 'form';
 const meta: Meta<typeof InputFieldTextKUI> = {
   title: 'Form/InputFieldKUI',
   component: InputFieldTextKUI,
-  argTypes:{
-    label:{
-      description: "Define the text of the input"
+  argTypes: {
+    label: {
+      description: 'Define the text of the input',
     },
-    
-    handleChange:{
-      description: "Define the onChange Event"
+
+    handleChange: {
+      description: 'Define the onChange Event',
     },
-    
-  }
+  },
 };
 export default meta;
 
