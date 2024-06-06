@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { IconEye, IconEyeClosed } from '../../../icons';
 import { AtomDiv, AtomInput } from '../../../element';
-import { CheckKUI } from '../../../form';
+import { CheckKUI } from '../CheckKUI';
 import { DivStyle } from './styles';
 import { PasswordInputKUIProps } from './types';
 
