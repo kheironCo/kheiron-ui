@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import { IconEye, IconEyeClosed } from '../../../icons';
 import { AtomDiv, AtomInput } from '../../../element';
 import { CheckKUI } from '../CheckKUI';
-import { DivStyle } from './styles';
+import { DivStyle, input } from './styles';
 import { PasswordInputKUIProps } from './types';
 
 export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
@@ -22,6 +22,7 @@ export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
         value={_value}
         type={visible ? 'text' : 'password'}
         className="KUI-PasswordInput-input"
+        css={input}
       />
       <CheckKUI
         className="KUI-PasswordInput-check"
