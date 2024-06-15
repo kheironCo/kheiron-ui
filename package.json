@@ -1,6 +1,6 @@
 {
   "name": "kheiron-ui",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "license": "MIT",
   "author": "Kheiron",
   "main": "dist/index.js",
@@ -23,9 +23,7 @@
     "husky": "husky",
     "lint": "eslint ./src ./stories ./test",
     "lint-staged": "lint-staged",
-    "postinstall": "husky",
     "prepare": "dts build",
-    "prepublish": "eslint ./src",
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "storybook dev -p 6006",
