@@ -1,5 +1,5 @@
 import 'react-app-polyfill/ie11';
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import {
   AtomButton,
   AtomDetails,
@@ -16,7 +16,7 @@ import {
   AtomList,
 } from '../src';
 import { useState } from 'react';
-import { InputFieldKUI } from '../src/molecules/InputFieldKUI';
+//import { InputFieldKUI } from '../src/molecules/InputFieldKUI';
 
 const optionSelector: OptionList = [
   { value: 'opt1', option: 'Option 1' },
@@ -31,14 +31,14 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
-  const [inputValue, setInputValue] = useState<string>('');
+  /* const [inputValue, setInputValue] = useState<string>('');
 
   const handleChange = (event: any): void => {
     setInputValue(event.target.value);
-  };
+  }; */
   return (
     <AtomDiv>
-      <InputFieldKUI label="Nombre" value={inputValue} handleChange={handleChange} />
+      {/* <InputFieldKUI label="Nombre" value={inputValue} handleChange={handleChange} /> */}
 
       <AtomList>
         <AtomListItem>lista</AtomListItem>
@@ -142,4 +142,7 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement!);
+
+root.render(<App />);

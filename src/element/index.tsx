@@ -27,3 +27,4 @@ export * from './AtomTbody';
 export * from './AtomTh';
 export * from './AtomThead';
 export * from './AtomTable';
+export * from './AtomSpan';
