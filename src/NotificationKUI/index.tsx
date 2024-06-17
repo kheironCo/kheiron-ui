@@ -1,4 +1,4 @@
-import { AtomDiv, AtomDivProps, AtomParagraph, AtomSection } from '../../element';
+import { AtomDiv, AtomDivProps, AtomParagraph, AtomSection } from '../element';
 import { FiAlertTriangle, FiCheckSquare, FiInfo, FiXOctagon } from 'react-icons/fi';
 import {
   WarnNotificationRoot,
@@ -20,7 +20,7 @@ Lógica para asignar icono y clase en base al NotificationType
 Se que hay una manera de unificar estas dos funciones para que los strings de la clase y del icono retornen en una sola estructura, pero para tener el componente listo de forma mas rápida prefiero separarlos. Cualquier sugerencia es bien recibida.
 */
 const icon = (type: NotificationType) => {
-  const warnIcon = { height: '2rem', color: 'yellow' };
+  const warnIcon = { height: '2rem', color: '#CB9D06' };
   const successIcon = { height: '2rem', color: 'green' };
   const infoIcon = { height: '2rem', color: 'blue' };
   const errorIcon = { height: '2rem', color: 'red' };

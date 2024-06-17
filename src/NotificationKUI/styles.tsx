@@ -5,7 +5,7 @@ export const WarnNotificationRoot = css`
   height: auto;
   padding: 0.25rem 1rem 0.25rem 0.5rem;
   background-color: #ffffe0;
-  border: solid 1px yellow;
+  border: solid 1px #cb9d06;
   border-radius: 0.5rem;
   box-sizing: border-box;
   display: flex;
