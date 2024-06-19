@@ -20,3 +20,14 @@ export const input = css`
     border: none;
   }
 `;
+export const inputWidth = css`
+  width: 368px;
+  background-color: #f3f1f1;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+`;

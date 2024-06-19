@@ -1,12 +1,13 @@
 import { AtomDiv, AtomInput } from '../../element';
 import { LabelKUI } from '../base';
-import { divStyles, input, labelParentDiv } from './styles';
+import { divStyles, input, inputWidth, labelParentDiv } from './styles';
 
 export type InputFieldTextKUIProps = {
   value?: string;
   label: string;
   placeHolder?: string;
   handleChange?: Parameters<typeof AtomDiv>[0]['onChange'];
+  width?: 'small' | 'medium';
 };
 
 export const InputFieldTextKUI = ({
@@ -14,6 +15,7 @@ export const InputFieldTextKUI = ({
   value,
   placeHolder,
   handleChange,
+  width,
 }: InputFieldTextKUIProps) => {
   return (
     <AtomDiv className="KUI-inputfield-root" css={divStyles}>
@@ -25,7 +27,7 @@ export const InputFieldTextKUI = ({
       >
         <AtomInput
           className="KUI-inputfield-input"
-          css={input}
+          css={width == 'small' ? input : inputWidth}
           placeholder={placeHolder}
           value={value}
           onChange={handleChange}
