@@ -1,6 +1,7 @@
-import { css } from '@emotion/react';
+import styled from 'styled-components';
+import { AtomDiv, AtomInput, AtomLabel } from '../../../element';
 
-export const CheckRoot = css`
+export const AtomDivComponentStyled = styled(AtomDiv)`
   display: flex;
 
   & input + label path {
@@ -8,13 +9,13 @@ export const CheckRoot = css`
   }
 `;
 
-export const InputCheckBox = css`
+export const AtomInputComponentStyled = styled(AtomInput)`
   height: 0;
   width: 0;
   visibility: hidden;
 `;
 
-export const LabelCheckBox = css`
+export const AtomLabelComponentStyled = styled(AtomLabel)`
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;

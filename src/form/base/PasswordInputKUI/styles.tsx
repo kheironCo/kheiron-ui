@@ -1,10 +1,11 @@
-import { css } from '@emotion/react';
+import { AtomDiv, AtomInput } from '../../../element';
+import styled from 'styled-components';
 
-export const DivStyle = css`
+export const AtomDivComponentStyled = styled(AtomDiv)`
   display: flex;
 `;
 
-export const input = css`
+export const AtomInputComponentStyled = styled(AtomInput)`
   background-color: #f3f1f1;
   border: none;
   padding: 6px;

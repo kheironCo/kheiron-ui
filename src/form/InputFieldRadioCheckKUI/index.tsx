@@ -4,7 +4,7 @@ import { ChangeEvent, ReactElement, useState } from 'react';
 import { IconRadioClose2, IconRadioOpen2 } from '../../icons';
 import { LabelKUI, LabelKUIProps } from '../base';
 
-import { stylesRadio } from './styles';
+import { AtomDivComponentStyled } from './styles';
 
 export type RadioCheckItem = {
   label: string;
@@ -44,7 +44,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   };
 
   return (
-    <AtomDiv css={stylesRadio}>
+    <AtomDivComponentStyled>
       {items?.map((el, index) => (
         <AtomDiv className="KUI-input-field-radio-check-root" key={index}>
           <LabelKUI
@@ -69,6 +69,6 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
           </LabelKUI>
         </AtomDiv>
       ))}
-    </AtomDiv>
+    </AtomDivComponentStyled>
   );
 };

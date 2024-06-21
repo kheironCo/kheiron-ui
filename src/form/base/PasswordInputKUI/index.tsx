@@ -1,8 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { IconEye, IconEyeClosed } from '../../../icons';
-import { AtomDiv, AtomInput } from '../../../element';
 import { CheckKUI } from '../CheckKUI';
-import { DivStyle, input } from './styles';
+import { AtomDivComponentStyled, AtomInputComponentStyled } from './styles';
 import { PasswordInputKUIProps } from './types';
 
 export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
@@ -16,13 +15,12 @@ export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
   };
 
   return (
-    <AtomDiv css={DivStyle} className="KUI-PasswordInput-div">
-      <AtomInput
+    <AtomDivComponentStyled className="KUI-PasswordInput-div">
+      <AtomInputComponentStyled
         onChange={handleChange}
         value={_value}
         type={visible ? 'text' : 'password'}
         className="KUI-PasswordInput-input"
-        css={input}
       />
       <CheckKUI
         className="KUI-PasswordInput-check"
@@ -30,6 +28,6 @@ export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
         icon={<IconEye />}
         iconChecked={<IconEyeClosed />}
       />
-    </AtomDiv>
+    </AtomDivComponentStyled>
   );
 };

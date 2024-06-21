@@ -1,6 +1,10 @@
-import { AtomDiv, AtomInput } from '../../element';
-import { LabelKUI } from '../base';
-import { divStyles, input, labelParentDiv } from './styles';
+import { AtomDiv } from '../../element';
+
+import {
+  AtomDivComponentStyled,
+  AtomInputComponentStyled,
+  LabelKUIComponentStyled,
+} from './styles';
 
 export type InputFieldTextKUIProps = {
   value?: string;
@@ -16,22 +20,16 @@ export const InputFieldTextKUI = ({
   handleChange,
 }: InputFieldTextKUIProps) => {
   return (
-    <AtomDiv className="KUI-inputfield-root" css={divStyles}>
-      <LabelKUI
-        htmlFor="toinput"
-        className="KUI-inputfield-label"
-        css={labelParentDiv}
-        label={label}
-      >
-        <AtomInput
+    <AtomDivComponentStyled className="KUI-inputfield-root">
+      <LabelKUIComponentStyled htmlFor="toinput" className="KUI-inputfield-label" label={label}>
+        <AtomInputComponentStyled
           className="KUI-inputfield-input"
-          css={input}
           placeholder={placeHolder}
           value={value}
           onChange={handleChange}
           id="toinput"
         />
-      </LabelKUI>
-    </AtomDiv>
+      </LabelKUIComponentStyled>
+    </AtomDivComponentStyled>
   );
 };
