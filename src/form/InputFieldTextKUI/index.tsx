@@ -28,6 +28,7 @@ export const InputFieldTextKUI = ({
           value={value}
           onChange={handleChange}
           id="toinput"
+          width="400px"
         />
       </LabelKUIComponentStyled>
     </AtomDivComponentStyled>

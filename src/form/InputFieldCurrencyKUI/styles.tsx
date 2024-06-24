@@ -14,23 +14,12 @@ export const LabelKUIComponentStyled = styled(LabelKUI)`
 
 export const AtomInputComponentStyled = styled(AtomInput)`
   background-color: #f3f1f1;
+  width: ${(props) => props.width};
   border: none;
   padding: 6px;
-  width: ${(props) => props.width};
   border-radius: 5px;
   &:focus {
     outline: none;
     border: none;
   }
 `;
-// export const inputWidth = css`
-//   width: 368px;
-//   background-color: #f3f1f1;
-//   border: none;
-//   padding: 6px;
-//   border-radius: 5px;
-//   &:focus {
-//     outline: none;
-//     border: none;
-//   }
-// `;

@@ -1,7 +1,14 @@
-import { LabelKUI, LabelKUIProps, PasswordInputKUI } from '../base';
-import { AtomDivComponentStyled, PasswordInputComponentStyled } from './styles';
+import { LabelKUIProps, PasswordInputKUI } from '../base';
+import {
+  AtomDivComponentStyled,
+  LabelKUIComponentStyled,
+  PasswordInputComponentStyled,
+} from './styles';
 
-export type InputFieldPasswordKUIProps = LabelKUIProps & Parameters<typeof PasswordInputKUI>[0];
+export type InputFieldPasswordKUIProps = LabelKUIProps &
+  Parameters<typeof PasswordInputKUI>[0] & {
+    width?: string;
+  };
 
 export const InputFieldPasswordKUI = ({
   label,
@@ -11,14 +18,14 @@ export const InputFieldPasswordKUI = ({
 }: InputFieldPasswordKUIProps) => {
   return (
     <AtomDivComponentStyled className="KUI-input-field-password-root">
-      <LabelKUI
+      <LabelKUIComponentStyled
         position={position}
         align={align}
         label={label}
         className="KUI-input-field-password-label"
       >
-        <PasswordInputComponentStyled getValue={getValue} />
-      </LabelKUI>
+        <PasswordInputComponentStyled getValue={getValue} width="400px" />
+      </LabelKUIComponentStyled>
     </AtomDivComponentStyled>
   );
 };

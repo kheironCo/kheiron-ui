@@ -4,7 +4,7 @@ import { CheckKUI } from '../CheckKUI';
 import { AtomDivComponentStyled, AtomInputComponentStyled } from './styles';
 import { PasswordInputKUIProps } from './types';
 
-export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
+export const PasswordInputKUI = ({ getValue, width }: PasswordInputKUIProps) => {
   const [visible, setVisible] = useState(false);
 
   const [_value, _setValue] = useState('');
@@ -21,6 +21,7 @@ export const PasswordInputKUI = ({ getValue }: PasswordInputKUIProps) => {
         value={_value}
         type={visible ? 'text' : 'password'}
         className="KUI-PasswordInput-input"
+        width={width}
       />
       <CheckKUI
         className="KUI-PasswordInput-check"

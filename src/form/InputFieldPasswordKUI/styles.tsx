@@ -16,6 +16,7 @@ export const LabelKUIComponentStyled = styled(LabelKUI)`
 export const PasswordInputComponentStyled = styled(PasswordInputKUI)`
   background-color: #f3f1f1;
   border: none;
+  width: ${(props) => props.width};
   padding: 6px;
   border-radius: 5px;
   &:focus {
