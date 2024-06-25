@@ -1,15 +1,12 @@
-import { AtomDiv, AtomInput } from '../../../element';
 import styled from 'styled-components';
-
-export const AtomDivComponentStyled = styled(AtomDiv)`
-  display: flex;
-`;
+import { AtomInput } from '../../../element';
 
 export const AtomInputComponentStyled = styled(AtomInput)`
   background-color: #f3f1f1;
-  border: none;
   width: ${(props) => props.width};
+  border: none;
   padding: 6px;
+  outline: none;
   border-radius: 5px;
   &:focus {
     outline: none;
