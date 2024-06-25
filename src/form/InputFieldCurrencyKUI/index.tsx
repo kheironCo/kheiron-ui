@@ -9,6 +9,7 @@ export const InputFieldCurrencyKUI = ({
   position,
   align,
   className,
+  width,
   ...rest
 }: InputFieldCurrencyKUIProps) => {
   return (
@@ -16,7 +17,7 @@ export const InputFieldCurrencyKUI = ({
       {...{ label, position, align }}
       className={`KUI-input-field-currency-root ${className}`}
     >
-      <CurrencyInputKUI {...rest} className="KUI-input-field-currency" width="400px" />
+      <CurrencyInputKUI {...rest} className="KUI-input-field-currency" width={width} />
     </LabelKUIComponentStyled>
   );
 };

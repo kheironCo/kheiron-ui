@@ -11,6 +11,7 @@ export type InputFieldTextKUIProps = {
   label: string;
   placeHolder?: string;
   handleChange?: Parameters<typeof AtomDiv>[0]['onChange'];
+  width?: string;
 };
 
 export const InputFieldTextKUI = ({
@@ -18,6 +19,7 @@ export const InputFieldTextKUI = ({
   value,
   placeHolder,
   handleChange,
+  width,
 }: InputFieldTextKUIProps) => {
   return (
     <AtomDivComponentStyled className="KUI-inputfield-root">
@@ -28,7 +30,7 @@ export const InputFieldTextKUI = ({
           value={value}
           onChange={handleChange}
           id="toinput"
-          width="400px"
+          width={width}
         />
       </LabelKUIComponentStyled>
     </AtomDivComponentStyled>

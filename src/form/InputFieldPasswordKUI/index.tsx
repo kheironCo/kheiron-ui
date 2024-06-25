@@ -15,6 +15,7 @@ export const InputFieldPasswordKUI = ({
   position = 'top',
   align = 'left',
   getValue,
+  width,
 }: InputFieldPasswordKUIProps) => {
   return (
     <AtomDivComponentStyled className="KUI-input-field-password-root">
@@ -24,7 +25,7 @@ export const InputFieldPasswordKUI = ({
         label={label}
         className="KUI-input-field-password-label"
       >
-        <PasswordInputComponentStyled getValue={getValue} width="400px" />
+        <PasswordInputComponentStyled getValue={getValue} width={width} />
       </LabelKUIComponentStyled>
     </AtomDivComponentStyled>
   );
