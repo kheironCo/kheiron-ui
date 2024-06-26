@@ -1,4 +1,4 @@
-import { AtomDiv, AtomInput } from '../../element';
+import { AtomDiv, AtomInput, AtomInputProps } from '../../element';
 import { ChangeEvent, ReactElement, useState } from 'react';
 
 import { IconRadioClose2, IconRadioOpen2 } from '../../icons';
@@ -10,14 +10,15 @@ export type RadioCheckItem = {
   label: string;
   value: string;
 };
-export type InputFieldRadioCheckKUIProps = Pick<LabelKUIProps, 'align' | 'position'> & {
-  initValue?: string;
-  value?: string;
-  getValue: (value: string) => void;
-  items: RadioCheckItem[];
-  icon?: ReactElement;
-  iconChecked?: ReactElement;
-};
+export type InputFieldRadioCheckKUIProps = Pick<LabelKUIProps, 'align' | 'position'> &
+  AtomInputProps & {
+    initValue?: string;
+    value?: string;
+    getValue?: (value: string) => void;
+    items: RadioCheckItem[];
+    icon?: ReactElement;
+    iconChecked?: ReactElement;
+  };
 
 export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = ({
   initValue,
@@ -28,6 +29,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   iconChecked = <IconRadioClose2 />,
   position = 'right',
   align,
+  ...rest
 }: InputFieldRadioCheckKUIProps) => {
   const [selectedRadio, setSelectedRadio] = useState<string | null>(initValue || null);
 
@@ -63,6 +65,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
                 value={el.value}
                 checked={selectedRadio === el.value}
                 onChange={handleRadioChange}
+                {...rest}
               />
               {selectedRadio === el.value ? icon : iconChecked}
             </AtomDiv>

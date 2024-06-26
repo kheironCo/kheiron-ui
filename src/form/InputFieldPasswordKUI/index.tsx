@@ -1,3 +1,4 @@
+import { PasswordInputKUIProps } from 'form/base/PasswordInputKUI/types';
 import { LabelKUIProps, PasswordInputKUI } from '../base';
 import {
   AtomDivComponentStyled,
@@ -6,6 +7,7 @@ import {
 } from './styles';
 
 export type InputFieldPasswordKUIProps = LabelKUIProps &
+  PasswordInputKUIProps &
   Parameters<typeof PasswordInputKUI>[0] & {
     width?: string;
   };
@@ -16,6 +18,7 @@ export const InputFieldPasswordKUI = ({
   align = 'left',
   getValue,
   width,
+  ...rest
 }: InputFieldPasswordKUIProps) => {
   return (
     <AtomDivComponentStyled className="KUI-input-field-password-root">
@@ -24,6 +27,7 @@ export const InputFieldPasswordKUI = ({
         align={align}
         label={label}
         className="KUI-input-field-password-label"
+        {...rest}
       >
         <PasswordInputComponentStyled getValue={getValue} width={width} />
       </LabelKUIComponentStyled>

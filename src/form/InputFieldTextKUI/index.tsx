@@ -1,4 +1,4 @@
-import { AtomDiv } from '../../element';
+import { AtomDiv, AtomInputProps } from '../../element';
 
 import {
   AtomDivComponentStyled,
@@ -6,7 +6,7 @@ import {
   LabelKUIComponentStyled,
 } from './styles';
 
-export type InputFieldTextKUIProps = {
+export type InputFieldTextKUIProps = AtomInputProps & {
   value?: string;
   label: string;
   placeHolder?: string;
@@ -20,7 +20,10 @@ export const InputFieldTextKUI = ({
   placeHolder,
   handleChange,
   width,
+  ...rest
 }: InputFieldTextKUIProps) => {
+  const idCreado = Math.random() * 1000000;
+  const idUnico = `idUnico-${idCreado}`;
   return (
     <AtomDivComponentStyled className="KUI-inputfield-root">
       <LabelKUIComponentStyled htmlFor="toinput" className="KUI-inputfield-label" label={label}>
@@ -29,8 +32,9 @@ export const InputFieldTextKUI = ({
           placeholder={placeHolder}
           value={value}
           onChange={handleChange}
-          id="toinput"
+          id={idUnico}
           width={width}
+          {...rest}
         />
       </LabelKUIComponentStyled>
     </AtomDivComponentStyled>
