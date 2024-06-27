@@ -1,39 +1,29 @@
-import { AtomDiv, AtomInput } from '../../element';
-import { LabelKUI } from '../base';
-import { divStyles, input, inputWidth, labelParentDiv } from './styles';
+import { AtomInputProps } from '../../element';
 
-export type InputFieldTextKUIProps = {
-  value?: string;
+import {
+  AtomDivComponentStyled,
+  AtomInputComponentStyled,
+  LabelKUIComponentStyled,
+} from './styles';
+
+export type InputFieldTextKUIProps = AtomInputProps & {
   label: string;
-  placeHolder?: string;
-  handleChange?: Parameters<typeof AtomDiv>[0]['onChange'];
-  width?: 'small' | 'medium';
+  width?: string;
 };
 
-export const InputFieldTextKUI = ({
-  label,
-  value,
-  placeHolder,
-  handleChange,
-  width,
-}: InputFieldTextKUIProps) => {
+export const InputFieldTextKUI = ({ label, width, ...rest }: InputFieldTextKUIProps) => {
+  const idCreado = Math.random() * 1000000;
+  const idUnico = `idUnico-${idCreado}`;
   return (
-    <AtomDiv className="KUI-inputfield-root" css={divStyles}>
-      <LabelKUI
-        htmlFor="toinput"
-        className="KUI-inputfield-label"
-        css={labelParentDiv}
-        label={label}
-      >
-        <AtomInput
+    <AtomDivComponentStyled className="KUI-inputfield-root">
+      <LabelKUIComponentStyled htmlFor="toinput" className="KUI-inputfield-label" label={label}>
+        <AtomInputComponentStyled
           className="KUI-inputfield-input"
-          css={width == 'small' ? input : inputWidth}
-          placeholder={placeHolder}
-          value={value}
-          onChange={handleChange}
-          id="toinput"
+          id={idUnico}
+          width={width}
+          {...rest}
         />
-      </LabelKUI>
-    </AtomDiv>
+      </LabelKUIComponentStyled>
+    </AtomDivComponentStyled>
   );
 };

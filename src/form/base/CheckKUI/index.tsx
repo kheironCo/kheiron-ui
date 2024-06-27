@@ -1,6 +1,10 @@
 import { ChangeEvent, useState } from 'react';
-import { CheckRoot, InputCheckBox, LabelCheckBox } from './styles';
-import { AtomDiv, AtomInput, AtomLabel } from '../../../element';
+import {
+  AtomDivComponentStyled,
+  AtomInputComponentStyled,
+  AtomLabelComponentStyled,
+} from './styles';
+import { AtomInput } from '../../../element';
 import { IconCheckBox } from '../../../icons';
 
 type CheckboxParameters = Parameters<typeof AtomInput>[0];
@@ -20,6 +24,7 @@ export const CheckKUI = ({
   iconChecked,
   className,
   onChange,
+  id,
 }: CheckKUIProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
@@ -30,18 +35,17 @@ export const CheckKUI = ({
   };
 
   return (
-    <AtomDiv css={CheckRoot} className={`KUI-check-root ${className || ''}`}>
-      <AtomInput
-        css={InputCheckBox}
+    <AtomDivComponentStyled className={`KUI-check-root ${className || ''}`}>
+      <AtomInputComponentStyled
         checked={isChecked}
         onChange={_onChange}
-        id="KUICheck"
+        id={id}
         className="KUI-check-input"
         type="checkbox"
       />
-      <AtomLabel css={LabelCheckBox} htmlFor="KUICheck" className="KUI-check-label">
+      <AtomLabelComponentStyled htmlFor={id} className="KUI-check-label">
         {isChecked ? iconChecked || <IconCheckBox checked /> : icon || <IconCheckBox />}
-      </AtomLabel>
-    </AtomDiv>
+      </AtomLabelComponentStyled>
+    </AtomDivComponentStyled>
   );
 };

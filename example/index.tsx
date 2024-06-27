@@ -14,6 +14,12 @@ import {
   AtomHeading,
   AtomListItem,
   AtomList,
+  PasswordInputKUI,
+  InputFieldCheckboxKUI,
+  InputFieldPasswordKUI,
+  InputFieldRadioCheckKUI,
+  IconHeartFilled,
+  IconHeartOutlined,
 } from '../src';
 import { useState } from 'react';
 //import { InputFieldKUI } from '../src/molecules/InputFieldKUI';
@@ -138,6 +144,31 @@ const App = () => {
           <AtomParagraph>Este es un parafo dentro de una etiqueta Details</AtomParagraph>
         </AtomDiv>
       </AtomDetails>
+
+      <hr />
+      <InputFieldPasswordKUI> Password </InputFieldPasswordKUI>
+      <hr />
+      <PasswordInputKUI />
+      <PasswordInputKUI />
+      <PasswordInputKUI />
+      <PasswordInputKUI />
+      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
+      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
+      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
+      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
+
+      <hr />
+      <InputFieldRadioCheckKUI
+        icon={<IconHeartFilled />}
+        iconChecked={<IconHeartOutlined />}
+        items={[
+          { label: 'Ejemplo1', value: 'valor1' },
+          { label: 'Ejemplo2', value: 'valor2' },
+          { label: 'Ejemplo3', value: 'valor3' },
+          { label: 'Ejemplo4', value: 'valor4' },
+          { label: 'Ejemplo5', value: 'valor5' },
+        ]}
+      ></InputFieldRadioCheckKUI>
     </AtomDiv>
   );
 };
