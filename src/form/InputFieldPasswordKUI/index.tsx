@@ -27,9 +27,8 @@ export const InputFieldPasswordKUI = ({
         align={align}
         label={label}
         className="KUI-input-field-password-label"
-        {...rest}
       >
-        <PasswordInputComponentStyled getValue={getValue} width={width} />
+        <PasswordInputComponentStyled getValue={getValue} width={width} {...rest} />
       </LabelKUIComponentStyled>
     </AtomDivComponentStyled>
   );

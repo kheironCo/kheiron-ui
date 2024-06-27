@@ -29,6 +29,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   iconChecked = <IconRadioClose2 />,
   position = 'right',
   align,
+  onChange,
   ...rest
 }: InputFieldRadioCheckKUIProps) => {
   const [selectedRadio, setSelectedRadio] = useState<string | null>(initValue || null);
@@ -41,6 +42,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
 
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(event.target.value);
+    if (onChange) onChange(event);
     value = event.target.value;
     setSelectedRadio(value);
   };

@@ -4,13 +4,14 @@ import { CheckKUI } from '../CheckKUI';
 import { AtomDivComponentStyled, AtomInputComponentStyled } from './styles';
 import { PasswordInputKUIProps } from './types';
 
-export const PasswordInputKUI = ({ getValue, width, ...rest }: PasswordInputKUIProps) => {
+export const PasswordInputKUI = ({ getValue, width, onChange, ...rest }: PasswordInputKUIProps) => {
   const [visible, setVisible] = useState(false);
 
   const [_value, _setValue] = useState('');
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (getValue) getValue(e.target.value);
+    if (onChange) onChange(e);
     _setValue(e.target.value);
   };
 
