@@ -8,6 +8,7 @@ export const AtomDivComponentStyled = styled(AtomDiv)`
 `;
 
 export const LabelKUIComponentStyled = styled(LabelKUI)`
+  font-family: 'Quicksand', sans-serif;
   color: #64467a;
   margin: 5px;
 `;
