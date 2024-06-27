@@ -24,6 +24,7 @@ export const CheckKUI = ({
   iconChecked,
   className,
   onChange,
+  id,
 }: CheckKUIProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
@@ -38,11 +39,11 @@ export const CheckKUI = ({
       <AtomInputComponentStyled
         checked={isChecked}
         onChange={_onChange}
-        id="KUICheck"
+        id={id}
         className="KUI-check-input"
         type="checkbox"
       />
-      <AtomLabelComponentStyled htmlFor="KUICheck" className="KUI-check-label">
+      <AtomLabelComponentStyled htmlFor={id} className="KUI-check-label">
         {isChecked ? iconChecked || <IconCheckBox checked /> : icon || <IconCheckBox />}
       </AtomLabelComponentStyled>
     </AtomDivComponentStyled>
