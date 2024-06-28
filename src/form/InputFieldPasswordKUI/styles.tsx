@@ -9,8 +9,8 @@ export const AtomDivComponentStyled = styled(AtomDiv)`
 `;
 
 export const LabelKUIComponentStyled = styled(LabelKUI)`
+  font-family: 'Blinker';
   color: #64467a;
-  font-family: 'Quicksand', sans-serif;
   margin: 5px;
 `;
 
@@ -19,6 +19,7 @@ export const PasswordInputComponentStyled = styled(PasswordInputKUI)`
   border: none;
   width: ${(props) => props.width};
   padding: 6px;
+  font-family: 'Quicksand';
   border-radius: 5px;
   &:focus {
     outline: none;
