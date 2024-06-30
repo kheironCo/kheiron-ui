@@ -10,6 +10,7 @@ export const AtomInputComponentStyled = styled(AtomInput)`
   font-family: 'Quicksand', sans-serif;
   border: none;
   width: ${(props) => props.width};
+  box-sizing: border-box;
   padding: 6px;
   border-radius: 5px;
   &:focus {

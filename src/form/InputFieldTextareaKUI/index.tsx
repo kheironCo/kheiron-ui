@@ -7,7 +7,6 @@ export type InputFieldTextareaKUIProps = Parameters<typeof LabelKUI>[0] &
 export const InputFieldTextareaKUI = ({
   label,
   position,
-  align,
   htmlFor,
   ...rest
 }: InputFieldTextareaKUIProps) => {
@@ -15,7 +14,6 @@ export const InputFieldTextareaKUI = ({
     <LabelKUI
       label={label}
       position={position}
-      align={align}
       htmlFor={htmlFor}
       className="KUI-input-field-textarea-root"
     >

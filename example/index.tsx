@@ -15,13 +15,13 @@ import {
   AtomListItem,
   AtomList,
   PasswordInputKUI,
-  InputFieldCheckboxKUI,
   InputFieldPasswordKUI,
   InputFieldRadioCheckKUI,
   IconHeartFilled,
   IconHeartOutlined,
 } from '../src';
 import { useState } from 'react';
+import FormLayer from './components/FormLayer';
 //import { InputFieldKUI } from '../src/molecules/InputFieldKUI';
 
 const optionSelector: OptionList = [
@@ -37,14 +37,9 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
-  /* const [inputValue, setInputValue] = useState<string>('');
-
-  const handleChange = (event: any): void => {
-    setInputValue(event.target.value);
-  }; */
   return (
     <AtomDiv>
-      {/* <InputFieldKUI label="Nombre" value={inputValue} handleChange={handleChange} /> */}
+      <FormLayer />
 
       <AtomList>
         <AtomListItem>lista</AtomListItem>
@@ -112,9 +107,7 @@ const App = () => {
         Choose a browser from this list: <input list="browsers" name="myBrowser" />
       </label>
       <datalist id="browsers">
-        <option value="Chrome">
-          <AtomButton style={{ backgroundColor: 'blue' }}>Boton</AtomButton>
-        </option>
+        <option value="Chrome"></option>
         <option value="Firefox"></option>
         <option value="Internet Explorer"></option>
         <option value="Opera"></option>
@@ -127,7 +120,6 @@ const App = () => {
           <AtomDiv className="KUI-summary-icon-root">
             <AtomDiv className="KUI-summary-icon KUI-summary-icon-horizontal"></AtomDiv>
             <AtomDiv className="KUI-summary-icon KUI-summary-icon-vertical"></AtomDiv>
-            {/* <AtomDiv className="KUI-summary-icon">▹</AtomDiv> */}
           </AtomDiv>
           <AtomHeading variant="h5" style={{ width: '100%', margin: 0 }}>
             Atom Summary
@@ -146,16 +138,11 @@ const App = () => {
       </AtomDetails>
 
       <hr />
-      <InputFieldPasswordKUI> Password </InputFieldPasswordKUI>
+      <InputFieldPasswordKUI />
       <hr />
       <PasswordInputKUI />
       <PasswordInputKUI />
       <PasswordInputKUI />
-      <PasswordInputKUI />
-      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
-      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
-      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
-      <InputFieldCheckboxKUI> </InputFieldCheckboxKUI>
 
       <hr />
       <InputFieldRadioCheckKUI
