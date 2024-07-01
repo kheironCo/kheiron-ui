@@ -15,7 +15,7 @@ export * from './AtomMeter';
 export * from './AtomNav';
 export * from './AtomOptGroup';
 export * from './AtomOption';
-export * from './AtomParagraph';
+export * from './Paragraph';
 export * from './AtomSearch';
 export * from './AtomSelect';
 export * from './AtomSummary';

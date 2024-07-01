@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { AvatarKUI } from 'atom';
+import { AvatarKUI } from 'utily';
 
 const meta: Meta<typeof AvatarKUI> = {
-  title: 'Atom/Avatar',
+  title: 'Utils/Avatar',
   component: AvatarKUI,
 };
 export default meta;

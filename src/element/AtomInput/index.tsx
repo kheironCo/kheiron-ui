@@ -1,6 +1,16 @@
-export type AtomInputProps = React.InputHTMLAttributes<HTMLInputElement>;
+import { forwardRef } from 'react';
+import styled from 'styled-components';
 
-export interface AtomInputElement extends React.JSX.Element {}
+const Input = styled.input``;
 
-export const AtomInput = ({ className, ...rest }: AtomInputProps) =>
-  (<input className={`KUI-atom-element-input ${className || ''}`} {...rest} />) as AtomInputElement;
+export type AtomInputProps = Parameters<typeof Input>[0];
+
+export interface AtomInputElement extends JSX.Element {}
+
+export const AtomInput = forwardRef<HTMLInputElement, AtomInputProps>(
+  ({ className, ...rest }, ref) => (
+    <Input className={`KUI-atom-element-input ${className || ''}`} ref={ref} {...rest} />
+  ),
+);
+
+AtomInput.displayName = 'AtomInput';

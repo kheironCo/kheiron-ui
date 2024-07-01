@@ -1,4 +1,4 @@
-import { AtomDiv, AtomDivProps, AtomParagraph, AtomSection } from '../element';
+import { AtomDiv, AtomDivProps, Paragraph, AtomSection } from '../element';
 import { FiAlertTriangle, FiCheckSquare, FiInfo, FiXOctagon } from 'react-icons/fi';
 import {
   WarnNotificationRoot,
@@ -56,9 +56,9 @@ export const NotificationKUI = ({ type, description, ...rest }: NotificationKUIP
     <AtomSection css={notificationClass(type)} className="KUI-user-profile-card-root">
       <AtomDiv>{icon(type)}</AtomDiv>
       <AtomDiv>
-        <AtomParagraph css={NotificationBody} className="KUI-user-profile-card-body">
+        <Paragraph css={NotificationBody} className="KUI-user-profile-card-body">
           {description}
-        </AtomParagraph>
+        </Paragraph>
       </AtomDiv>
     </AtomSection>
   </AtomDiv>

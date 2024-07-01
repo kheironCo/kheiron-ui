@@ -4,7 +4,7 @@ import { LabelKUI } from '../base/LabelKUI';
 
 export const AtomDivComponentStyled = styled(AtomDiv)`
   display: flex;
-  flexdirection: column;
+  flex-direction: column;
 `;
 
 export const LabelKUIComponentStyled = styled(LabelKUI)`
@@ -17,6 +17,7 @@ export const AtomInputComponentStyled = styled(AtomInput)`
   font-family: 'Quicksand';
   background-color: #f3f1f1;
   border: none;
+  box-sizing: border-box;
   padding: 6px;
   width: ${(props) => props.width};
   border-radius: 5px;
@@ -25,14 +26,3 @@ export const AtomInputComponentStyled = styled(AtomInput)`
     border: none;
   }
 `;
-// export const inputWidth = css`
-//   width: 368px;
-//   background-color: #f3f1f1;
-//   border: none;
-//   padding: 6px;
-//   border-radius: 5px;
-//   &:focus {
-//     outline: none;
-//     border: none;
-//   }
-// `;

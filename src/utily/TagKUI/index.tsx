@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { AtomDiv, AtomParagraph } from '../../element';
+import { AtomDiv, Paragraph } from '../../element';
 import { stylesBackground, stylesBorder } from './styles';
 import { TagKUIProps } from './types';
 
@@ -9,7 +9,7 @@ export const TagKUI = ({ label, color = 'main', border = 'none' }: TagKUIProps) 
 
   return (
     <AtomDiv className="KUI-tag-root" css={[styleBackground, styleBorder]}>
-      <AtomParagraph className="KUI-tag-paragraph">{label}</AtomParagraph>
+      <Paragraph className="KUI-tag-paragraph">{label}</Paragraph>
     </AtomDiv>
   );
 };

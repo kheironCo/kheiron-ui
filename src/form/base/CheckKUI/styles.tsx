@@ -10,6 +10,7 @@ export const AtomDivComponentStyled = styled(AtomDiv)`
 `;
 
 export const AtomInputComponentStyled = styled(AtomInput)`
+  display: none;
   height: 0;
   width: 0;
   visibility: hidden;
