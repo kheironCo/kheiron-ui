@@ -8,10 +8,6 @@ const meta: Meta<typeof InputFieldTextKUI> = {
     label: {
       description: 'Define the text of the input',
     },
-
-    handleChange: {
-      description: 'Define the onChange Event',
-    },
   },
 };
 export default meta;

@@ -8,10 +8,6 @@ const meta: Meta<typeof InputFieldCurrencyKUI> = {
     label: {
       description: 'Define the text of the input',
     },
-
-    getValue: {
-      description: 'Function to get the value',
-    },
   },
 };
 

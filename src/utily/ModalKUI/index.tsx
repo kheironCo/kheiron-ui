@@ -8,7 +8,7 @@ export type ModalKUIProps = {
   open: boolean;
 };
 
-const ModalKUI = ({ children, open }: ModalKUIProps) => {
+export const ModalKUI = ({ children, open }: ModalKUIProps) => {
   return (
     <AtomDialog
       css={css({
@@ -48,5 +48,3 @@ const ModalKUI = ({ children, open }: ModalKUIProps) => {
     </AtomDialog>
   );
 };
-
-export default ModalKUI;

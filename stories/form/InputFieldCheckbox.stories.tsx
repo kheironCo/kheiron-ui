@@ -23,9 +23,6 @@ const meta: Meta<typeof InputFieldCheckboxKUI> = {
     position: {
       description: 'Define if the position',
     },
-    align: {
-      description: 'Define where the text is align',
-    },
   },
 };
 

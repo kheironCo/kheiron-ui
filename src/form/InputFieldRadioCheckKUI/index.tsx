@@ -10,7 +10,7 @@ export type RadioCheckItem = {
   label: string;
   value: string;
 };
-export type InputFieldRadioCheckKUIProps = Pick<LabelKUIProps, 'align' | 'position'> &
+export type InputFieldRadioCheckKUIProps = Pick<LabelKUIProps, 'position'> &
   AtomInputProps & {
     initValue?: string;
     value?: string;
@@ -28,13 +28,12 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   icon = <IconRadioOpen2 />,
   iconChecked = <IconRadioClose2 />,
   position = 'right',
-  align,
   onChange,
   ...rest
 }: InputFieldRadioCheckKUIProps) => {
   const [selectedRadio, setSelectedRadio] = useState<string | null>(initValue || null);
 
-  const flatValues = items.map((elemento) => elemento.value);
+  const flatValues = items.map((element) => element.value);
   const uniqueValues = Array.from(new Set(flatValues));
 
   if (uniqueValues.length !== flatValues.length)
@@ -53,7 +52,6 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
         <AtomDiv className="KUI-input-field-radio-check-root" key={index}>
           <LabelKUI
             position={position}
-            align={align}
             htmlFor={`${el.value}-${index}`}
             label={el.label}
             className={`'KUI-input-field-radio-check-label KUI-input-field-radio-check-label-${index}'`}
@@ -61,7 +59,6 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
             <AtomDiv>
               <AtomInput
                 className="KUI-input-field-radio-check-input"
-                id={`${el.value}-${index}`}
                 key={index}
                 type="radio"
                 value={el.value}

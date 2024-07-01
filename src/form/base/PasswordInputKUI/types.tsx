@@ -1,8 +1,7 @@
 import { SerializedStyles } from '@emotion/react';
-import { AtomInputProps } from 'element';
+import { AtomInputComponentStyled } from './styles';
 
-export type PasswordInputKUIProps = AtomInputProps & {
-  getValue?: (value: string) => void;
+export type PasswordInputKUIProps = Parameters<typeof AtomInputComponentStyled>[0] & {
   css?: SerializedStyles;
   width?: string;
 };

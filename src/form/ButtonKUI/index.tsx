@@ -3,16 +3,18 @@ import { AtomButton } from '../../element';
 import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonList, GeneralButtonStyle } from './styles';
 
-export type ButtonKUIProps = Parameters<typeof AtomButton>[0] & {
+export type ButtonKUIProps = Omit<Parameters<typeof AtomButton>[0], 'children'> & {
   className?: string;
   variant?: ButtonVariant;
   palette?: ButtonPalette;
-  children: string;
+  children?: string;
+  label?: string;
 };
 
 export const ButtonKUI = ({
   className,
   children,
+  label,
   variant = 'filled',
   palette = 'primary',
   ...rest
@@ -25,7 +27,7 @@ export const ButtonKUI = ({
       className={`KUI-button ${className || ''}`}
       {...rest}
     >
-      {children}
+      {label ?? children ?? ''}
     </AtomButton>
   );
 };
