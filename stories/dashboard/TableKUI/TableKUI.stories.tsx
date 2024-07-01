@@ -4,7 +4,7 @@ import { TableKUI } from 'dashboard';
 import { AtomParagraph } from 'element';
 import { css } from '@emotion/react';
 import { fakeData } from './mock';
-import { UserProfileCardKUI } from 'molecules';
+import { UserProfileCardKUI } from 'utily';
 
 const meta: Meta<typeof TableKUI> = {
   title: 'Dashboard/TableKUI',

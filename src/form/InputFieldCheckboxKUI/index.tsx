@@ -5,7 +5,7 @@ import { AtomDiv } from '../../element';
 export type CheckboxKUIProps = CheckKUIProps & LabelKUIProps;
 
 export const InputFieldCheckboxKUI = forwardRef<HTMLInputElement, CheckboxKUIProps>(
-  ({ label, position, checked, ...rest }, ref) => {
+  ({ label, position = 'right', checked, ...rest }, ref) => {
     return (
       <AtomDiv className="KUI-checkbox-root">
         <LabelKUI className="KUI-checkbox-label" label={label} position={position}>

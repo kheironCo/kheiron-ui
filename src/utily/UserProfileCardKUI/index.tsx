@@ -1,6 +1,6 @@
 import { UserProfileCardRoot, UserProfileCardHead, UserProfileCardBody } from './styles';
 import { AtomDiv, AtomDivProps, AtomHeading, AtomParagraph, AtomSection } from '../../element';
-import { AvatarKUI } from '../../atom';
+import { AvatarKUI } from '../AvatarKUI';
 
 export type UserProfileCardKUIProps = AtomDivProps & {
   image: string;

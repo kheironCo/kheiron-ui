@@ -4,8 +4,8 @@ import {
   InputFieldCheckboxKUI,
   InputFieldPasswordKUI,
   InputFieldTextKUI,
+  ModalKUI,
 } from '../../../src';
-import ModalKUI from '../../../src/molecules/ModalKUI';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
