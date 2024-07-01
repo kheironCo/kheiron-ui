@@ -11,7 +11,7 @@ import {
   SelectorKUI,
   AtomSummary,
   OptionList,
-  AtomHeading,
+  Heading,
   AtomListItem,
   AtomList,
   PasswordInputKUI,
@@ -51,26 +51,26 @@ const App = () => {
 
       <DropDownKUI
         summary={
-          <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
+          <Heading as="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
             Titulo del Drop-Down
-          </AtomHeading>
+          </Heading>
         }
       >
         <Paragraph>Esta es una descripción</Paragraph>
 
         <DropDownKUI
           summary={
-            <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
+            <Heading as="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
               Titulo del Drop-Down
-            </AtomHeading>
+            </Heading>
           }
         >
           <Paragraph>Esta es una descripción</Paragraph>
           <DropDownKUI
             summary={
-              <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
+              <Heading as="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
                 Titulo del Drop-Down
-              </AtomHeading>
+              </Heading>
             }
           >
             <Paragraph>Esta es una descripción</Paragraph>
@@ -121,9 +121,9 @@ const App = () => {
             <AtomDiv className="KUI-summary-icon KUI-summary-icon-horizontal"></AtomDiv>
             <AtomDiv className="KUI-summary-icon KUI-summary-icon-vertical"></AtomDiv>
           </AtomDiv>
-          <AtomHeading variant="h5" style={{ width: '100%', margin: 0 }}>
+          <Heading as="h5" style={{ width: '100%', margin: 0 }}>
             Atom Summary
-          </AtomHeading>
+          </Heading>
         </AtomSummary>
         <AtomDiv
           className="KUI-details-content"

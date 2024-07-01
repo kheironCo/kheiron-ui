@@ -8,9 +8,6 @@ const meta: Meta<typeof CurrencyInputKUI> = {
     value: {
       description: 'Define the value',
     },
-    getValue: {
-      description: 'Function to get the value',
-    },
   },
 };
 

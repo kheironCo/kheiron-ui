@@ -12,9 +12,6 @@ const meta: Meta<typeof InputFieldPasswordKUI> = {
     position: {
       description: 'Define if the position',
     },
-    align: {
-      description: 'Define where the text is align',
-    },
   },
 };
 export default meta;
