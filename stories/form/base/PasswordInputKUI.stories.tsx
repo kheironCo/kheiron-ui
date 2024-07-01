@@ -4,11 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof PasswordInputKUI> = {
   title: 'Form/Bases/Password',
   component: PasswordInputKUI,
-  argTypes: {
-    getValue: {
-      description: 'Function to get the value',
-    },
-  },
+  argTypes: {},
 };
 
 export default meta;
