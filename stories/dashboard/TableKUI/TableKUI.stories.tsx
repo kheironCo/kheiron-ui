@@ -1,7 +1,7 @@
 // @ts-check
 import { Meta, StoryObj } from '@storybook/react';
 import { TableKUI } from 'dashboard';
-import { AtomParagraph } from 'element';
+import { Paragraph } from 'element';
 import { css } from '@emotion/react';
 import { fakeData } from './mock';
 import { UserProfileCardKUI } from 'utily';
@@ -51,7 +51,7 @@ export const Default: Story = {
     renderBody: ({ value, key, valueRow }) => {
       if (['id', 'age', 'phone'].includes(key)) {
         return (
-          <AtomParagraph
+          <Paragraph
             css={css`
               font-family: monospace;
               font-size: 0.875rem;
@@ -59,7 +59,7 @@ export const Default: Story = {
             `}
           >
             {value}
-          </AtomParagraph>
+          </Paragraph>
         );
       }
       switch (key) {

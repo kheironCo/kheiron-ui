@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
-import { AtomDiv, AtomLabel } from '../../../element';
-import { PositionStyle } from './styles';
+import { AtomDiv, Paragraph } from '../../../element';
+import { LabelStyledKUI } from './styles';
 import { PositionType } from './types';
 
 export type LabelKUIProps = {
@@ -16,10 +16,10 @@ type Props = LabelKUIProps & {
 export const LabelKUI = ({ position = 'top', htmlFor, children, className, label }: Props) => {
   return (
     <AtomDiv className={className}>
-      <AtomLabel css={PositionStyle[position]} htmlFor={htmlFor}>
-        <AtomDiv>{label}</AtomDiv>
+      <LabelStyledKUI {...{ position, htmlFor }}>
+        <Paragraph>{label}</Paragraph>
         <AtomDiv>{children}</AtomDiv>
-      </AtomLabel>
+      </LabelStyledKUI>
     </AtomDiv>
   );
 };

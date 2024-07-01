@@ -7,7 +7,7 @@ import {
   AtomDiv,
   DropDownKUI,
   AtomLabel,
-  AtomParagraph,
+  Paragraph,
   SelectorKUI,
   AtomSummary,
   OptionList,
@@ -56,7 +56,7 @@ const App = () => {
           </AtomHeading>
         }
       >
-        <AtomParagraph>Esta es una descripción</AtomParagraph>
+        <Paragraph>Esta es una descripción</Paragraph>
 
         <DropDownKUI
           summary={
@@ -65,7 +65,7 @@ const App = () => {
             </AtomHeading>
           }
         >
-          <AtomParagraph>Esta es una descripción</AtomParagraph>
+          <Paragraph>Esta es una descripción</Paragraph>
           <DropDownKUI
             summary={
               <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
@@ -73,7 +73,7 @@ const App = () => {
               </AtomHeading>
             }
           >
-            <AtomParagraph>Esta es una descripción</AtomParagraph>
+            <Paragraph>Esta es una descripción</Paragraph>
           </DropDownKUI>
         </DropDownKUI>
       </DropDownKUI>
@@ -83,7 +83,7 @@ const App = () => {
           <SelectorKUI list={optionSelector} />
 
           <DropDownKUI summary={<AtomLabel>This is a label</AtomLabel>}>
-            <AtomParagraph>Esta es una descripción</AtomParagraph>
+            <Paragraph>Esta es una descripción</Paragraph>
           </DropDownKUI>
 
           <AtomButton
@@ -133,7 +133,7 @@ const App = () => {
             transition: 'all 1s ease',
           }}
         >
-          <AtomParagraph>Este es un parafo dentro de una etiqueta Details</AtomParagraph>
+          <Paragraph>Este es un parafo dentro de una etiqueta Details</Paragraph>
         </AtomDiv>
       </AtomDetails>
 

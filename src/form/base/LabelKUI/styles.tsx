@@ -1,23 +1,16 @@
-import { css } from '@emotion/react';
+import { PositionType } from './types';
+import styled from 'styled-components';
+import { AtomLabel } from '../../../element';
 
-import { PositionStyleType } from './types';
-
-export const PositionStyle: PositionStyleType = {
-  top: css`
-    display: flex;
-    flex-direction: column;
-  `,
-  bottom: css`
-    display: flex;
-    flex-direction: column-reverse;
-  `,
-  left: css`
-    display: flex;
-    flex-direction: row;
-  `,
-  right: css`
-    display: flex;
-    justify-content: left;
-    flex-direction: row-reverse;
-  `,
+const LabelPosition: Record<PositionType, string> = {
+  top: 'column',
+  bottom: 'column-reverse',
+  left: 'row',
+  right: 'row-reverse',
 };
+
+export const LabelStyledKUI = styled(AtomLabel)<{ position?: PositionType }>`
+  display: flex;
+  ${(props) => props.position === 'right' && 'justify-content: left;'}
+  flex-direction: ${(props) => LabelPosition[props.position ?? 'top']};
+`;
