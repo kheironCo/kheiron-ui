@@ -7,15 +7,21 @@ import {
   AtomDiv,
   DropDownKUI,
   AtomLabel,
-  AtomParagraph,
+  Paragraph,
   SelectorKUI,
   AtomSummary,
   OptionList,
-  AtomHeading,
+  Heading,
   AtomListItem,
   AtomList,
+  PasswordInputKUI,
+  InputFieldPasswordKUI,
+  InputFieldRadioCheckKUI,
+  IconHeartFilled,
+  IconHeartOutlined,
 } from '../src';
 import { useState } from 'react';
+import FormLayer from './components/FormLayer';
 //import { InputFieldKUI } from '../src/molecules/InputFieldKUI';
 
 const optionSelector: OptionList = [
@@ -31,14 +37,9 @@ const optionSelector: OptionList = [
 
 const App = () => {
   const [tg, setTG] = useState(false);
-  /* const [inputValue, setInputValue] = useState<string>('');
-
-  const handleChange = (event: any): void => {
-    setInputValue(event.target.value);
-  }; */
   return (
     <AtomDiv>
-      {/* <InputFieldKUI label="Nombre" value={inputValue} handleChange={handleChange} /> */}
+      <FormLayer />
 
       <AtomList>
         <AtomListItem>lista</AtomListItem>
@@ -50,29 +51,29 @@ const App = () => {
 
       <DropDownKUI
         summary={
-          <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
+          <Heading as="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
             Titulo del Drop-Down
-          </AtomHeading>
+          </Heading>
         }
       >
-        <AtomParagraph>Esta es una descripción</AtomParagraph>
+        <Paragraph>Esta es una descripción</Paragraph>
 
         <DropDownKUI
           summary={
-            <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
+            <Heading as="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
               Titulo del Drop-Down
-            </AtomHeading>
+            </Heading>
           }
         >
-          <AtomParagraph>Esta es una descripción</AtomParagraph>
+          <Paragraph>Esta es una descripción</Paragraph>
           <DropDownKUI
             summary={
-              <AtomHeading variant="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
+              <Heading as="h4" style={{ margin: '0', padding: '0.25rem 0.5rem' }}>
                 Titulo del Drop-Down
-              </AtomHeading>
+              </Heading>
             }
           >
-            <AtomParagraph>Esta es una descripción</AtomParagraph>
+            <Paragraph>Esta es una descripción</Paragraph>
           </DropDownKUI>
         </DropDownKUI>
       </DropDownKUI>
@@ -82,7 +83,7 @@ const App = () => {
           <SelectorKUI list={optionSelector} />
 
           <DropDownKUI summary={<AtomLabel>This is a label</AtomLabel>}>
-            <AtomParagraph>Esta es una descripción</AtomParagraph>
+            <Paragraph>Esta es una descripción</Paragraph>
           </DropDownKUI>
 
           <AtomButton
@@ -106,9 +107,7 @@ const App = () => {
         Choose a browser from this list: <input list="browsers" name="myBrowser" />
       </label>
       <datalist id="browsers">
-        <option value="Chrome">
-          <AtomButton style={{ backgroundColor: 'blue' }}>Boton</AtomButton>
-        </option>
+        <option value="Chrome"></option>
         <option value="Firefox"></option>
         <option value="Internet Explorer"></option>
         <option value="Opera"></option>
@@ -121,11 +120,10 @@ const App = () => {
           <AtomDiv className="KUI-summary-icon-root">
             <AtomDiv className="KUI-summary-icon KUI-summary-icon-horizontal"></AtomDiv>
             <AtomDiv className="KUI-summary-icon KUI-summary-icon-vertical"></AtomDiv>
-            {/* <AtomDiv className="KUI-summary-icon">▹</AtomDiv> */}
           </AtomDiv>
-          <AtomHeading variant="h5" style={{ width: '100%', margin: 0 }}>
+          <Heading as="h5" style={{ width: '100%', margin: 0 }}>
             Atom Summary
-          </AtomHeading>
+          </Heading>
         </AtomSummary>
         <AtomDiv
           className="KUI-details-content"
@@ -135,9 +133,29 @@ const App = () => {
             transition: 'all 1s ease',
           }}
         >
-          <AtomParagraph>Este es un parafo dentro de una etiqueta Details</AtomParagraph>
+          <Paragraph>Este es un parafo dentro de una etiqueta Details</Paragraph>
         </AtomDiv>
       </AtomDetails>
+
+      <hr />
+      <InputFieldPasswordKUI />
+      <hr />
+      <PasswordInputKUI />
+      <PasswordInputKUI />
+      <PasswordInputKUI />
+
+      <hr />
+      <InputFieldRadioCheckKUI
+        icon={<IconHeartFilled />}
+        iconChecked={<IconHeartOutlined />}
+        items={[
+          { label: 'Ejemplo1', value: 'valor1' },
+          { label: 'Ejemplo2', value: 'valor2' },
+          { label: 'Ejemplo3', value: 'valor3' },
+          { label: 'Ejemplo4', value: 'valor4' },
+          { label: 'Ejemplo5', value: 'valor5' },
+        ]}
+      ></InputFieldRadioCheckKUI>
     </AtomDiv>
   );
 };

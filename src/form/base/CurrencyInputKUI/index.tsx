@@ -2,9 +2,8 @@ import { AtomInputProps } from 'element';
 import { AtomInputComponentStyled } from './styles';
 import { useState } from 'react';
 
-export type CurrencyInputKUIProps = Omit<AtomInputProps, 'onChange'> & {
+export type CurrencyInputKUIProps = Parameters<typeof AtomInputComponentStyled>[0] & {
   readonly value?: number;
-  getValue?: (e: number) => void;
   width?: string;
 };
 
@@ -29,8 +28,8 @@ const NumberToCurrency = (value: number) => {
 export const CurrencyInputKUI = ({
   width,
   value,
+  onChange,
   className,
-  getValue,
   ...rest
 }: CurrencyInputKUIProps) => {
   const [_value, _setValue] = useState<string>(value ? NumberToCurrency(value) : '0,00');
@@ -38,7 +37,7 @@ export const CurrencyInputKUI = ({
     const _valueNumber = CurrencyToNumber(e.target.value);
     const _valueCurrency = NumberToCurrency(_valueNumber);
     _setValue(_valueCurrency);
-    if (getValue) getValue(_valueNumber);
+    if (onChange) onChange({ ...e, target: { ...e.target, value: _valueCurrency } });
   };
   return (
     <AtomInputComponentStyled

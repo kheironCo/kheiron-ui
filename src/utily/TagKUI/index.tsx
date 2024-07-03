@@ -1,4 +1,4 @@
-import { AtomParagraph } from '../../element';
+import { Paragraph } from '../../element';
 import { DivStyled } from './styles';
 import { TagKUIProps } from './types';
 
@@ -19,7 +19,7 @@ export const TagKUI = ({
       borderColor={borderColor}
       borderWidth={borderWidth}
     >
-      <AtomParagraph className="KUI-tag-paragraph">{label}</AtomParagraph>
+      <Paragraph className="KUI-tag-paragraph">{label}</Paragraph>
     </DivStyled>
   );
 };

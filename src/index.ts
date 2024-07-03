@@ -1,4 +1,3 @@
-export * from './atom';
 export * from './dashboard';
 export * from './element';
 export * from './form';

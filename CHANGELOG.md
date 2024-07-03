@@ -1,3 +1,11 @@
+## [1.1.0] 2024-06-30
+
+### ⚙ Fixed
+
+- **InputFields**
+  - All args are the same params by input
+  - It's solve the implementation with React-Hook-Form
+
 ## [1.0.8] 2024-06-14
 
 ### ✨ Added

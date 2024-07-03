@@ -1,38 +1,23 @@
-import { AtomDiv } from '../../element';
-
+import { forwardRef } from 'react';
 import {
   AtomDivComponentStyled,
   AtomInputComponentStyled,
   LabelKUIComponentStyled,
 } from './styles';
 
-export type InputFieldTextKUIProps = {
-  value?: string;
-  label: string;
-  placeHolder?: string;
-  handleChange?: Parameters<typeof AtomDiv>[0]['onChange'];
-  width?: string;
-};
+export type InputFieldTextKUIProps = Parameters<typeof AtomInputComponentStyled>[0] &
+  Pick<Parameters<typeof LabelKUIComponentStyled>[0], 'label' | 'position'>;
 
-export const InputFieldTextKUI = ({
-  label,
-  value,
-  placeHolder,
-  handleChange,
-  width,
-}: InputFieldTextKUIProps) => {
-  return (
-    <AtomDivComponentStyled className="KUI-inputfield-root">
-      <LabelKUIComponentStyled htmlFor="toinput" className="KUI-inputfield-label" label={label}>
-        <AtomInputComponentStyled
-          className="KUI-inputfield-input"
-          placeholder={placeHolder}
-          value={value}
-          onChange={handleChange}
-          id="toinput"
-          width={width}
-        />
-      </LabelKUIComponentStyled>
-    </AtomDivComponentStyled>
-  );
-};
+export const InputFieldTextKUI = forwardRef<HTMLInputElement, InputFieldTextKUIProps>(
+  ({ label, position, ...rest }, ref) => {
+    return (
+      <AtomDivComponentStyled className="KUI-input-field-root">
+        <LabelKUIComponentStyled className="KUI-input-field-label" {...{ label, position }}>
+          <AtomInputComponentStyled className="KUI-input-field-input" {...rest} ref={ref} />
+        </LabelKUIComponentStyled>
+      </AtomDivComponentStyled>
+    );
+  },
+);
+
+InputFieldTextKUI.displayName = 'InputFieldTextKUI';

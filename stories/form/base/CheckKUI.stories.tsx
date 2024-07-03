@@ -9,9 +9,6 @@ const meta: Meta<typeof CheckKUI> = {
     checked: {
       description: 'Define if the check is checked',
     },
-    getValue: {
-      description: 'Function to get the value',
-    },
     icon: {
       description: 'Define the icon',
     },
