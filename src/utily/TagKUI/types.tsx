@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 export type BorderStyleType = 'none' | 'solid' | 'dashed' | 'dotted';
-// export type BorderStyle = ;
 
 export type TagKUIProps = {
   label: ReactNode;
