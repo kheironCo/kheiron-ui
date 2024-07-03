@@ -1,15 +1,25 @@
-import { useMemo } from 'react';
-import { AtomDiv, Paragraph } from '../../element';
-import { stylesBackground, stylesBorder } from './styles';
+import { Paragraph } from '../../element';
+import { DivStyled } from './styles';
 import { TagKUIProps } from './types';
 
-export const TagKUI = ({ label, color = 'main', border = 'none' }: TagKUIProps) => {
-  const styleBackground = useMemo(() => stylesBackground[color], [color]);
-  const styleBorder = useMemo(() => stylesBorder[border], [border]);
-
+export const TagKUI = ({
+  label,
+  color,
+  borderStyle = 'none',
+  borderColor = 'gray',
+  borderWidth = '1px',
+  bgcolor,
+}: TagKUIProps) => {
   return (
-    <AtomDiv className="KUI-tag-root" css={[styleBackground, styleBorder]}>
+    <DivStyled
+      className="KUI-tag-root"
+      bgcolor={bgcolor}
+      color={color}
+      borderStyle={borderStyle}
+      borderColor={borderColor}
+      borderWidth={borderWidth}
+    >
       <Paragraph className="KUI-tag-paragraph">{label}</Paragraph>
-    </AtomDiv>
+    </DivStyled>
   );
 };
