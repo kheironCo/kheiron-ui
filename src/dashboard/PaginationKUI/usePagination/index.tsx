@@ -12,7 +12,6 @@ export const usePagination = ({ neighbors, totalPages }: UsePaginationProps) => 
   const [currentPage, setCurrentPage] = useState(1);
 
   const updatePages = () => {
-    console.log('currentPage', currentPage);
     if (totalPages <= lengthPage) {
       setPages(Array.from({ length: totalPages }, (_, i) => i + 1));
       return;

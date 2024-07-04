@@ -13,7 +13,7 @@ export const PaginationKUI = ({ totalPages = 1, neighbors = 0 }: PaginationKUIPr
 
   return (
     <Root>
-      <ButtonStyled variant="outlined" onClick={previewPage}>
+      <ButtonStyled disabled={currentPage <= 1} variant="outlined" onClick={previewPage}>
         <FaCaretLeft />
       </ButtonStyled>
       {pages.map((page, i) => (
@@ -24,7 +24,7 @@ export const PaginationKUI = ({ totalPages = 1, neighbors = 0 }: PaginationKUIPr
           page={page}
         />
       ))}
-      <ButtonStyled variant="outlined" onClick={nextPage}>
+      <ButtonStyled disabled={currentPage >= totalPages} variant="outlined" onClick={nextPage}>
         <FaCaretRight />
       </ButtonStyled>
     </Root>
