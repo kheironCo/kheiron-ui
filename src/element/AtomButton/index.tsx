@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AtomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+export interface AtomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 interface AtomButtonJSXElement extends React.JSX.Element {}
 
