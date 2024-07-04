@@ -2,6 +2,7 @@ import { ButtonListType } from './type';
 import ROOT from '../../common/root';
 
 export const GeneralButtonStyle = {
+  width: 'min-content',
   padding: ' 0.25rem 0.75rem',
   minHeight: '24px',
   border: 'none',
