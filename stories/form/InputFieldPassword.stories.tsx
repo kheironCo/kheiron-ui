@@ -20,5 +20,7 @@ type Story = StoryObj<typeof InputFieldPasswordKUI>;
 export const Example: Story = {
   args: {
     label: 'Contraseña: ',
+    errorMessage: 'Este es un mensaje indicador de errores al validar el campo de texto',
+    width: '',
   },
 };
