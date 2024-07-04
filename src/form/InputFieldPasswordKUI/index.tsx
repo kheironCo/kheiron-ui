@@ -17,11 +17,9 @@ export const InputFieldPasswordKUI = forwardRef<HTMLInputElement, InputFieldPass
           label={label}
           className="KUI-input-field-password-label"
         >
-          <>
-            <PasswordInputKUI width={width} {...rest} ref={ref} />
-            <SpanComponentStyled>{errorMessage}</SpanComponentStyled>
-          </>
+          <PasswordInputKUI width={width} {...rest} ref={ref} />
         </LabelKUIComponentStyled>
+        <SpanComponentStyled>{errorMessage}</SpanComponentStyled>
       </AtomDivComponentStyled>
     );
   },

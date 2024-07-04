@@ -15,4 +15,5 @@ export const LabelKUIComponentStyled = styled(LabelKUI)`
 export const SpanComponentStyled = styled(Span)`
   color: red;
   font-size: 14px;
+  font-family: 'Blinker', sans-serif;
 `;

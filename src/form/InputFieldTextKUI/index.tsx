@@ -16,12 +16,9 @@ export const InputFieldTextKUI = forwardRef<HTMLInputElement, InputFieldTextKUIP
     return (
       <AtomDivComponentStyled className="KUI-input-field-root">
         <LabelKUIComponentStyled className="KUI-input-field-label" {...{ label, position }}>
-          <>
-            <AtomInputComponentStyled className="KUI-input-field-input" {...rest} ref={ref} />{' '}
-            <br />
-            <SpanComponentStyled>{errorMessage}</SpanComponentStyled>
-          </>
+          <AtomInputComponentStyled className="KUI-input-field-input" {...rest} ref={ref} />
         </LabelKUIComponentStyled>
+        <SpanComponentStyled>{errorMessage}</SpanComponentStyled>
       </AtomDivComponentStyled>
     );
   },
