@@ -28,3 +28,4 @@ export * from './AtomTable';
 export * from './AtomSpan';
 export * from './Heading';
 export * from './Paragraph';
+export * from './Span';
