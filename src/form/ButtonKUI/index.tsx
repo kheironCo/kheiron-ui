@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
-import { AtomButton } from '../../element';
+import { AtomButton, AtomButtonProps } from '../../element';
 import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonList, GeneralButtonStyle } from './styles';
 import { ReactNode } from 'react';
 
-export type ButtonKUIProps = Parameters<typeof AtomButton>[0] & {
+export type ButtonKUIProps = AtomButtonProps & {
   className?: string;
   variant?: ButtonVariant;
   palette?: ButtonPalette;
