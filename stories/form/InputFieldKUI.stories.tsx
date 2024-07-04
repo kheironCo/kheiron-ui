@@ -17,5 +17,7 @@ type Story = StoryObj<typeof InputFieldTextKUI>;
 export const Example: Story = {
   args: {
     label: 'Nombre: ',
+    errorMessage: 'Este es un mensaje indicador de errores al validar el campo de texto',
+    width: '',
   },
 };

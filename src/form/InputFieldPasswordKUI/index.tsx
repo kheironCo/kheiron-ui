@@ -1,14 +1,15 @@
 import { forwardRef } from 'react';
 import { LabelKUIProps, PasswordInputKUI } from '../base';
-import { AtomDivComponentStyled, LabelKUIComponentStyled } from './styles';
+import { AtomDivComponentStyled, LabelKUIComponentStyled, SpanComponentStyled } from './styles';
 
 export type InputFieldPasswordKUIProps = LabelKUIProps &
   Parameters<typeof PasswordInputKUI>[0] & {
     width?: string;
+    errorMessage?: string;
   };
 
 export const InputFieldPasswordKUI = forwardRef<HTMLInputElement, InputFieldPasswordKUIProps>(
-  ({ label, position = 'top', width, ...rest }, ref) => {
+  ({ label, errorMessage, position = 'top', width, ...rest }, ref) => {
     return (
       <AtomDivComponentStyled className="KUI-input-field-password-root">
         <LabelKUIComponentStyled
@@ -16,7 +17,10 @@ export const InputFieldPasswordKUI = forwardRef<HTMLInputElement, InputFieldPass
           label={label}
           className="KUI-input-field-password-label"
         >
-          <PasswordInputKUI width={width} {...rest} ref={ref} />
+          <>
+            <PasswordInputKUI width={width} {...rest} ref={ref} />
+            <SpanComponentStyled>{errorMessage}</SpanComponentStyled>
+          </>
         </LabelKUIComponentStyled>
       </AtomDivComponentStyled>
     );
