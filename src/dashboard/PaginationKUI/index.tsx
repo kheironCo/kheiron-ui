@@ -12,7 +12,7 @@ export const PaginationKUI = ({ totalPages = 1, neighbors = 0 }: PaginationKUIPr
   });
 
   return (
-    <Root>
+    <Root className="KUI-pagination-root">
       <ButtonStyled disabled={currentPage <= 1} variant="outlined" onClick={previewPage}>
         <FaCaretLeft />
       </ButtonStyled>

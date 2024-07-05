@@ -1,6 +1,6 @@
 import ROOT from '../../common/root';
 import styled from 'styled-components';
-import { AtomTable, AtomTd, AtomTh, AtomThead, AtomTr } from '../../element';
+import { AtomDiv, AtomTable, AtomTd, AtomTh, AtomThead, AtomTr } from '../../element';
 
 export const ThStyled = styled(AtomTh)`
   font-family: Blinker, sans-serif;
@@ -48,4 +48,11 @@ export const BodyTdStyled = styled(AtomTd)`
 
   padding: 0.25rem 0.5rem;
   box-sizing: border-box;
+`;
+
+export const Pagination = styled(AtomDiv)<ITHeader>`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: ${({ bgcolor = '#425' /*#583D6B'*/ }) => bgcolor};
 `;

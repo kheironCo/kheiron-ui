@@ -7,8 +7,10 @@ import {
   HeaderTrStyled,
   THeaderStyled,
   TableStyled,
+  Pagination,
 } from './styles';
 import { TableKUIProps } from './type';
+import { PaginationKUI } from '../PaginationKUI';
 
 export const TableKUI = <B, H extends string, C extends string>({
   keys,
@@ -82,6 +84,9 @@ export const TableKUI = <B, H extends string, C extends string>({
         </THeaderStyled>
         <AtomTbody className="KUI-table-tbody">{_renderBody}</AtomTbody>
       </TableStyled>
+      <Pagination>
+        <PaginationKUI totalPages={9} neighbors={1} />
+      </Pagination>
     </AtomDiv>
   );
 };

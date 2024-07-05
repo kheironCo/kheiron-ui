@@ -8,7 +8,11 @@ export const ButtonPage = ({ current, page, onClick }: ButtonPageProps) => {
     if (onClick && !isNaN(Number(page))) onClick(Number(page));
   };
   return (
-    <ButtonStyled variant={current ? 'filled' : 'outlined'} onClick={handleClick}>
+    <ButtonStyled
+      bgcolor={current ? '#C39FE3' : 'blue'}
+      variant={current ? 'filled' : 'outlined'}
+      onClick={handleClick}
+    >
       <Paragraph>{page.toString()}</Paragraph>
     </ButtonStyled>
   );
