@@ -20,8 +20,8 @@ export const ButtonKUI = ({
   palette = 'primary',
   ...rest
 }: ButtonKUIProps) => {
-  const ButtonPaletetStyle = ButtonList[(palette as ButtonPalette) || 'primary'];
-  const ButtonStyle = ButtonPaletetStyle[(variant as ButtonVariant) || 'filled'];
+  const ButtonPaletteStyle = ButtonList[(palette as ButtonPalette) || 'primary'];
+  const ButtonStyle = ButtonPaletteStyle[(variant as ButtonVariant) || 'filled'];
   return (
     <AtomButton
       css={css(GeneralButtonStyle, ButtonStyle)}
