@@ -1,12 +1,12 @@
-import { AtomDiv, AtomTable, AtomTbody, AtomTd, AtomTh, AtomThead, AtomTr } from '../../element';
+import { AtomDiv, AtomTbody } from '../../element';
 import { useMemo } from 'react';
 import {
-  TableBodyCellStyle,
-  TableBodyRowStyle,
-  TableHeaderCellStyle,
-  TableHeaderRowStyle,
-  TableHeaderStyle,
-  TableStyle,
+  ThStyled,
+  BodyTdStyled,
+  BodyTrStyled,
+  HeaderTrStyled,
+  THeaderStyled,
+  TableStyled,
 } from './styles';
 import { TableKUIProps } from './type';
 
@@ -25,25 +25,24 @@ export const TableKUI = <B, H extends string, C extends string>({
     throw new Error(`The key array contains duplicate keys: ${keys}`);
   }
   if (!Array.isArray(keys)) {
-    throw new Error('La propiedad "keys" debe ser un array de strings.');
+    throw new Error('The property "keys" must be an array of strings.');
   }
   if (typeof head !== 'object') {
-    throw new Error('La propiedad "head" debe ser un objeto.');
+    throw new Error('The property "head" must be an object.');
   }
   if (!Array.isArray(body)) {
-    throw new Error('La propiedad "body" debe ser un array de objetos.');
+    throw new Error('The property "body" must be an array de objects.');
   }
 
   const _renderHead = useMemo(
     () =>
       keys.map((key, column) => (
-        <AtomTh
+        <ThStyled
           key={`KUI-table-header-${key}-column-${column}`}
           className={`KUI-table-header-${key}-column-${column}`}
-          css={TableHeaderCellStyle}
         >
           {renderHead ? renderHead({ value: head[key], key, column }) : head[key]}
-        </AtomTh>
+        </ThStyled>
       )),
     [keys, head, renderHead],
   );
@@ -54,24 +53,22 @@ export const TableKUI = <B, H extends string, C extends string>({
         const propsTr = onRow ? onRow(valueRow) : {};
 
         return (
-          <AtomTr
+          <BodyTrStyled
             {...propsTr}
             key={row}
             className={`KUI-table-body-row KUI-table-body-row-${row} ${propsTr.className}`}
-            css={[TableBodyRowStyle, propsTr?.css]}
           >
             {keys.map((key, column) => (
-              <AtomTd
+              <BodyTdStyled
                 key={`KUI-table-body-cell-${key}-row-${row}-column-${column}`}
                 className={`KUI-table-body-cell KUI-table-body-cell-${key}-row-${row}-column-${column}`}
-                css={TableBodyCellStyle}
               >
                 {renderBody
                   ? renderBody({ value: valueRow[key], key, row, column, valueRow })
                   : valueRow[key]?.toString()}
-              </AtomTd>
+              </BodyTdStyled>
             ))}
-          </AtomTr>
+          </BodyTrStyled>
         );
       }),
     [keys, body, renderBody],
@@ -79,14 +76,12 @@ export const TableKUI = <B, H extends string, C extends string>({
 
   return (
     <AtomDiv {...rest} className={`KUI-table-root ${className}`}>
-      <AtomTable css={TableStyle} className="KUI-table">
-        <AtomThead css={TableHeaderStyle} className="KUI-table-thead">
-          <AtomTr css={TableHeaderRowStyle} className="KUI-table-thead-tr">
-            {_renderHead}
-          </AtomTr>
-        </AtomThead>
+      <TableStyled className="KUI-table">
+        <THeaderStyled className="KUI-table-thead">
+          <HeaderTrStyled className="KUI-table-thead-tr">{_renderHead}</HeaderTrStyled>
+        </THeaderStyled>
         <AtomTbody className="KUI-table-tbody">{_renderBody}</AtomTbody>
-      </AtomTable>
+      </TableStyled>
     </AtomDiv>
   );
 };

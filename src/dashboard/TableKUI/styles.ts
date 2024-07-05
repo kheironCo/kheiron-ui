@@ -1,35 +1,8 @@
-import { css } from '@emotion/react';
 import ROOT from '../../common/root';
+import styled from 'styled-components';
+import { AtomTable, AtomTd, AtomTh, AtomThead, AtomTr } from '../../element';
 
-export const TableStyle = css`
-  font-family: Quicksand, sans-serif;
-  font-size: 1rem;
-  border-collapse: collapse;
-  border-radius: 0.5rem;
-  background-color: #ddd2;
-  box-shadow: 0 2px 4px 0 #ddd;
-  overflow: hidden;
-`;
-
-export const TableHeaderStyle = css`
-  font-family: Blinker, sans-serif;
-  background-color: ${ROOT.color.triada.morado};
-`;
-
-export const TableBodyStyle = css`
-  font-family: Quicksand, sans-serif;
-`;
-export const TableBodyRowStyle = css`
-  font-family: Quicksand, sans-serif;
-  border: 0 solid ${ROOT.color.gray[100]};
-  border-width: 1px 0;
-`;
-
-export const TableHeaderRowStyle = css`
-  font-family: Blinker, sans-serif;
-`;
-
-export const TableHeaderCellStyle = css`
+export const ThStyled = styled(AtomTh)`
   font-family: Blinker, sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -39,7 +12,36 @@ export const TableHeaderCellStyle = css`
   box-sizing: border-box;
 `;
 
-export const TableBodyCellStyle = css`
+export const HeaderTrStyled = styled(AtomTr)`
+  font-family: Blinker, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+`;
+
+export const TableStyled = styled(AtomTable)`
+  font-family: Quicksand, sans-serif;
+  font-size: 1rem;
+  border-collapse: collapse;
+  border-radius: 0.125rem;
+  background-color: #ddd2;
+  /* box-shadow: 0 2px 4px 0 #ddd; */
+  overflow: hidden;
+`;
+
+export type ITHeader = { bgcolor?: string };
+export const THeaderStyled = styled(AtomThead)<ITHeader>`
+  font-family: Blinker, sans-serif;
+  background-color: ${({ bgcolor = '#583D6B' }) => bgcolor};
+`;
+
+export const BodyTrStyled = styled(AtomTr)`
+  font-family: Quicksand, sans-serif;
+  font-size: 0.75rem;
+  border: 0 solid ${ROOT.color.gray[100]};
+  border-width: 1px 0;
+`;
+
+export const BodyTdStyled = styled(AtomTd)`
   font-family: Quicksand, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
