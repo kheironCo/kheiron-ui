@@ -1,16 +1,10 @@
 import { AtomDiv, AtomTbody } from '../../element';
-import { useMemo } from 'react';
-import {
-  ThStyled,
-  BodyTdStyled,
-  BodyTrStyled,
-  HeaderTrStyled,
-  THeaderStyled,
-  TableStyled,
-  Pagination,
-} from './styles';
+import { HeaderTrStyled, THeaderStyled, TableStyled, Pagination } from './styles';
 import { TableKUIProps } from './type';
+import { RenderBody } from './RenderBody';
+import { RenderHead } from './RenderHead';
 import { PaginationKUI } from '../PaginationKUI';
+import { useState } from 'react';
 
 export const TableKUI = <B, H extends string, C extends string>({
   keys,
@@ -18,8 +12,8 @@ export const TableKUI = <B, H extends string, C extends string>({
   body,
   renderHead,
   renderBody,
-  onRow,
   className,
+  limit,
   ...rest
 }: TableKUIProps<B, H, C>) => {
   const uniqueKeys = Array.from(new Set(keys));
@@ -36,56 +30,47 @@ export const TableKUI = <B, H extends string, C extends string>({
     throw new Error('The property "body" must be an array de objects.');
   }
 
-  const _renderHead = useMemo(
-    () =>
-      keys.map((key, column) => (
-        <ThStyled
-          key={`KUI-table-header-${key}-column-${column}`}
-          className={`KUI-table-header-${key}-column-${column}`}
-        >
-          {renderHead ? renderHead({ value: head[key], key, column }) : head[key]}
-        </ThStyled>
-      )),
-    [keys, head, renderHead],
-  );
+  const limitPage = typeof limit === 'number' ? limit : body.length;
 
-  const _renderBody = useMemo(
-    () =>
-      body.map((valueRow, row) => {
-        const propsTr = onRow ? onRow(valueRow) : {};
+  const totalPages = Math.ceil(body.length / limitPage);
 
-        return (
-          <BodyTrStyled
-            {...propsTr}
-            key={row}
-            className={`KUI-table-body-row KUI-table-body-row-${row} ${propsTr.className}`}
-          >
-            {keys.map((key, column) => (
-              <BodyTdStyled
-                key={`KUI-table-body-cell-${key}-row-${row}-column-${column}`}
-                className={`KUI-table-body-cell KUI-table-body-cell-${key}-row-${row}-column-${column}`}
-              >
-                {renderBody
-                  ? renderBody({ value: valueRow[key], key, row, column, valueRow })
-                  : valueRow[key]?.toString()}
-              </BodyTdStyled>
-            ))}
-          </BodyTrStyled>
-        );
-      }),
-    [keys, body, renderBody],
-  );
+  const [dataBody, setDataBody] = useState<typeof body>(body.slice(0, limit));
+
+  const onChange = (page: number) => {
+    const index = (page - 1) * limitPage;
+    setDataBody(body.slice(index, index + limitPage));
+  };
 
   return (
     <AtomDiv {...rest} className={`KUI-table-root ${className}`}>
       <TableStyled className="KUI-table">
         <THeaderStyled className="KUI-table-thead">
-          <HeaderTrStyled className="KUI-table-thead-tr">{_renderHead}</HeaderTrStyled>
+          <HeaderTrStyled className="KUI-table-thead-tr">
+            {keys.map((key, column) => (
+              <RenderHead
+                key={`KUI-table-header-${key}-column-${column}`}
+                keyType={key}
+                renderHead={renderHead}
+                head={head}
+                column={column}
+              />
+            ))}
+          </HeaderTrStyled>
         </THeaderStyled>
-        <AtomTbody className="KUI-table-tbody">{_renderBody}</AtomTbody>
+        <AtomTbody className="KUI-table-tbody">
+          {dataBody.map((valueRow, row) => (
+            <RenderBody
+              key={row}
+              keys={keys}
+              renderBody={renderBody}
+              valueRow={valueRow}
+              row={row}
+            />
+          ))}
+        </AtomTbody>
       </TableStyled>
       <Pagination>
-        <PaginationKUI totalPages={9} neighbors={1} />
+        <PaginationKUI totalPages={totalPages} neighbors={1} onChange={onChange} />
       </Pagination>
     </AtomDiv>
   );

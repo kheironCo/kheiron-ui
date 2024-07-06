@@ -12,7 +12,7 @@ const meta: Meta<typeof TableKUI> = {
   argTypes: {
     keys: {
       control: 'object',
-      description: `This props recibe a string's array`,
+      description: `This props must be a string array`,
     },
     head: {
       control: 'object',
@@ -41,7 +41,8 @@ export const Default: Story = {
       city: 'City',
       phone: 'Phone',
     },
-    body: fakeData,
+    body: fakeData(31),
+    limit: 4,
     onRow: (value) => ({
       css: css`
         cursor: pointer;

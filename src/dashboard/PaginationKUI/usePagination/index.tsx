@@ -3,15 +3,17 @@ import { useEffect, useState } from 'react';
 export type UsePaginationProps = {
   totalPages: number;
   neighbors: number;
+  onChange?: (page: number) => void;
 };
 
-export const usePagination = ({ neighbors, totalPages }: UsePaginationProps) => {
+export const usePagination = ({ neighbors, totalPages, onChange }: UsePaginationProps) => {
   const lengthPage = 5 + neighbors * 2;
   const center = Math.floor(lengthPage / 2);
   const [pages, setPages] = useState<('...' | number)[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const updatePages = () => {
+    if (onChange) onChange(currentPage);
     if (totalPages <= lengthPage) {
       setPages(Array.from({ length: totalPages }, (_, i) => i + 1));
       return;

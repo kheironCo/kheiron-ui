@@ -4,6 +4,10 @@ type HovType = {
 };
 export type ButtonVariant = 'filled' | 'outlined';
 export type ButtonPalette = 'primary' | 'gold' | 'orange';
+export type StyleProps = {
+  variant?: ButtonVariant;
+  palette?: ButtonPalette;
+};
 export type ButtonType = {
   color: string;
   backgroundColor: string;

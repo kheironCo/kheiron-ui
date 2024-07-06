@@ -38,9 +38,31 @@ export type TableKUIProps<B, H extends string, C extends string> = AtomDivProps 
   keys: C[]; // Lista de claves de columnas.
   head: Record<NoInfer<C>, H>; // Encabezado de la tabla.
   body: Record<NoInfer<C>, AnyType<B>>[]; // Cuerpo de la tabla.
+  limit?: number;
   renderHead?: (args: RenderHeadProps<H, NoInfer<C>>) => JSX.Element; // Función para renderizar el encabezado.
   renderBody?: (
     args: RenderBodyProps<AnyType<B>, NoInfer<C>, Record<NoInfer<C>, AnyType<B>>>,
   ) => JSX.Element; // Función para renderizar el cuerpo.
   onRow?: (args: Record<NoInfer<C>, AnyType<B>>) => AtomTrProps;
+};
+
+export type RenderTableHeadProps<H extends string, C extends string> = {
+  keyType: C; // Lista de claves de columnas.
+  renderHead?: (args: RenderHeadProps<H, NoInfer<C>>) => JSX.Element; // Función para renderizar el encabezado.
+  head: Record<NoInfer<C>, H>;
+  column: number;
+};
+
+export type RenderTableBodyProps<B, C extends string> = {
+  /**
+   * @template C List To string
+   * @example string[]
+   * ['id', 'name', 'email']
+   */
+  keys: C[]; // Lista de claves de columnas.
+  renderBody?: (
+    args: RenderBodyProps<AnyType<B>, NoInfer<C>, Record<NoInfer<C>, AnyType<B>>>,
+  ) => JSX.Element; // Función para renderizar el cuerpo.
+  valueRow: Record<NoInfer<C>, AnyType<B>>;
+  row: number;
 };

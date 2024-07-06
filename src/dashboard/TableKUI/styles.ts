@@ -52,7 +52,8 @@ export const BodyTdStyled = styled(AtomTd)`
 
 export const Pagination = styled(AtomDiv)<ITHeader>`
   width: 100%;
+  padding: 0.25rem;
   display: flex;
   justify-content: center;
-  background-color: ${({ bgcolor = '#425' /*#583D6B'*/ }) => bgcolor};
+  background-color: ${({ bgcolor = '#583D6B' }) => bgcolor};
 `;

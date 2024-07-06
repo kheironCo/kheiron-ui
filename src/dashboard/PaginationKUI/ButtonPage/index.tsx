@@ -9,8 +9,9 @@ export const ButtonPage = ({ current, page, onClick }: ButtonPageProps) => {
   };
   return (
     <ButtonStyled
-      bgcolor={current ? '#C39FE3' : 'blue'}
-      variant={current ? 'filled' : 'outlined'}
+      bgcolor={current ? '#C39FE3' : undefined}
+      hover={{ bgcolor: '#C39FE3' }}
+      variant="filled"
       onClick={handleClick}
     >
       <Paragraph>{page.toString()}</Paragraph>
