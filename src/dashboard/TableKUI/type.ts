@@ -39,6 +39,7 @@ export type TableKUIProps<B, H extends string, C extends string> = AtomDivProps 
   head: Record<NoInfer<C>, H>; // Encabezado de la tabla.
   body: Record<NoInfer<C>, AnyType<B>>[]; // Cuerpo de la tabla.
   limit?: number;
+  neighbors?: number;
   renderHead?: (args: RenderHeadProps<H, NoInfer<C>>) => JSX.Element; // Función para renderizar el encabezado.
   renderBody?: (
     args: RenderBodyProps<AnyType<B>, NoInfer<C>, Record<NoInfer<C>, AnyType<B>>>,

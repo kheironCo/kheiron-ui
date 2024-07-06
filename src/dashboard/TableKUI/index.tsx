@@ -14,6 +14,7 @@ export const TableKUI = <B, H extends string, C extends string>({
   renderBody,
   className,
   limit,
+  neighbors,
   ...rest
 }: TableKUIProps<B, H, C>) => {
   const uniqueKeys = Array.from(new Set(keys));
@@ -70,7 +71,7 @@ export const TableKUI = <B, H extends string, C extends string>({
         </AtomTbody>
       </TableStyled>
       <Pagination>
-        <PaginationKUI totalPages={totalPages} neighbors={1} onChange={onChange} />
+        <PaginationKUI {...{ totalPages, neighbors, onChange }} />
       </Pagination>
     </AtomDiv>
   );
