@@ -2,7 +2,7 @@ import { ButtonPalette, ButtonVariant } from './type';
 import { ButtonStyle } from './styles';
 import { ReactNode } from 'react';
 
-export type ButtonKUIProps = Parameters<typeof ButtonStyle>[0] & {
+export type ButtonKUIProps = {
   className?: string;
   variant?: ButtonVariant;
   palette?: ButtonPalette;
@@ -16,10 +16,9 @@ export const ButtonKUI = ({
   label,
   variant = 'filled',
   palette = 'primary',
-  ...rest
 }: ButtonKUIProps) => {
   return (
-    <ButtonStyle {...{ variant, palette }} className={`KUI-button ${className || ''}`} {...rest}>
+    <ButtonStyle {...{ variant, palette }} className={`KUI-button ${className || ''}`}>
       {label ?? children ?? ''}
     </ButtonStyle>
   );
