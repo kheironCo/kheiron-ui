@@ -41,8 +41,9 @@ export const Default: Story = {
       city: 'City',
       phone: 'Phone',
     },
-    body: fakeData(31),
+    body: fakeData(39),
     limit: 4,
+    neighbors: 1,
     onRow: (value) => ({
       css: css`
         cursor: pointer;

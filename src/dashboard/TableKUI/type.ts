@@ -1,5 +1,7 @@
 import { AtomDivProps, AtomTrProps } from '../../element';
 
+export type Size = { width?: string; height?: string };
+
 /**
  * @template V - Tipo del valor recibido del cuerpo.
  * @template K - Tipo de la clave asociada.
@@ -45,6 +47,7 @@ export type TableKUIProps<B, H extends string, C extends string> = AtomDivProps 
     args: RenderBodyProps<AnyType<B>, NoInfer<C>, Record<NoInfer<C>, AnyType<B>>>,
   ) => JSX.Element; // Función para renderizar el cuerpo.
   onRow?: (args: Record<NoInfer<C>, AnyType<B>>) => AtomTrProps;
+  TableSx?: Size;
 };
 
 export type RenderTableHeadProps<H extends string, C extends string> = {

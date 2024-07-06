@@ -1,5 +1,5 @@
-import { AtomDiv, AtomTbody } from '../../element';
-import { HeaderTrStyled, THeaderStyled, TableStyled, Pagination } from './styles';
+import { AtomDiv, TableBody, AtomTr, TableFoot } from '../../element';
+import { HeaderTrStyled, THeaderStyled, TableStyled, FooterStyled, Pagination } from './styles';
 import { TableKUIProps } from './type';
 import { RenderBody } from './RenderBody';
 import { RenderHead } from './RenderHead';
@@ -15,6 +15,7 @@ export const TableKUI = <B, H extends string, C extends string>({
   className,
   limit,
   neighbors,
+  TableSx,
   ...rest
 }: TableKUIProps<B, H, C>) => {
   const uniqueKeys = Array.from(new Set(keys));
@@ -44,7 +45,7 @@ export const TableKUI = <B, H extends string, C extends string>({
 
   return (
     <AtomDiv {...rest} className={`KUI-table-root ${className}`}>
-      <TableStyled className="KUI-table">
+      <TableStyled className="KUI-table" {...TableSx}>
         <THeaderStyled className="KUI-table-thead">
           <HeaderTrStyled className="KUI-table-thead-tr">
             {keys.map((key, column) => (
@@ -58,7 +59,7 @@ export const TableKUI = <B, H extends string, C extends string>({
             ))}
           </HeaderTrStyled>
         </THeaderStyled>
-        <AtomTbody className="KUI-table-tbody">
+        <TableBody className="KUI-table-tbody">
           {dataBody.map((valueRow, row) => (
             <RenderBody
               key={row}
@@ -68,11 +69,17 @@ export const TableKUI = <B, H extends string, C extends string>({
               row={row}
             />
           ))}
-        </AtomTbody>
+        </TableBody>
+        <TableFoot>
+          <AtomTr>
+            <FooterStyled colSpan={keys.length}>
+              <Pagination>
+                <PaginationKUI {...{ totalPages, neighbors, onChange }} />
+              </Pagination>
+            </FooterStyled>
+          </AtomTr>
+        </TableFoot>
       </TableStyled>
-      <Pagination>
-        <PaginationKUI {...{ totalPages, neighbors, onChange }} />
-      </Pagination>
     </AtomDiv>
   );
 };

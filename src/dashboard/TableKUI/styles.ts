@@ -1,6 +1,19 @@
-import ROOT from '../../common/root';
 import styled from 'styled-components';
-import { AtomDiv, AtomTable, AtomTd, AtomTh, AtomThead, AtomTr } from '../../element';
+import ROOT from '../../common/root';
+import { AtomDiv, AtomTable, AtomTd, AtomTh, TableHead, AtomTr } from '../../element';
+import { Size } from './type';
+
+export const TableStyled = styled(AtomTable)<Size>`
+  width: ${({ width = '100%' }) => width};
+  height: ${({ height = '100%' }) => height};
+  font-family: Quicksand, sans-serif;
+  font-size: 1rem;
+  border-collapse: collapse;
+  border-radius: 0.125rem;
+  background-color: #ddd2;
+  /* box-shadow: 0 2px 4px 0 #ddd; */
+  overflow: hidden;
+`;
 
 export const ThStyled = styled(AtomTh)`
   font-family: Blinker, sans-serif;
@@ -18,18 +31,8 @@ export const HeaderTrStyled = styled(AtomTr)`
   font-weight: 400;
 `;
 
-export const TableStyled = styled(AtomTable)`
-  font-family: Quicksand, sans-serif;
-  font-size: 1rem;
-  border-collapse: collapse;
-  border-radius: 0.125rem;
-  background-color: #ddd2;
-  /* box-shadow: 0 2px 4px 0 #ddd; */
-  overflow: hidden;
-`;
-
 export type ITHeader = { bgcolor?: string };
-export const THeaderStyled = styled(AtomThead)<ITHeader>`
+export const THeaderStyled = styled(TableHead)<ITHeader>`
   font-family: Blinker, sans-serif;
   background-color: ${({ bgcolor = '#583D6B' }) => bgcolor};
 `;
@@ -50,10 +53,13 @@ export const BodyTdStyled = styled(AtomTd)`
   box-sizing: border-box;
 `;
 
-export const Pagination = styled(AtomDiv)<ITHeader>`
-  width: 100%;
+export const FooterStyled = styled(AtomTd)<ITHeader>`
   padding: 0.25rem;
+  background-color: ${({ bgcolor = '#583D6B' }) => bgcolor};
+`;
+
+export const Pagination = styled(AtomDiv)`
   display: flex;
   justify-content: center;
-  background-color: ${({ bgcolor = '#583D6B' }) => bgcolor};
+  align-items: center;
 `;
