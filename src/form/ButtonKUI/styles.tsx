@@ -100,7 +100,7 @@ const ButtonList: ButtonListType = {
   },
 };
 
-export const ButtonStyled = styled(AtomButton)<StyleProps>`
+export const ButtonStyle = styled(AtomButton)<StyleProps>`
   min-height: 24px;
   padding: 0.25rem 0.75rem;
   border: none;

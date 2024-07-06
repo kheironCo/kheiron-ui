@@ -1,12 +1,14 @@
-import React from 'react';
+import styled from 'styled-components';
 
-export interface AtomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+const Button = styled.button``;
 
-interface AtomButtonJSXElement extends React.JSX.Element {}
+export type AtomButtonProps = Parameters<typeof Button>[0];
+
+export interface AtomButtonJSXElement extends React.JSX.Element {}
 
 export const AtomButton = ({ className, children, ...rest }: AtomButtonProps) =>
   (
-    <button className={`KUI-element-button ${className || ''}`} {...rest}>
+    <Button className={`KUI-element-button ${className || ''}`} {...rest}>
       {children}
-    </button>
+    </Button>
   ) as AtomButtonJSXElement;

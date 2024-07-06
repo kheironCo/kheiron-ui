@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type SpanProps = React.HTMLAttributes<HTMLDivElement>;
+export type SpanProps = React.HTMLAttributes<HTMLSpanElement>;
 
 export interface SpanElement extends React.JSX.Element {}
 
