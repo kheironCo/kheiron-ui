@@ -18,13 +18,13 @@
 <!-- [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/kheiron-ui) -->
 <!-- [![gzip size](http://img.badgesize.io/https://unpkg.com/formik@latest/dist/formik.esm.js?compression=gzip)](https://unpkg.com/formik@latest/dist/formik.esm.js) -->
 
-### Install
+## Install
 
 ```bash
 npm install kheiron-ui
 ```
 
-### Quickstart
+## Quickstart
 
 ```tsx
 import { TableKUI } from 'kheiron-ui';
@@ -81,3 +81,66 @@ import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
   }}
 />;
 ```
+
+<!-- ## Organization
+
+[List of organizations and projects using Formik](https://github.com/jaredpalmer/formik/issues/87) -->
+
+## Authors and Team
+
+<!--
+![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
+![Static Badge](https://img.shields.io/badge/🎨-pink 'Design')
+![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
+![Static Badge](https://img.shields.io/badge/💡-orange 'Planning')
+![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
+![Static Badge](https://img.shields.io/badge/👀-gold 'Reviews')
+![Static Badge](https://img.shields.io/badge/🧪-red 'Test')
+![Static Badge](https://img.shields.io/badge/⚙-gray 'UX/UI')
+-->
+
+<!-- 🤔💬 -->
+
+- Juan Marcos Mansilla [![Static Badge](https://img.shields.io/badge/LinkedIn-blue 'LinkedIn')](https://www.linkedin.com/in/juan-marcos-mansilla/) <span style="opacity:0">\_\_\_</span>
+  ![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
+  ![Static Badge](https://img.shields.io/badge/🎨-pink 'Design')
+  ![Static Badge](https://img.shields.io/badge/💡-orange 'Planning')
+  ![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
+  ![Static Badge](https://img.shields.io/badge/🧪-red 'Test')
+  ![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
+  ![Static Badge](https://img.shields.io/badge/👀-gold 'Reviews')
+- Gina Paola Medina [![Static Badge](https://img.shields.io/badge/LinkedIn-blue 'LinkedIn')](https://www.linkedin.com/in/ginapaolamedina/) <span style="opacity:0">\_\_\_</span>
+  ![Static Badge](https://img.shields.io/badge/👀-gold 'Reviews')
+  ![Static Badge](https://img.shields.io/badge/🧪-red 'Test')
+  ![Static Badge](https://img.shields.io/badge/⚙-gray 'UX/UI')
+- Gaston Jaurena [![Static Badge](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/gaston-jaurena-73a130235/) <span style="opacity:0">\_\_\_</span>
+  ![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
+  ![Static Badge](https://img.shields.io/badge/🎨-pink 'Design')
+  ![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
+  ![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
+- Alejandro Torres [![Static Badge](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/jalejotorresm5286/) <span style="opacity:0">\_\_\_</span>
+  ![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
+  ![Static Badge](https://img.shields.io/badge/🎨-pink 'Design')
+  ![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
+  ![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
+- Andres Rodriguez [![Static Badge](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/andres-rodriguez-038880238/) <span style="opacity:0">\_\_\_</span>
+  ![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
+  ![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
+  ![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
+- Brian Padilla [![Static Badge](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/brianpadilla01/) <span style="opacity:0">\_\_\_</span>
+  ![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
+  ![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
+  ![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<!-- [<img src="https://avatars2.githubusercontent.com/u/4060187?v=4" width="100px;"/><br /><sub><b>Jared Palmer</b></sub>](http://jaredpalmer.com)<br />
+[💬](#question-jaredpalmer "Answering Questions")
+[💻](https://github.com/jaredpalmer/formik/commits?author=jaredpalmer "Code") 
+[🎨](#design-jaredpalmer "Design")
+[📖](https://github.com/jaredpalmer/formik/commits?author=jaredpalmer "Documentation") 
+[💡](#example-jaredpalmer "Examples") 
+[🤔](#ideas-jaredpalmer "Ideas, Planning, & Feedback") 
+[👀](#review-jaredpalmer "Reviewed Pull Requests") 
+[⚠️](https://github.com/jaredpalmer/formik/commits?author=jaredpalmer "Tests")
+[🐛](https://github.com/jaredpalmer/formik/issues?q=author%3Aeonwhite "Bug reports") -->
