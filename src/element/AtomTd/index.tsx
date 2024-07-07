@@ -1,4 +1,5 @@
-type AtomTdProps = React.HTMLAttributes<HTMLTableCellElement>;
+type AtomTdProps = React.TdHTMLAttributes<HTMLTableDataCellElement> &
+  React.HTMLAttributes<HTMLTableCellElement>;
 
 export interface AtomTdElement extends React.JSX.Element {}
 

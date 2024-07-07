@@ -1,16 +1,9 @@
-import { ButtonListType } from './type';
+import styled, { css } from 'styled-components';
 import ROOT from '../../common/root';
+import { AtomButton } from '../../element';
+import { ButtonListType, StyleProps } from './type';
 
-export const GeneralButtonStyle = {
-  padding: ' 0.25rem 0.75rem',
-  minHeight: '24px',
-  border: 'none',
-  borderRadius: '0.375rem',
-  cursor: 'pointer',
-  fontWeight: 500,
-};
-
-export const ButtonList: ButtonListType = {
+const ButtonList: ButtonListType = {
   primary: {
     filled: {
       backgroundColor: ROOT.color.aiax.primary,
@@ -106,3 +99,28 @@ export const ButtonList: ButtonListType = {
     },
   },
 };
+
+export const ButtonStyle = styled(AtomButton)<StyleProps>`
+  min-height: 24px;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  ${({ variant = 'filled', palette = 'primary' }) => css`
+    color: ${ButtonList[palette][variant].color};
+    background-color: ${ButtonList[palette][variant].backgroundColor};
+    border-radius: ${ButtonList[palette][variant].borderRadius};
+    padding: ${ButtonList[palette][variant].padding};
+    border: ${ButtonList[palette][variant].border};
+    &:hover {
+      color: ${ButtonList[palette][variant]['&:hover'].color};
+      background-color: ${ButtonList[palette][variant]['&:hover'].backgroundColor};
+    }
+    &:active {
+      color: ${ButtonList[palette][variant]['&:active'].color};
+      background-color: ${ButtonList[palette][variant]['&:active'].backgroundColor};
+    }
+  `}
+`;
