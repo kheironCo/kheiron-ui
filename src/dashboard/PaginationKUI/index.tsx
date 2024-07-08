@@ -5,15 +5,16 @@ import { usePagination, UsePaginationProps } from './usePagination';
 
 export type PaginationKUIProps = Partial<UsePaginationProps>;
 
-export const PaginationKUI = ({ totalPages = 1, neighbors = 0 }: PaginationKUIProps) => {
+export const PaginationKUI = ({ totalPages = 1, neighbors = 0, onChange }: PaginationKUIProps) => {
   const { currentPage, pages, previewPage, nextPage, setPage } = usePagination({
     totalPages,
     neighbors,
+    onChange,
   });
 
   return (
-    <Root>
-      <ButtonStyled disabled={currentPage <= 1} variant="outlined" onClick={previewPage}>
+    <Root className="KUI-pagination-root">
+      <ButtonStyled disabled={currentPage <= 1} variant="filled" onClick={previewPage}>
         <FaCaretLeft />
       </ButtonStyled>
       {pages.map((page, i) => (
@@ -24,7 +25,7 @@ export const PaginationKUI = ({ totalPages = 1, neighbors = 0 }: PaginationKUIPr
           page={page}
         />
       ))}
-      <ButtonStyled disabled={currentPage >= totalPages} variant="outlined" onClick={nextPage}>
+      <ButtonStyled disabled={currentPage >= totalPages} variant="filled" onClick={nextPage}>
         <FaCaretRight />
       </ButtonStyled>
     </Root>

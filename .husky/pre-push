@@ -1,3 +1,3 @@
 #!bin/sh
 #Exect lint on all proyect
-pnpm lint 
+pnpm lint && pnpm build
