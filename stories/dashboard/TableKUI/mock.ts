@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 
 // Función para generar una fila de datos ficticios
-function generateFakeRow() {
+export function generateFakeRow() {
   return {
     id: faker.string.numeric({ length: 4 }),
     user: {

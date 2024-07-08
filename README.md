@@ -40,7 +40,7 @@ import { TableKUI } from 'kheiron-ui';
 />;
 ```
 
-### RenderBody
+### TableKUI
 
 ```tsx
 import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
@@ -48,39 +48,44 @@ import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
 <TableKUI
   keys={['id', 'user']}
   head={{ id: 'ID', user: 'User' }}
-  head={[
+  body={[
     {
-      id: 'AB1',
+      id: 'KUI',
       user: {
         image: 'https://avatars.githubusercontent.com/u/158779561?s=48&v=4',
-        name: 'User Example',
-        email: 'user@example.com',
+        name: 'Kheiron',
+        email: 'kheiron-ui@example.com',
       },
     },
+    ...
   ]}
-  renderBody={(valueRow, key) => {
+  limit={5}
+  neighbors={1}
+  renderBody={({ value, key }) => {
     switch (key) {
       case 'user': {
         return (
           <UserProfileCardKUI
-            image={valueRow?.user?.image || ''}
-            head={valueRow?.user?.name || ''}
-            body={valueRow?.user?.email || ''}
+            image={value?.image || ''}
+            head={value?.name || ''}
+            body={value?.email || ''}
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              alert(valueRow?.user?.name);
+              alert(value?.name);
             }}
           />
         );
       }
       default: {
-        return value;
+        return <>{String(value)}</>;
       }
     }
   }}
 />;
 ```
+
+![Static](./assets/table.png)
 
 <!-- ## Organization
 
@@ -88,16 +93,14 @@ import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
 
 ## Authors and Team
 
-<!--
-![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
-![Static Badge](https://img.shields.io/badge/🎨-pink 'Design')
-![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
-![Static Badge](https://img.shields.io/badge/💡-orange 'Planning')
-![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
-![Static Badge](https://img.shields.io/badge/👀-gold 'Reviews')
-![Static Badge](https://img.shields.io/badge/🧪-red 'Test')
-![Static Badge](https://img.shields.io/badge/⚙-gray 'UX/UI')
--->
+![Static Badge](https://img.shields.io/badge/Code-💻-purple 'Code')
+![Static Badge](https://img.shields.io/badge/Design-🎨-pink 'Design')
+![Static Badge](https://img.shields.io/badge/Documentation-📖-blue 'Documentation')
+![Static Badge](https://img.shields.io/badge/Planning-💡-orange 'Planning')
+![Static Badge](https://img.shields.io/badge/Bug-🐛-green 'Bug')
+![Static Badge](https://img.shields.io/badge/Reviews-👀-gold 'Reviews')
+![Static Badge](https://img.shields.io/badge/Test-🧪-red 'Test')
+![Static Badge](https://img.shields.io/badge/UX/UI-⚙-gray 'UX/UI')
 
 <!-- 🤔💬 -->
 
