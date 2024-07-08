@@ -15,9 +15,6 @@
 
 [![Static Badge](https://img.shields.io/badge/documentation-Storybook-ff4785?style=for-the-badge)](https://kheiron-ui.vercel.app)
 
-<!-- [![Discord](https://img.shields.io/discord/769256827007139912.svg?style=flat-square)](https://discord.gg/pJSg287) -->
-<!-- [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/kheiron-ui) -->
-<!-- [![gzip size](http://img.badgesize.io/https://unpkg.com/formik@latest/dist/formik.esm.js?compression=gzip)](https://unpkg.com/formik@latest/dist/formik.esm.js) -->
 
 kheiron-ui is a UI component library with semantic HTML, optimized to accelerate user interface development in web applications. Designed with productivity and simplicity in mind, kheiron-ui offers a comprehensive solution for creating robust forms and tables without the need to invest time in complex configurations.
 
