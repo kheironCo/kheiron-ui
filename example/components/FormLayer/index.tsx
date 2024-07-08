@@ -64,6 +64,7 @@ export const FormLayer = () => {
             label="terms and conditions"
             {...register('terms')}
           />
+          <br />
           <AtomDiv style={{}}>
             <ButtonKUI
               label="Cancel"

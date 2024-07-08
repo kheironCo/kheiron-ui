@@ -8,15 +8,18 @@
   Build faster your React Web with KUI.
 </h3>
 
-[![Static Badge](https://img.shields.io/badge/documentation-Storybook-ff4785)](https://kheiron-ui.vercel.app)
 [![Stable Release](https://img.shields.io/npm/v/kheiron-ui.svg)](https://npm.im/kheiron-ui)
 [![Downloads](https://img.shields.io/npm/dm/kheiron-ui.svg)](https://www.npmjs.com/package/kheiron-ui)
 [![npm](https://img.shields.io/npm/dt/kheiron-ui.svg)](https://www.npmjs.com/package/kheiron-ui)
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
+[![Static Badge](https://img.shields.io/badge/documentation-Storybook-ff4785?style=for-the-badge)](https://kheiron-ui.vercel.app)
+
 <!-- [![Discord](https://img.shields.io/discord/769256827007139912.svg?style=flat-square)](https://discord.gg/pJSg287) -->
 <!-- [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/kheiron-ui) -->
 <!-- [![gzip size](http://img.badgesize.io/https://unpkg.com/formik@latest/dist/formik.esm.js?compression=gzip)](https://unpkg.com/formik@latest/dist/formik.esm.js) -->
+
+kheiron-ui is a UI component library with semantic HTML, optimized to accelerate user interface development in web applications. Designed with productivity and simplicity in mind, kheiron-ui offers a comprehensive solution for creating robust forms and tables without the need to invest time in complex configurations.
 
 ## Install
 
@@ -26,19 +29,54 @@ npm install kheiron-ui
 
 ## Quickstart
 
-```tsx
-import { TableKUI } from 'kheiron-ui';
+### Forms and Modal
 
-<TableKUI
-  keys={['id', 'name']}
-  head={{ id: 'ID', name: 'Name' }}
-  head={[
-    { id: 'AB1', name: 'One' },
-    { id: 'A2K', name: 'Two' },
-    { id: 'D3C', name: 'Three' },
-  ]}
-/>;
+> This example are using react-hook-form how complement
+
+```tsx
+import {
+  AtomDiv,
+  ButtonKUI,
+  InputFieldCheckboxKUI,
+  InputFieldPasswordKUI,
+  InputFieldTextKUI,
+  ModalKUI,
+} from 'kheiron-ui';
+
+<ButtonKUI label="form" onClick={() => setOpen(true)} />
+<ModalKUI open={open}>
+  <form onSubmit={handleSubmit(onSubmit)} style={{ width: '200px' }}>
+    <InputFieldTextKUI
+      width="100%"
+      label="Username"
+      errorMessage={errors?.username?.message}
+      {...register('username')}
+    />
+    <InputFieldPasswordKUI
+      width="100%"
+      label="Password"
+      errorMessage={errors?.password?.message}
+      {...register('password')}
+    />
+    <InputFieldCheckboxKUI
+      errorMessage={errors?.terms?.message || ''}
+      position="right"
+      label="terms and conditions"
+      {...register('terms')}
+    />
+    <ButtonKUI
+      label="Cancel"
+      variant="outlined"
+      type="button"
+      onClick={() => setOpen((old) => !old)}
+    />
+    <ButtonKUI label="Submit" type="submit" />
+  </form>
+</ModalKUI>;
 ```
+
+![Static](https://i.ibb.co/h1QmTLm/form.png 'form')
+![Static](https://i.ibb.co/BVKmf4p/form-error.png 'form')
 
 ### TableKUI
 
@@ -85,11 +123,7 @@ import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
 />;
 ```
 
-![Static](./assets/table.png)
-
-<!-- ## Organization
-
-[List of organizations and projects using Formik](https://github.com/jaredpalmer/formik/issues/87) -->
+![Static](https://i.ibb.co/KmccknD/table.png 'Table')
 
 ## Authors and Team
 
@@ -134,16 +168,3 @@ import { TableKUI, UserProfileCardKUI } from 'kheiron-ui';
   ![Static Badge](https://img.shields.io/badge/💻-purple 'Code')
   ![Static Badge](https://img.shields.io/badge/📖-blue 'Documentation')
   ![Static Badge](https://img.shields.io/badge/🐛-green 'Bug')
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<!-- [<img src="https://avatars2.githubusercontent.com/u/4060187?v=4" width="100px;"/><br /><sub><b>Jared Palmer</b></sub>](http://jaredpalmer.com)<br />
-[💬](#question-jaredpalmer "Answering Questions")
-[💻](https://github.com/jaredpalmer/formik/commits?author=jaredpalmer "Code") 
-[🎨](#design-jaredpalmer "Design")
-[📖](https://github.com/jaredpalmer/formik/commits?author=jaredpalmer "Documentation") 
-[💡](#example-jaredpalmer "Examples") 
-[🤔](#ideas-jaredpalmer "Ideas, Planning, & Feedback") 
-[👀](#review-jaredpalmer "Reviewed Pull Requests") 
-[⚠️](https://github.com/jaredpalmer/formik/commits?author=jaredpalmer "Tests")
-[🐛](https://github.com/jaredpalmer/formik/issues?q=author%3Aeonwhite "Bug reports") -->
