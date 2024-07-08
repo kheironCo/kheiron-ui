@@ -12,8 +12,16 @@
   "keywords": [
     "react",
     "react-dom",
+    "html",
+    "css",
+    "semantic",
+    "js",
+    "ts",
+    "ux",
     "ui",
-    "form"
+    "form",
+    "table",
+    "util"
   ],
   "scripts": {
     "analyze": "size-limit --why",
