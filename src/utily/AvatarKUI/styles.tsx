@@ -4,13 +4,13 @@ import { AtomDiv, AtomImage } from '../../element';
 function stringToColor(str: string): string {
   // Crea un hash a partir del string
   let hash = 0;
-  for (const i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);
   }
 
   // Convierte el hash a un valor hexadecimal
   let color = '#';
-  for (const i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     const value = (hash >> (i * 8)) & 0xff;
     color += ('00' + value.toString(16)).slice(-2);
   }
