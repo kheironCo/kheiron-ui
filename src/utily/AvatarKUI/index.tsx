@@ -1,13 +1,29 @@
-import { AtomDiv, AtomImage } from '../../element';
-import { AvatarRoot, AvatarAlt } from './styles';
+import { AvatarRoot, AvatarAlt, Avatar } from './styles';
 import { useState, useEffect } from 'react';
 
 export type AvatarKUIProps = {
   imgSrc: string;
   altText: string;
+  size?: {
+    width: string;
+    height: string;
+  };
+  altStyle?: {
+    bgColor?: string;
+    color?: string;
+    border?: string;
+  };
 };
 
-export const AvatarKUI = ({ imgSrc = '', altText = '' }: AvatarKUIProps) => {
+export const AvatarKUI = ({
+  imgSrc = '',
+  altText = '',
+  altStyle = {},
+  size = {
+    width: '',
+    height: '',
+  },
+}: AvatarKUIProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -20,11 +36,13 @@ export const AvatarKUI = ({ imgSrc = '', altText = '' }: AvatarKUIProps) => {
   return (
     <>
       {imageLoaded ? (
-        <AtomImage css={AvatarRoot} className="KUI-avatar-root" src={imgSrc} alt={altText} />
+        <AvatarRoot size={size}>
+          <Avatar src={imgSrc} alt={altText} />
+        </AvatarRoot>
       ) : (
-        <AtomDiv css={AvatarAlt} className="KUI-avatar-alt">
-          {altText.charAt(0)}
-        </AtomDiv>
+        <AvatarAlt altText={altText} altStyle={altStyle} size={size}>
+          {altText.charAt(0).toUpperCase()}
+        </AvatarAlt>
       )}
     </>
   );
