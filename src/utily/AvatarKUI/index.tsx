@@ -1,23 +1,12 @@
+// AvatarKUI.tsx
 import { AvatarRoot, AvatarAlt, Avatar } from './styles';
+import { AvatarKUIProps } from './types'; // Importa los tipos desde el archivo separado
 import { useState, useEffect } from 'react';
-
-export type AvatarKUIProps = {
-  imgSrc: string;
-  altText: string;
-  size?: {
-    width: string;
-    height: string;
-  };
-  altStyle?: {
-    bgColor?: string;
-    color?: string;
-    border?: string;
-  };
-};
 
 export const AvatarKUI = ({
   imgSrc = '',
   altText = '',
+  borderRadius = '',
   altStyle = {},
   size = {
     width: '',
@@ -36,11 +25,11 @@ export const AvatarKUI = ({
   return (
     <>
       {imageLoaded ? (
-        <AvatarRoot size={size}>
+        <AvatarRoot size={size} borderRadius={borderRadius}>
           <Avatar src={imgSrc} alt={altText} />
         </AvatarRoot>
       ) : (
-        <AvatarAlt altText={altText} altStyle={altStyle} size={size}>
+        <AvatarAlt altText={altText} altStyle={altStyle} size={size} borderRadius={borderRadius}>
           {altText.charAt(0).toUpperCase()}
         </AvatarAlt>
       )}

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { AtomDiv, AtomImage } from '../../element';
-
+import { AvatarStyleProps, AvatarRootProps, AvatarProps } from './types';
 function stringToColor(str: string): string {
   // Crea un hash a partir del string
   let hash = 0;
@@ -38,17 +38,14 @@ const blinkerFont = css`
 `;
 
 // Estilos convertidos a styled-components
-export const Avatar = styled(AtomImage)<{ alt: string; src: string }>`
+export const Avatar = styled(AtomImage)<AvatarProps>`
   width: 100%;
   height: 100%;
   src: ${({ src }) => src};
   alt: ${({ alt }) => alt};
 `;
-export const AvatarRoot = styled(AtomDiv)<{
-  altStyle?: { bgColor?: string; color?: string; border?: string };
-  size: { width: string; height: string };
-}>`
-  border-radius: 9999px;
+export const AvatarRoot = styled(AtomDiv)<AvatarRootProps>`
+  border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : `9999px`)};
   width: ${({ size }) =>
     typeof size === 'object' && size.width ? size.width : typeof size === 'string' ? size : '5rem'};
   height: ${({ size }) =>
@@ -61,15 +58,11 @@ export const AvatarRoot = styled(AtomDiv)<{
   border: ${({ altStyle }) => (altStyle && altStyle.border ? altStyle.border : ``)};
 `;
 
-export const AvatarAlt = styled(AtomDiv)<{
-  altText: string;
-  altStyle?: { bgColor?: string; color?: string; border?: string };
-  size: { width: string; height: string };
-}>`
+export const AvatarAlt = styled(AtomDiv)<AvatarStyleProps>`
   ${blinkerFont};
   font-family: 'Blinker', sans-serif;
   display: flex;
-  border-radius: 9999px;
+  border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : `9999px`)};
   background-color: ${({ altText, altStyle }) =>
     altStyle ? altStyle.bgColor || stringToColor(altText) : stringToColor(altText)};
   color: ${({ altText, altStyle }) =>
