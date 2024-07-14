@@ -3,16 +3,7 @@ import { AvatarRoot, AvatarAlt, Avatar } from './styles';
 import { AvatarKUIProps } from './types'; // Importa los tipos desde el archivo separado
 import { useState, useEffect } from 'react';
 
-export const AvatarKUI = ({
-  imgSrc = '',
-  altText = '',
-  borderRadius = '',
-  altStyle = {},
-  size = {
-    width: '',
-    height: '',
-  },
-}: AvatarKUIProps) => {
+export const AvatarKUI = ({ imgSrc, altText, borderRadius, altStyle, size }: AvatarKUIProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
