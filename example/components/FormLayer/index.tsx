@@ -3,6 +3,7 @@ import {
   AtomDiv,
   ButtonKUI,
   InputFieldCheckboxKUI,
+  InputFieldCurrencyKUI,
   InputFieldPasswordKUI,
   InputFieldTextKUI,
   ModalKUI,
@@ -14,13 +15,14 @@ import { zodResolver } from '@hookform/resolvers/zod';
 const schema = z.object({
   username: z.string().min(1, { message: 'Required' }),
   password: z.string().min(8, { message: 'Min. 8 characters' }),
+  currency: z.number().min(1, { message: 'Required' }),
   terms: z
     .boolean({
       required_error: 'terms and conditions is required',
       invalid_type_error: 'isActive must be a boolean',
     })
     .refine((val) => val === true, {
-      message: 'terms and conditions is required.',
+      message: 'Terms and conditions is required.',
     }),
 });
 
@@ -58,6 +60,13 @@ export const FormLayer = () => {
             errorMessage={errors?.password?.message}
             {...register('password')}
           />
+          <InputFieldCurrencyKUI
+            width="100%"
+            errorMessage={errors?.currency?.message || ''}
+            {...register('currency')}
+            label="Currency"
+          />
+
           <InputFieldCheckboxKUI
             errorMessage={errors?.terms?.message || ''}
             position="right"
