@@ -14,8 +14,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
   username: z.string().min(1, { message: 'Required' }),
+  currency: z.number().min(1, { message: 'Required ' }),
   password: z.string().min(8, { message: 'Min. 8 characters' }),
-  currency: z.number().min(1, { message: 'Required' }),
+
   terms: z
     .boolean({
       required_error: 'terms and conditions is required',
