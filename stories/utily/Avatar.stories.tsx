@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { AvatarKUI } from 'utily';
+import { AvatarKUI } from 'utils';
 
 const componentDescription = `
 The AvatarKUI component is used to display avatars with advanced customization options for styling.
