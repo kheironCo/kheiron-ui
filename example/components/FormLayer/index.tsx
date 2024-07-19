@@ -47,7 +47,7 @@ export const FormLayer = () => {
   return (
     <div>
       <ButtonKUI label="form" onClick={() => setOpen(true)} />
-      <ModalKUI open={open}>
+      <ModalKUI open={open} onClose={() => setOpen(false)}>
         <form onSubmit={handleSubmit(onSubmit)} style={{ width: '200px' }}>
           <InputFieldTextKUI
             width="100%"
