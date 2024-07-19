@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { UserProfileCardKUI } from 'utily';
+import { UserProfileCardKUI } from 'utils';
 
 const meta: Meta<typeof UserProfileCardKUI> = {
   title: 'Utils/UserProfileCard',

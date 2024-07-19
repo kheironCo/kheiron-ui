@@ -1,8 +1,8 @@
-import { TagKUI } from '.';
+import { TagKUI } from 'utils';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof TagKUI> = {
-  title: 'utily/TagKUI',
+  title: 'Utils/TagKUI',
   component: TagKUI,
 };
 export default meta;
