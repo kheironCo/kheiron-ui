@@ -36,6 +36,7 @@ export const AtomDivComponentStyled = styled(AtomDiv)`
 
   background-color: ${ROOT.color.gray[200]};
   display: flex;
+  justify-content: start;
   flex-direction: column;
 
   position: absolute;
