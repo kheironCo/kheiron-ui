@@ -29,7 +29,7 @@ export const AtomDialogComponentStyled = styled(AtomDialog)`
 `;
 
 export const AtomDivComponentStyled = styled(AtomDiv)`
-        padding: '16px',
-        borderRadius: '8px',
-        backgroundColor: ${ROOT.color.gray[200]},
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: ${ROOT.color.gray[200]};
 `;

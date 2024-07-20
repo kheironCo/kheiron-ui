@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ModalKUI } from 'utily';
+import { ModalKUI } from 'utils';
 import { ButtonKUI } from 'form';
 
 const meta: Meta<typeof ModalKUI> = {

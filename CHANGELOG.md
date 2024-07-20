@@ -1,4 +1,23 @@
-## [1.1.1] 2024-07-08
+## [1.2.2] 2024-07-19
+
+### ⚙ Feature
+
+- **ModalKUI**
+  - Implement noClose param
+
+### 🐛 Fixed
+
+- **InputFieldCheckboxKUI**
+  - The param errorMessage now is optional
+
+## [1.2.1] 2024-07-08
+
+### ⚙ Feature
+
+- **AvatarKUI**
+  - Implement more styles params
+
+## [1.2.0] 2024-07-08
 
 ### ✨ Added
 

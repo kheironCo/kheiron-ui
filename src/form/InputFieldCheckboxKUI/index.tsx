@@ -5,7 +5,7 @@ import { SpanComponentStyled } from './styles';
 
 export type CheckboxKUIProps = CheckKUIProps &
   LabelKUIProps & {
-    errorMessage: string;
+    errorMessage?: string;
   };
 
 export const InputFieldCheckboxKUI = forwardRef<HTMLInputElement, CheckboxKUIProps>(
