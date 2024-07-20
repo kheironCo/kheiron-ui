@@ -28,7 +28,7 @@ export const TableLayer = () => {
   return (
     <Fragment>
       <ButtonKUI onClick={() => setOpen((old) => !old)}>Table</ButtonKUI>
-      <ModalKUI open={open}>
+      <ModalKUI open={open} onClose={() => setOpen(false)}>
         <AtomDiv>
           <TableKUI
             keys={['id', 'user']}
