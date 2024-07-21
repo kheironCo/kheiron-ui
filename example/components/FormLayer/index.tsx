@@ -15,17 +15,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
   username: z.string().min(1, { message: 'Required' }),
-  currency: z.string().refine(
-    (val) => {
-      return CurrencyToNumber(val) >= 1;
-    },
-    {
+  currency: z
+    .string()
+    .transform((val) => CurrencyToNumber(val))
+    .refine((val) => val >= 1, {
       message: 'Min. value must be 1',
-    },
-  ),
-  // .refine((val) => !isNaN(val), {
-  //   message: 'Invalid Number',
-  // })
+    }),
   password: z.string().min(8, { message: 'Min. 8 characters' }),
   terms: z
     .boolean({

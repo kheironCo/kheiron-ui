@@ -5,7 +5,6 @@ import { CurrencyInputKUIProps } from './type';
 
 export const CurrencyToNumber = (value: string) => {
   return Number(value.replace(/\D/g, '').replace(/^0+/, '')) / 100;
-  // return Number(value.replace(/\./g, '').replace(',', '.'));
 };
 export const NumberToCurrency = (value: number) => {
   const cleanNumber = Math.trunc(value * 100)
