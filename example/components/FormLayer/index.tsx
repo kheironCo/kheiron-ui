@@ -17,7 +17,7 @@ const schema = z.object({
   username: z.string().min(1, { message: 'Required' }),
   currency: z
     .string()
-    .transform((val) => CurrencyToNumber(val))
+    .transform(CurrencyToNumber)
     .refine((val) => val >= 1, {
       message: 'Min. value must be 1',
     }),
@@ -35,7 +35,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export const FormLayer = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const {
     register,
     handleSubmit,
