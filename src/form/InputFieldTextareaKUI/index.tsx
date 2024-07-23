@@ -1,23 +1,37 @@
 import { LabelKUI } from '../base';
-import { AtomTextArea } from '../../element';
+import { AtomTextAreaComponentStyled, SpanComponentStyled } from './styles';
 
-export type InputFieldTextareaKUIProps = Parameters<typeof LabelKUI>[0] &
-  Parameters<typeof AtomTextArea>[0];
+export type InputFieldTextAreaKUIProps = {
+  label: string;
+  position?: 'top' | 'bottom' | 'left' | 'right';
+  htmlFor?: string;
+  width?: string;
+  errorMessage?: string;
+};
 
-export const InputFieldTextareaKUI = ({
+export const InputFieldTextAreaKUI = ({
   label,
-  position,
+  position = 'top',
   htmlFor,
+  width = '100%',
+  errorMessage,
   ...rest
-}: InputFieldTextareaKUIProps) => {
+}: InputFieldTextAreaKUIProps) => {
   return (
-    <LabelKUI
-      label={label}
-      position={position}
-      htmlFor={htmlFor}
-      className="KUI-input-field-textarea-root"
-    >
-      <AtomTextArea {...rest} className="KUI-input-field-text-area" />
-    </LabelKUI>
+    <>
+      <LabelKUI
+        label={label}
+        position={position}
+        htmlFor={htmlFor}
+        className="KUI-input-field-textarea-root"
+      >
+        <AtomTextAreaComponentStyled
+          width={width}
+          {...rest}
+          className="KUI-input-field-text-area"
+        />
+      </LabelKUI>
+      <SpanComponentStyled>{errorMessage}</SpanComponentStyled>
+    </>
   );
 };

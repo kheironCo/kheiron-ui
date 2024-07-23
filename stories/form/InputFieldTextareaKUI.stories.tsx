@@ -1,14 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { InputFieldTextareaKUI } from '../../src/form/InputFieldTextareaKUI';
+import { InputFieldTextAreaKUI } from '../../src/form/InputFieldTextAreaKUI';
 
-const meta: Meta<typeof InputFieldTextareaKUI> = {
-  title: 'Form/InputFieldTextareaKUI',
-  component: InputFieldTextareaKUI,
+const meta: Meta<typeof InputFieldTextAreaKUI> = {
+  title: 'Form/InputFieldTextAreaKUI',
+  component: InputFieldTextAreaKUI,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof InputFieldTextareaKUI>;
+type Story = StoryObj<typeof InputFieldTextAreaKUI>;
 
 export const Default: Story = {
   args: {},
