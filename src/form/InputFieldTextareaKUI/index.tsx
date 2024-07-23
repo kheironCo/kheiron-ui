@@ -4,7 +4,7 @@ import { AtomTextArea } from '../../element';
 export type InputFieldTextareaKUIProps = Parameters<typeof LabelKUI>[0] &
   Parameters<typeof AtomTextArea>[0];
 
-export const InputFieldTextareaKUI = ({
+export const InputFieldTextAreaKUI = ({
   label,
   position,
   htmlFor,
