@@ -13,7 +13,7 @@ export const InputFieldTextAreaKUI = ({
   label,
   position = 'top',
   htmlFor,
-  width = '100%',
+  width,
   errorMessage,
   ...rest
 }: InputFieldTextAreaKUIProps) => {
