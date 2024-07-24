@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
+import styled from 'styled-components';
 
-export type AtomTextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+const Input = styled.textarea``;
+
+export type AtomTextAreaProps = Parameters<typeof Input>[0];
 
 export interface AtomTextAreaElement extends React.JSX.Element {}
 
-export const AtomTextArea = ({ className, ...rest }: AtomTextAreaProps) =>
-  (
-    <textarea className={`KUI-atom-element-textarea ${className || ''}`} {...rest} />
-  ) as AtomTextAreaElement;
+export const AtomTextArea = forwardRef<HTMLTextAreaElement, AtomTextAreaProps>(
+  ({ className, ...rest }, ref) => (
+    <textarea className={`KUI-atom-element-textarea ${className || ''}`} {...rest} ref={ref} />
+  ),
+);
+
+AtomTextArea.displayName = 'AtomTextArea';

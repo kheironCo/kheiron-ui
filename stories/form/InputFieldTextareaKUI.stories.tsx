@@ -11,11 +11,10 @@ export default meta;
 type Story = StoryObj<typeof InputFieldTextAreaKUI>;
 
 export const Default: Story = {
-  args: {},
-};
-
-export const Label: Story = {
   args: {
-    label: 'Buenos días',
+    label: 'Hola',
+    position: 'top',
+    width: '100px',
+    errorMessage: 'Texto de error',
   },
 };
