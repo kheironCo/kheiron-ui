@@ -1,4 +1,22 @@
-### [1.2.3] 2024-07-19
+## [1.2.4] 2024-07-24
+
+### ✨ Added
+
+- **InputFieldNumberKUI** → _New Component_
+
+### ⚙ Feature
+
+- **InputFieldTextAreaKUI**
+  - Implement styles
+  - Added ErrorMessage
+
+### 🐛 Fixed
+
+- **InputFieldCurrencyKUI**
+  - Now is functional with React-Form-Hook
+  - Parser functions are exported
+
+## [1.2.3] 2024-07-19
 
 ### ⚙ Feature
 
