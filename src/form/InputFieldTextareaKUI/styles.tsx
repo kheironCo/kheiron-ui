@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import { AtomTextArea, Span } from '../../element';
+import { LabelKUI } from '../base/LabelKUI';
 
 type AtomTextAreaProps = {
   width?: string;
 };
+
+export const LabelKUIComponentStyled = styled(LabelKUI)`
+  font-family: 'Blinker';
+  color: #64467a;
+  margin: 5px;
+`;
 
 export const AtomTextAreaComponentStyled = styled(AtomTextArea)<AtomTextAreaProps>`
   background-color: #f3f1f1;
