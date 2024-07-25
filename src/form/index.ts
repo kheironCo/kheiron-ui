@@ -7,3 +7,4 @@ export * from './InputFieldNumberKUI';
 export * from './InputFieldTextAreaKUI';
 export * from './InputFieldRadioCheckKUI';
 export * from './InputFieldPasswordKUI';
+export * from './InputFieldDateKUI';
