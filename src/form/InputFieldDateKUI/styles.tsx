@@ -31,15 +31,4 @@ export const AtomDateComponentStyled = styled(AtomInput).attrs({ type: 'date' })
     outline: none;
     border: none;
   }
-  &::-webkit-calendar-picker-indicator {
-    display: none;
-  }
-  &::after {
-    content: '';
-    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/003/738/383/small/appointment-date-icon-free-vector.jpg');
-    background-size: contain; /* Ajusta el tamaño de la imagen */
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 18px;
-  }
 `;
