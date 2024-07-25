@@ -43,16 +43,3 @@ export const AtomDateComponentStyled = styled(AtomInput).attrs({ type: 'date' })
     height: 18px;
   }
 `;
-export const AtomInputComponentStyled = styled(AtomInput).attrs({ type: 'text' })`
-  font-family: 'Quicksand';
-  background-color: #f3f1f1;
-  border: none;
-  box-sizing: border-box;
-  padding: 6px;
-  width: ${(props) => props.width};
-  border-radius: 5px;
-  &:focus {
-    outline: none;
-    border: none;
-  }
-`;
