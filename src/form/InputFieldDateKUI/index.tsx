@@ -2,12 +2,12 @@ import { forwardRef } from 'react';
 import {
   AtomDateComponentStyled,
   AtomDivComponentStyled,
-  AtomInputComponentStyled,
   LabelKUIComponentStyled,
   SpanComponentStyled,
 } from './styles';
+import { AtomInput } from 'element';
 
-export type InputFieldDateKUIProps = Parameters<typeof AtomInputComponentStyled>[0] &
+export type InputFieldDateKUIProps = Parameters<typeof AtomInput>[0] &
   Pick<Parameters<typeof LabelKUIComponentStyled>[0], 'label' | 'position'> & {
     errorMessage?: string;
   };
