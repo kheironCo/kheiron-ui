@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AtomDate, AtomDiv, AtomInput, Span } from '../../element';
+import { AtomDiv, AtomInput, Span } from '../../element';
 import { LabelKUI } from '../base/LabelKUI';
 
 export const AtomDivComponentStyled = styled(AtomDiv)`
@@ -18,7 +18,7 @@ export const SpanComponentStyled = styled(Span)`
   font-family: 'Blinker', sans-serif;
 `;
 
-export const AtomDateComponentStyled = styled(AtomDate)`
+export const AtomDateComponentStyled = styled(AtomInput).attrs({ type: 'date' })`
   font-family: 'Quicksand';
   background-color: #f3f1f1;
   color: grey;
@@ -43,7 +43,7 @@ export const AtomDateComponentStyled = styled(AtomDate)`
     height: 18px;
   }
 `;
-export const AtomInputComponentStyled = styled(AtomInput)`
+export const AtomInputComponentStyled = styled(AtomInput).attrs({ type: 'text' })`
   font-family: 'Quicksand';
   background-color: #f3f1f1;
   border: none;
