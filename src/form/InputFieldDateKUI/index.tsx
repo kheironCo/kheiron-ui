@@ -5,9 +5,8 @@ import {
   LabelKUIComponentStyled,
   SpanComponentStyled,
 } from './styles';
-import { AtomInput } from 'element';
 
-export type InputFieldDateKUIProps = Parameters<typeof AtomInput>[0] &
+export type InputFieldDateKUIProps = Parameters<typeof AtomDateComponentStyled>[0] &
   Pick<Parameters<typeof LabelKUIComponentStyled>[0], 'label' | 'position'> & {
     errorMessage?: string;
   };
