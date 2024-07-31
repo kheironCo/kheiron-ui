@@ -69,9 +69,7 @@ export const alternativeStyles: Story = {
       color: '#ffabfc',
       border: '.3rem solid #ffabfc',
     },
-    imgSrc: '',
     altText: 'kheiron',
     borderRadius: '25%',
-    size: '15rem',
   },
 };
