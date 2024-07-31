@@ -47,13 +47,13 @@ export const Avatar = styled(AtomImage)<AvatarProps>`
 export const AvatarRoot = styled(AtomDiv)<AvatarRootProps>`
   border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : `9999px`)};
   width: ${({ size }) =>
-    typeof size === 'object' && size.width ? size.width : typeof size === 'string' ? size : '48px'};
+    typeof size === 'object' && size.width ? size.width : typeof size === 'string' ? size : '3rem'};
   height: ${({ size }) =>
     typeof size === 'object' && size.height
       ? size.height
       : typeof size === 'string'
         ? size
-        : '48px'};
+        : '3rem'};
   overflow: hidden;
   border: ${({ altStyle }) => (altStyle && altStyle.border ? altStyle.border : ``)};
 `;
@@ -86,5 +86,5 @@ export const AvatarAlt = styled(AtomDiv)<AvatarStyleProps>`
         ? size
         : '3rem'};
   font-size: ${({ size }) =>
-    typeof size === 'object' && size.width ? size.width : typeof size === 'string' ? size : '4rem'};
+    typeof size === 'object' && size.width ? size.width : typeof size === 'string' ? size : '3rem'};
 `;

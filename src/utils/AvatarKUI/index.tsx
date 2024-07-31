@@ -20,12 +20,7 @@ export const AvatarKUI = ({ imgSrc, altText, borderRadius, altStyle, size }: Ava
           <Avatar src={imgSrc} alt={altText} />
         </AvatarRoot>
       ) : (
-        <AvatarAlt
-          altText={altText}
-          altStyle={altStyle}
-          size={size ? '48px' : '36px'}
-          borderRadius={borderRadius}
-        >
+        <AvatarAlt altText={altText} altStyle={altStyle} size={size} borderRadius={borderRadius}>
           {altText.charAt(0).toUpperCase()}
         </AvatarAlt>
       )}
