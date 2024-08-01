@@ -1,4 +1,18 @@
-## [1.2.5] 2024-07-24
+## [1.2.7] 2024-07-31
+
+### 🐛 Fixed
+
+- **AvatarKUI**
+  - reduce default size of avatar style
+
+## [1.2.6] 2024-07-25
+
+### 🐛 Fixed
+
+- **InputFieldDateKUI**
+  - remove bug styles
+
+## [1.2.5] 2024-07-25
 
 ### ✨ Added
 
