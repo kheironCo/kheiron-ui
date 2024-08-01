@@ -1,4 +1,6 @@
-import { css, keyframes } from '@emotion/react';
+import { AtomDetails, AtomDiv, AtomSummary } from "../../element";
+import styled, { keyframes } from "styled-components";
+
 
 const SPINING = keyframes`
   from{
@@ -11,7 +13,7 @@ const SPINING = keyframes`
   }
 `;
 
-export const Dropdown = css`
+export const DropdownStyled = styled(AtomDetails)`
   width: auto;
   max-width: 400px;
   border: 1px solid #ccc;
@@ -40,7 +42,7 @@ export const Dropdown = css`
   }
 `;
 
-export const DropdownSummary = css`
+export const DropdownSummaryStyled = styled(AtomSummary)`
   font-weight: bold;
   padding: 5px;
   cursor: pointer;
@@ -49,7 +51,7 @@ export const DropdownSummary = css`
   flex-direction: row;
 `;
 
-export const DropdownSummaryIcon = css`
+export const DropdownSummaryIconStyled = styled(AtomDiv)`
   min-width: 1rem;
   min-height: 1rem;
   display: flex;
@@ -59,7 +61,7 @@ export const DropdownSummaryIcon = css`
   transition: all 0.2s ease-out;
 `;
 
-export const DropdownContent = css`
+export const DropdownContentStyled = styled(AtomDiv)`
   max-height: 100vh;
   padding: 0.5rem 1rem;
   display: none;

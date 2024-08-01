@@ -1,6 +1,7 @@
-import { css } from '@emotion/react';
+import styled from 'styled-components';
+import { AtomDiv, AtomList, AtomListItem } from '../../element';
 
-export const AtomDivStyle = css`
+export const AtomDivStyle = styled(AtomDiv)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,11 +10,11 @@ export const AtomDivStyle = css`
   border-bottom: 1px solid black;
 `;
 
-export const AtomListStyle = css`
+export const AtomListStyle = styled(AtomList)`
   display: flex;
 `;
 
-export const AtomListItemStyle = css`
+export const AtomListItemStyle = styled(AtomListItem)`
   display: flex;
   textdecoration: none;
   padding: 0 10px 0 10px;

@@ -103,8 +103,6 @@
     "vite-tsconfig-paths": "^4.3.2"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
     "react-icons": "^5.2.1",
     "styled-components": "^6.1.11"
   }

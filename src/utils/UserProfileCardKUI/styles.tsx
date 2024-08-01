@@ -1,6 +1,7 @@
-import { css } from '@emotion/react';
+import { AtomSection, Heading, Paragraph } from "../../element";
+import styled, { css } from "styled-components";
 
-export const UserProfileCardRoot = css`
+export const UserProfileCardRoot = styled(AtomSection)`
   width: fit-content;
   height: auto;
   padding: 0.25rem 1rem 0.25rem 0.5rem;
@@ -15,11 +16,11 @@ export const UserProfileCardRoot = css`
 export const UserProfileCardImage = css`
   height: 2rem;
 `;
-export const UserProfileCardHead = css`
+export const UserProfileCardHead = styled(Heading)`
   font-size: 1rem;
   font-weight: 500;
 `;
 
-export const UserProfileCardBody = css`
+export const UserProfileCardBody = styled(Paragraph)`
   font-size: 0.75rem;
 `;

@@ -1,5 +1,5 @@
-import { AtomSearch, AtomButton, AtomInput, AtomForm } from '../../element';
-import { button, input } from './styles';
+import { AtomSearch,   AtomForm } from '../../element';
+import { ButtonStyled, InputStyled } from './styles';
 import { ChangeEvent, FormEvent, useState } from 'react';
 
 export type SearchBarKUIProps = {
@@ -22,12 +22,11 @@ export const SearchBarKUI = ({ handleSearch, getValue, placeholder }: SearchBarK
   return (
     <AtomSearch className="KUI-search-bar-search KUI-search-bar-root">
       <AtomForm className="KUI-search-bar-form" onSubmit={_onSubmit}>
-        <AtomButton className="KUI-search-bar-button" css={button} type="submit">
+        <ButtonStyled className="KUI-search-bar-button" type="submit">
           Search
-        </AtomButton>
-        <AtomInput
+        </ButtonStyled>
+        <InputStyled
           className="KUI-search-bar-input"
-          css={input}
           onChange={handleChange}
           value={_value}
           placeholder={placeholder}

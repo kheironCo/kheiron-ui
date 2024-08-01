@@ -1,5 +1,8 @@
 // import { blinkerFont } from '../../common/styles';
-import { css } from '@emotion/react';
+
+
+import { AtomDiv } from "../../element/AtomDiv";
+import  styled, {css}from "styled-components";
 
 type WeightType =
   | 100
@@ -22,10 +25,12 @@ export type HeadingStyleProps = {
   weight?: WeightType;
 };
 
-export const HeadingStyle = ({ weight = 'normal' }: HeadingStyleProps) => css`
+export const HeadingStyle = styled(AtomDiv)<HeadingStyleProps>`
+${(props) => css`
   padding: 0;
   margin: 0;
   align-content: center;
   font-family: 'Blinker', sans-serif;
-  font-weight: ${weight};
+  font-weight: ${props.weight};
+`}
 `;
