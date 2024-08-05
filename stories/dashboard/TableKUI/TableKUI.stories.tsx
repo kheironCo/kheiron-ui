@@ -2,9 +2,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { TableKUI } from 'dashboard';
 import { Paragraph } from 'element';
-import { css } from '@emotion/react';
 import { fakeData } from './mock';
 import { UserProfileCardKUI } from 'utils';
+import { css } from 'styled-components';
 
 const meta: Meta<typeof TableKUI> = {
   title: 'Dashboard/TableKUI',
@@ -54,7 +54,7 @@ export const Default: Story = {
       if (['id', 'age', 'phone'].includes(key)) {
         return (
           <Paragraph
-            css={css`
+            className={css`
               font-family: monospace;
               font-size: 0.875rem;
               color: #777;

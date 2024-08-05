@@ -18,14 +18,14 @@ export const Heading = ({
   weight,
   ...rest
 }: AtomHeadingProps) => {
-  const HeadingTag = as ?? variant;
+
   return (
-    <HeadingTag
-      css={HeadingStyle({ weight })}
+    <HeadingStyle
+      weight={weight}
       className={`KUI-atom-element-heading-${variant} ${className || ''}`}
       {...rest}
     >
       {children}
-    </HeadingTag>
+    </HeadingStyle>
   ) as AtomHeadingElement;
 };
