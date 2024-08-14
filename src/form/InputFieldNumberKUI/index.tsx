@@ -12,10 +12,10 @@ export type InputFieldNumberKUI = Parameters<typeof AtomInputComponentStyled>[0]
   };
 
 export const InputFieldNumberKUI = forwardRef<HTMLInputElement, InputFieldNumberKUI>(
-  ({ label, position, errorMessage, ...rest }, ref) => {
+  ({ label, position, required, errorMessage, ...rest }, ref) => {
     return (
       <AtomDivComponentStyled className="KUI-input-field-root">
-        <LabelKUIComponentStyled className="KUI-input-field-label" {...{ label, position }}>
+        <LabelKUIComponentStyled className="KUI-input-field-label" required={required} {...{ label, position }}>
           <AtomInputComponentStyled
             type="number"
             className="KUI-input-field-input"

@@ -9,10 +9,10 @@ export type CheckboxKUIProps = CheckKUIProps &
   };
 
 export const InputFieldCheckboxKUI = forwardRef<HTMLInputElement, CheckboxKUIProps>(
-  ({ label, errorMessage, position = 'right', checked, ...rest }, ref) => {
+  ({ label, errorMessage, required, position = 'right', checked, ...rest }, ref) => {
     return (
       <AtomDiv className="KUI-checkbox-root">
-        <LabelKUI className="KUI-checkbox-label" label={label} position={position}>
+        <LabelKUI className="KUI-checkbox-label" label={label} position={position} required={required}>
           <CheckKUI {...rest} checked={checked} className="KUI-checkbox-check" ref={ref} />
         </LabelKUI>
         <SpanComponentStyled>{errorMessage}</SpanComponentStyled>

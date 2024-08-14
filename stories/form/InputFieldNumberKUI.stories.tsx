@@ -19,5 +19,6 @@ export const Example: Story = {
     label: 'Stock: ',
     errorMessage: 'Este es un mensaje indicador de errores al validar el campo de Numero',
     width: '',
+    required: true,
   },
 };

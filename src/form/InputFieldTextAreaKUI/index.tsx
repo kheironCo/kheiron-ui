@@ -16,7 +16,7 @@ export type InputFieldTextAreaKUIProps = Parameters<typeof AtomTextAreaComponent
   };
 
 export const InputFieldTextAreaKUI = forwardRef<HTMLTextAreaElement, InputFieldTextAreaKUIProps>(
-  ({ label, position = 'top', htmlFor, width, errorMessage, ...rest }, ref) => {
+  ({ label, position = 'top', required, htmlFor, width, errorMessage, ...rest }, ref) => {
     return (
       <>
         <LabelKUIComponentStyled
@@ -24,6 +24,7 @@ export const InputFieldTextAreaKUI = forwardRef<HTMLTextAreaElement, InputFieldT
           position={position}
           htmlFor={htmlFor}
           className="KUI-input-field-textarea-root"
+          required={required}
         >
           <AtomTextAreaComponentStyled
             width={width}

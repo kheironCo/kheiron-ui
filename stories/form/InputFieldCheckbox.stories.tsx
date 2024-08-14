@@ -35,6 +35,7 @@ export const Default: Story = {
     label: 'Esto es un Label',
     checked: true,
     errorMessage: 'Este es un mensaje indicador de errores al validar el campo de texto',
+    required: true,
   },
 };
 

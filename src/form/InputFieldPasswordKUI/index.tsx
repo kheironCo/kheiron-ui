@@ -9,12 +9,13 @@ export type InputFieldPasswordKUIProps = LabelKUIProps &
   };
 
 export const InputFieldPasswordKUI = forwardRef<HTMLInputElement, InputFieldPasswordKUIProps>(
-  ({ label, errorMessage, position = 'top', width, ...rest }, ref) => {
+  ({ label, errorMessage, required, position = 'top', width, ...rest }, ref) => {
     return (
       <AtomDivComponentStyled className="KUI-input-field-password-root">
         <LabelKUIComponentStyled
           position={position}
           label={label}
+          required={required}
           className="KUI-input-field-password-label"
         >
           <PasswordInputKUI width={width} {...rest} ref={ref} />

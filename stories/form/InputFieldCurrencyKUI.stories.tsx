@@ -19,5 +19,8 @@ export const Default: Story = {
   args: {
     label: 'Price',
     errorMessage: 'Esto es un mensaje de error',
+    
+    
+    required: true,
   },
 };
