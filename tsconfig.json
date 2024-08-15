@@ -5,11 +5,14 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "isolatedModules": false,
+    "declaration": true,
+    "skipLibCheck": true,
     "allowImportingTsExtensions": false,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "baseUrl": "./src"
   },
-  "include": [ "types", "test", "stories" ],
-  "exclude": [ "node_modules", "src" ]
+  "include": ["types", "test", "stories"],
+  "exclude": ["node_modules", "src"]
 }

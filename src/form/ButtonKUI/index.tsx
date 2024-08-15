@@ -9,6 +9,7 @@ export type ButtonKUIProps = Parameters<typeof ButtonStyled>[0] & {
   palette?: ButtonPalette;
   children?: ReactNode;
   label?: string;
+  disabled?: boolean;
 };
 
 export const ButtonKUI = ({

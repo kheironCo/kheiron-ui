@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from 'styled-components';
 
 export const blinkerFont = css`
   @import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');

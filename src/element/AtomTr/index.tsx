@@ -1,9 +1,9 @@
-import { Interpolation, Theme } from '@emotion/react';
 import { HTMLAttributes } from 'react';
 
-export type AtomTrProps = HTMLAttributes<HTMLTableRowElement> & {
-  css?: Interpolation<Theme>;
-};
+export type AtomTrProps = React.DetailedHTMLProps<
+  HTMLAttributes<HTMLTableRowElement>,
+  HTMLTableRowElement
+>;
 
 export interface AtomTrElement extends JSX.Element {}
 

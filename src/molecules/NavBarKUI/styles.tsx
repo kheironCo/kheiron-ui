@@ -16,7 +16,7 @@ export const AtomListStyle = styled(AtomList)`
 
 export const AtomListItemStyle = styled(AtomListItem)`
   display: flex;
-  textdecoration: none;
+  text-decoration: none;
   padding: 0 10px 0 10px;
-  textalign: center;
+  text-align: center;
 `;
