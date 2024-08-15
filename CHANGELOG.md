@@ -1,3 +1,15 @@
+## [1.2.8] 2024-08-15
+
+### ✨ Added
+
+- **LabelKUI**
+  - Added parameter required
+
+### ⚙ Feature
+
+- **Remove Library**
+  - Remove emotion
+
 ## [1.2.7] 2024-07-31
 
 ### 🐛 Fixed
