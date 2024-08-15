@@ -29,6 +29,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
   iconChecked = <IconRadioClose2 />,
   position = 'right',
   onChange,
+  required,
   ...rest
 }: InputFieldRadioCheckKUIProps) => {
   const [selectedRadio, setSelectedRadio] = useState<string | null>(initValue || null);
@@ -55,6 +56,7 @@ export const InputFieldRadioCheckKUI: React.FC<InputFieldRadioCheckKUIProps> = (
             htmlFor={`${el.value}-${index}`}
             label={el.label}
             className={`'KUI-input-field-radio-check-label KUI-input-field-radio-check-label-${index}'`}
+            required={required}
           >
             <AtomDiv>
               <AtomInput

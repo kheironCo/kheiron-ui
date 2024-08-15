@@ -19,5 +19,6 @@ export const Example: Story = {
     label: 'Nombre: ',
     errorMessage: 'Este es un mensaje indicador de errores al validar el campo de texto',
     width: '',
+    required: true,
   },
 };

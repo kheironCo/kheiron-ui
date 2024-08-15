@@ -1,6 +1,6 @@
 import { PositionType } from './types';
 import styled from 'styled-components';
-import { AtomLabel } from '../../../element';
+import { AtomLabel, AtomSpan } from '../../../element';
 
 const LabelPosition: Record<PositionType, string> = {
   top: 'column',
@@ -14,3 +14,8 @@ export const LabelStyledKUI = styled(AtomLabel)<{ position?: PositionType }>`
   ${(props) => props.position === 'right' && 'justify-content: left;'}
   flex-direction: ${(props) => LabelPosition[props.position ?? 'top']};
 `;
+
+export const AtomSpanStyled = styled(AtomSpan)`
+  display: flex;
+  color: red;
+  `

@@ -47,5 +47,6 @@ export const Example3 = {
       { label: 'Ejemplo4', value: 'valor4' },
       { label: 'Ejemplo5', value: 'valor5' },
     ],
+    required: true,
   },
 };

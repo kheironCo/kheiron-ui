@@ -8,11 +8,12 @@ export type InputFieldCurrencyKUIProps = Parameters<typeof CurrencyInputKUI>[0] 
   };
 
 export const InputFieldCurrencyKUI = forwardRef<HTMLInputElement, InputFieldCurrencyKUIProps>(
-  ({ label, position, className, width, errorMessage, ...rest }, ref) => {
+  ({ label, position, required, className, width, errorMessage, ...rest }, ref) => {
     return (
       <LabelKUIComponentStyled
         {...{ label, position }}
         className={`KUI-input-field-currency-root ${className}`}
+        required={required}
       >
         <>
           <CurrencyInputKUI
@@ -20,6 +21,7 @@ export const InputFieldCurrencyKUI = forwardRef<HTMLInputElement, InputFieldCurr
             width={width}
             {...rest}
             ref={ref}
+            required={required}
           />
           <br />
           <SpanComponentStyled>{errorMessage}</SpanComponentStyled>

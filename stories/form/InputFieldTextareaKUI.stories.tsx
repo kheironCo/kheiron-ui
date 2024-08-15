@@ -16,5 +16,6 @@ export const Default: Story = {
     position: 'top',
     width: '100px',
     errorMessage: 'Texto de error',
+    required: true,
   },
 };
