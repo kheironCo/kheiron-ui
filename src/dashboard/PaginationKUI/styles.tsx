@@ -14,6 +14,7 @@ interface IStyle {
   borderColor?: string;
   borderWidth?: string;
   borderStyle?: string;
+  disabled?: boolean;
 }
 
 interface StyleType extends IStyle {
