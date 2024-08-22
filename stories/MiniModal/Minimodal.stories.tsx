@@ -15,6 +15,7 @@ type Story = StoryObj<typeof MiniModal>;
 
 export const Default: Story = {
   args: {
-    items: [{ icon: <FaPen />, text: "Texto 1"}, { icon: <IoMdSettings/ >, text: "Texto 2"}]
+    marginLeft: "300px",
+    items: [{ icon: <FaPen />, text: "Texto 1"}, { icon: <IoMdSettings/ >, text: "Texto 2"}, { icon: <IoMdSettings/ >, text: "Texto 3"}]
   },
 };

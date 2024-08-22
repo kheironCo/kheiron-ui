@@ -1,12 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { ButtonStyled , ButtonIconStyled, UlStyled, LiStyled} from './styles';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { SlOptionsVertical } from "react-icons/sl";
 
 
 type DropdownButtonProps = {
-    items: {icon: Element, text: string}[];
+    items: {icon: ReactNode, text: string}[];
+    width: string;
+    marginLeft: string;
   };
   
-  export const MiniModal: React.FC<DropdownButtonProps> = ({ items  }) => {
+  export const MiniModal: React.FC<DropdownButtonProps> = ({ items , width="150px", marginLeft = "0px" }) => {
     const [isOpen, setIsOpen] = useState(false);
   
     const toggleDropdown = () => {
@@ -27,18 +30,18 @@ type DropdownButtonProps = {
   }, [isOpen]);
   
     return (
-      <div style={{marginLeft: "300px"}}>
-        <button ref={buttonRef} onClick={toggleDropdown} style={{borderRadius: "50%", cursor: "pointer"}}>
-        <SlOptionsVertical />
-        </button>
+      <div style={{marginLeft: `${marginLeft}`}}>
+        <ButtonIconStyled ref={buttonRef} onClick={toggleDropdown}>
+          <SlOptionsVertical />
+        </ButtonIconStyled>
         {isOpen && (
-          <ul style={{ listStyleType: 'none', padding: 0, marginTop: '20px', marginRight: "17px", border: '1px solid #ccc', borderRadius: '5px' , width: '200px', position: 'absolute', top: `${position.top}px`,  right: `${position.right}px`,}}>
+          <UlStyled  style={{ top: `${position.top}px`,  right: `${position.right}px`, width: `${width}`}} >
             {items.map((item, index) => (
-              <li key={index} style={{ padding: '8px 12px', cursor: 'pointer', borderBottom: '1px solid #ccc' , textAlign: "center"}}>
-               <button style={{border: "none", backgroundColor: "white"}}>{item.icon} {item.text}</button>
-              </li>
+              <LiStyled key={index} style={{ borderBottom: index !== items.length - 1 ? '1px solid #ccc' : 'none' }} >
+                <ButtonStyled>{item.icon} {item.text}</ButtonStyled>
+              </LiStyled>
             ))}
-          </ul>
+          </UlStyled>
         )}
       </div>
     );
