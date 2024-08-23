@@ -1,15 +1,20 @@
-import { ButtonStyled , ButtonIconStyled, UlStyled, LiStyled} from './styles';
+import { ButtonStyled , ButtonIconStyled, UlStyled, LiStyled, DivStyled} from './styles';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { SlOptionsVertical } from "react-icons/sl";
 
 
-type DropdownButtonProps = {
-    items: {icon: ReactNode, text: string}[];
+type MenuItem = {
+  id: number, icon: ReactNode, text: string
+}
+
+type MenuKUIProps = {
+    items: MenuItem[];
     width: string;
     marginLeft: string;
+    handleClick: (id:number) => void;
   };
   
-  export const MiniModal: React.FC<DropdownButtonProps> = ({ items , width="150px", marginLeft = "0px" }) => {
+  export const ModalKUI: React.FC<MenuKUIProps> = ({ items , width="150px", marginLeft = "0px", handleClick }) => {
     const [isOpen, setIsOpen] = useState(false);
   
     const toggleDropdown = () => {
@@ -30,19 +35,27 @@ type DropdownButtonProps = {
   }, [isOpen]);
   
     return (
-      <div style={{marginLeft: `${marginLeft}`}}>
+      <DivStyled marginLeft={marginLeft}>
         <ButtonIconStyled ref={buttonRef} onClick={toggleDropdown}>
           <SlOptionsVertical />
         </ButtonIconStyled>
         {isOpen && (
-          <UlStyled  style={{ top: `${position.top}px`,  right: `${position.right}px`, width: `${width}`}} >
+          <UlStyled top={position.top} right={position.right} width={width}  >
             {items.map((item, index) => (
-              <LiStyled key={index} style={{ borderBottom: index !== items.length - 1 ? '1px solid #ccc' : 'none' }} >
-                <ButtonStyled>{item.icon} {item.text}</ButtonStyled>
+              <LiStyled key={index} items={items} index={index}
+                onClick={() => {
+                  handleClick(item.id)
+                  setIsOpen(false)
+                }}>
+                <ButtonStyled onClick={() => {
+                  handleClick(item.id)
+                  setIsOpen(false)
+                }
+                  }>{item.icon} {item.text}</ButtonStyled>
               </LiStyled>
             ))}
           </UlStyled>
         )}
-      </div>
+      </DivStyled>
     );
   };

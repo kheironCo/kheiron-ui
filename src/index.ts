@@ -6,4 +6,4 @@ export * from './molecules';
 export * from './utils';
 export * from './NotificationKUI';
 
-export * from './MiniModal';
+export * from './ModalKUI';
