@@ -5,5 +5,4 @@ export * from './icons';
 export * from './molecules';
 export * from './utils';
 export * from './NotificationKUI';
-
-export * from './ModalKUI';
+export * from './MenuKUI';

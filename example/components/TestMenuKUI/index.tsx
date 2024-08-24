@@ -1,21 +1,19 @@
 import { FaPen } from "react-icons/fa";
-import { ModalKUI } from "../../../src";
+import { MenuKUI } from "../../../src";
 import { IoMdSettings } from "react-icons/io";
 
-const arregloItems = [{id: 1, icon: <FaPen />, text: "Texto 1"}, { id: 2, icon: <IoMdSettings/ >, text: "Texto 2"}, { id: 3, icon: <IoMdSettings/ >, text: "Texto 3"}]
 export const TestMenuKUI = () => {
-    
-const handleClick = (id:number) =>{
-    if(id == 1){
-        console.log("click 1")
-    }else if(id == 2){
-        console.log("click 2")
-        
-    }else if(id == 3){
-        console.log("click 3")
-        
+    function handleClick (){
+        console.log("hola");
     }
-}
 
-    return (<ModalKUI marginLeft="300px" items={arregloItems} handleClick={handleClick}/>)
+
+    const arregloItems = [{ icon: <FaPen />, text: "Texto 1", onClick: handleClick}, {  icon: <IoMdSettings/ >, text: "Texto 2"}, {  icon: <IoMdSettings/ >, text: "Texto 3"}]
+    return (
+        <div>
+            <MenuKUI marginLeft="180px" items={arregloItems}  />
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident modi, nemo similique voluptatum blanditiis perferendis, ea accusantium doloremque atque debitis incidunt obcaecati quaerat neque eos quis, aut facere officia et!</p>
+
+        </div>
+    )
 };

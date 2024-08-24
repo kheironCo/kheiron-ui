@@ -12,6 +12,7 @@ const App = () => {
       <FormLayer />
       <TableLayer />
       {/* <Thing /> */}
+      <p>Hola</p>
       <TestMenuKUI />
     </AtomDiv>
   );
