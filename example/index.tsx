@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { AtomDiv } from '../src';
 import { FormLayer } from './components/FormLayer';
 import { TableLayer } from './components/TableLayer';
-import { TestMenuKUI } from './components/TestMenuKUI';
 // import { Thing } from './Thing';
 
 const App = () => {
@@ -12,8 +11,6 @@ const App = () => {
       <FormLayer />
       <TableLayer />
       {/* <Thing /> */}
-      <p>Hola</p>
-      <TestMenuKUI />
     </AtomDiv>
   );
 };
