@@ -15,7 +15,7 @@ export const MenuKUIStory: Story = {
   args: {
     marginLeft: "300px",
     items: [
-      { icon: <FaPen />, text: "Texto 1" }, 
+      { icon: <FaPen />, text: "Texto 1"}, 
       { icon: <IoMdSettings />, text: "Texto 2" }, 
       { icon: <IoMdSettings />, text: "Texto 3" }
     ],
