@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { AtomDiv } from '../src';
 import { FormLayer } from './components/FormLayer';
 import { TableLayer } from './components/TableLayer';
+import { NotificationLayer } from './components/NotificationLayer';
 // import { Thing } from './Thing';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     <AtomDiv>
       <FormLayer />
       <TableLayer />
+      <NotificationLayer />
       {/* <Thing /> */}
     </AtomDiv>
   );
