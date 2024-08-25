@@ -1,3 +1,10 @@
+## [1.3.0] 2024-08-25
+
+### ⚙ Feature
+
+- **MenuKUI**
+  - Added a option menu with a toggle button
+
 ## [1.2.8] 2024-08-15
 
 ### ✨ Added
