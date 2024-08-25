@@ -4,14 +4,14 @@ import { FaPen } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 
 const meta: Meta<typeof MenuKUI> = {
-  title: 'OptionModal/MenuKUI',  // Asegúrate de que el título sea único
+  title: 'OptionModal/MenuKUI',  
   component: MenuKUI,
 };
 export default meta;
 
 type Story = StoryObj<typeof MenuKUI>;
 
-export const MenuKUIDefault: Story = {  // Renombrar la exportación
+export const MenuKUIStory: Story = {  
   args: {
     marginLeft: "300px",
     items: [

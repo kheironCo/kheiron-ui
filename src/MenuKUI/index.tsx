@@ -20,7 +20,6 @@ export const MenuKUI: React.FC<MenuKUIProps> = ({ items, width = "150px", margin
     };
 
     useEffect(() => {
-      console.log("Click");
         if (buttonRef.current && isOpen) {
             const rect = buttonRef.current.getBoundingClientRect();
             setPosition({
@@ -40,11 +39,11 @@ export const MenuKUI: React.FC<MenuKUIProps> = ({ items, width = "150px", margin
                     {items.map(({ icon, text, ...rest }, index) => {
                         let divider = index !== (items.length - 1);
                         return (
-                          <div style={{margin: "0 10px"}}>
+                          
                             <LiStyled key={index} divider={divider} {...rest}>
                                 {icon} {text}
                             </LiStyled>
-                          </div>
+                          
                         );
                     })}
                 </UlStyled>

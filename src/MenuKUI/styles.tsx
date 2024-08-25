@@ -35,6 +35,7 @@ export const LiStyled = styled.li<{ divider: boolean }>`
     padding: 10px;
     border-bottom: ${({ divider }) => (divider ? '1px solid #ccc' : 'none')};
     cursor: pointer;
+    margin: 0 10px;
 `;
 
 export const DivStyled = styled.div<{ marginLeft: string }>`
