@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { SlOptionsVertical } from "react-icons/sl";
 import { ButtonIconStyled, UlStyled, LiStyled, DivStyled } from './styles';
 
-type MenuItem = Parameters<typeof LiStyled>[0] & { icon: ReactNode; text: string }
+type MenuItem = Omit<Parameters<typeof LiStyled>[0], 'divider'> & { icon: ReactNode; text: string }
 
 type MenuKUIProps = {
     items: MenuItem[];
