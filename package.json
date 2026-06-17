@@ -75,7 +75,7 @@
     "@storybook/addon-links": "^8.1.10",
     "@storybook/addons": "^7.6.17",
     "@storybook/react": "^8.1.10",
-    "@storybook/react-vite": "^8.1.10",
+    "@storybook/react-vite": "^8.1.11",
     "@testing-library/react": "^15.0.7",
     "@tsconfig/recommended": "^1.0.6",
     "@tsconfig/vite-react": "^3.0.2",
