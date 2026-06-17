@@ -13,7 +13,7 @@
     "react-app-polyfill": "^3.0.0",
     "react-hook-form": "^7.52.0",
     "styled-components": "^6.1.8",
-    "zod": "^3.23.8"
+    "zod": "^4.4.3"
   },
   "alias": {
     "react": "../node_modules/react",
