@@ -29,6 +29,6 @@
     "@vitejs/plugin-react": "latest",
     "typescript": "^4",
     "vite": "latest",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^6.1.1"
   }
 }
